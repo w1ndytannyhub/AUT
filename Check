@@ -4,6 +4,7 @@ _G.Login = false
 		["W1ndy"] = "W1ndyxDemon",
 		["smart"] = "smartxddddfg",
 		["rov"] = "rovgame2009",
+		["bank"] = "Bog_BigBank"
 	}
 	local plr = game.Players.LocalPlayer
 	local X = plr.PlayerGui.TannyHub
