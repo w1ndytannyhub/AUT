@@ -1,3 +1,8 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
 local TannyHub = Instance.new("ScreenGui")
 local BG = Instance.new("Frame")
 local UICorner = Instance.new("UICorner")
@@ -62,6 +67,7 @@ local UICorner_25 = Instance.new("UICorner")
 local TextButton_2 = Instance.new("TextButton")
 local UICorner_26 = Instance.new("UICorner")
 local UICorner_27 = Instance.new("UICorner")
+local TextLabel_10 = Instance.new("TextLabel")
 
 --Properties:
 
@@ -74,7 +80,7 @@ BG.Name = "BG"
 BG.Parent = TannyHub
 BG.BackgroundColor3 = Color3.fromRGB(24, 24, 24)
 BG.BorderSizePixel = 0
-BG.Position = UDim2.new(0.00932021253, 0, 0.0299657173, 0)
+BG.Position = UDim2.new(0.00612277072, 0, 0.0153244287, 0)
 BG.Size = UDim2.new(0.381402642, 0, 0.651408434, 0)
 BG.Visible = false
 
@@ -452,9 +458,20 @@ UICorner_26.Parent = TextButton_2
 
 UICorner_27.Parent = Frame
 
+TextLabel_10.Parent = Frame
+TextLabel_10.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_10.BackgroundTransparency = 1.000
+TextLabel_10.Position = UDim2.new(0.297935098, 0, 0.174377233, 0)
+TextLabel_10.Size = UDim2.new(0.404130101, 0, 0.0964412093, 0)
+TextLabel_10.Font = Enum.Font.ArialBold
+TextLabel_10.Text = "Login"
+TextLabel_10.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_10.TextSize = 30.000
+TextLabel_10.TextWrapped = true
+
 -- Scripts:
 
-local function KEJKWNY_fake_script() -- Meteor.LocalScript 
+local function VCKEW_fake_script() -- Meteor.LocalScript 
 	local script = Instance.new('LocalScript', Meteor)
 
 	local On = false
@@ -473,8 +490,8 @@ local function KEJKWNY_fake_script() -- Meteor.LocalScript
 	
 	
 end
-coroutine.wrap(KEJKWNY_fake_script)()
-local function XJPNWTG_fake_script() -- Chest.LocalScript 
+coroutine.wrap(VCKEW_fake_script)()
+local function ZVMDH_fake_script() -- Chest.LocalScript 
 	local script = Instance.new('LocalScript', Chest)
 
 	local On = false
@@ -507,8 +524,8 @@ local function XJPNWTG_fake_script() -- Chest.LocalScript
 		end
 	end)
 end
-coroutine.wrap(XJPNWTG_fake_script)()
-local function NEYDFTD_fake_script() -- Sand.LocalScript 
+coroutine.wrap(ZVMDH_fake_script)()
+local function RREQWL_fake_script() -- Sand.LocalScript 
 	local script = Instance.new('LocalScript', Sand)
 
 	local On = false
@@ -544,8 +561,8 @@ local function NEYDFTD_fake_script() -- Sand.LocalScript
 		end
 	end)
 end
-coroutine.wrap(NEYDFTD_fake_script)()
-local function ZONP_fake_script() -- AutoFarm.LocalScript 
+coroutine.wrap(RREQWL_fake_script)()
+local function KJXF_fake_script() -- AutoFarm.LocalScript 
 	local script = Instance.new('LocalScript', AutoFarm)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -553,8 +570,8 @@ local function ZONP_fake_script() -- AutoFarm.LocalScript
 		script.Parent.Parent.Parent.SecOpItem.Visible = false
 	end)
 end
-coroutine.wrap(ZONP_fake_script)()
-local function BMCP_fake_script() -- ItemNoti.LocalScript 
+coroutine.wrap(KJXF_fake_script)()
+local function JLCX_fake_script() -- ItemNoti.LocalScript 
 	local script = Instance.new('LocalScript', ItemNoti)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -562,15 +579,15 @@ local function BMCP_fake_script() -- ItemNoti.LocalScript
 		script.Parent.Parent.Parent.SecOpItem.Visible = true
 	end)
 end
-coroutine.wrap(BMCP_fake_script)()
-local function JTIEI_fake_script() -- BG.LocalScript 
+coroutine.wrap(JLCX_fake_script)()
+local function WPPQLRL_fake_script() -- BG.LocalScript 
 	local script = Instance.new('LocalScript', BG)
 
 	local Click = false
 	local Pos = nil
 	local FP = nil
 	local Frame = script.Parent
-	
+	local Mouse = game.Players.LocalPlayer:GetMouse()
 	Frame.InputBegan:Connect(function(i)
 		if i.UserInputType == Enum.UserInputType.MouseButton1 then
 			Click = true
@@ -585,17 +602,17 @@ local function JTIEI_fake_script() -- BG.LocalScript
 		end
 	end)
 	
-	game:GetService("UserInputService").InputChanged:Connect(function(i,c)
-		if not c then
-			if Click == true then
-				local Nw = FP + ((Vector2.new(i.Position.X,i.Position.Y) - Pos ) / game.Workspace.Camera.ViewportSize)
-				Frame.Position = UDim2.new(Nw.X,0,Nw.Y,0)
-			end
+	game.Players.LocalPlayer:GetMouse().Move:Connect(function()
+		if Click == true then
+			local Nw = FP + ((Vector2.new(Mouse.X,Mouse.Y) - Pos ) / game.Workspace.Camera.ViewportSize)
+			Frame.Position = UDim2.new(Nw.X,0,Nw.Y,0)
 		end
 	end)
+	
+	
 end
-coroutine.wrap(JTIEI_fake_script)()
-local function AKPI_fake_script() -- BG.LocalScript 
+coroutine.wrap(WPPQLRL_fake_script)()
+local function HJJNRY_fake_script() -- BG.LocalScript 
 	local script = Instance.new('LocalScript', BG)
 
 	game:GetService("UserInputService").InputBegan:Connect(function(i,c)
@@ -606,8 +623,8 @@ local function AKPI_fake_script() -- BG.LocalScript
 		end
 	end)
 end
-coroutine.wrap(AKPI_fake_script)()
-local function ULIGWM_fake_script() -- TextButton.LocalScript 
+coroutine.wrap(HJJNRY_fake_script)()
+local function VDQKPWJ_fake_script() -- TextButton.LocalScript 
 	local script = Instance.new('LocalScript', TextButton)
 
 	local On = false
@@ -626,8 +643,8 @@ local function ULIGWM_fake_script() -- TextButton.LocalScript
 	
 	
 end
-coroutine.wrap(ULIGWM_fake_script)()
-local function FTUOYV_fake_script() -- ScrollingFrame.LocalScript 
+coroutine.wrap(VDQKPWJ_fake_script)()
+local function WHERDJ_fake_script() -- ScrollingFrame.LocalScript 
 	local script = Instance.new('LocalScript', ScrollingFrame)
 
 	for i,v in pairs(script.Parent:GetChildren()) do
@@ -638,23 +655,23 @@ local function FTUOYV_fake_script() -- ScrollingFrame.LocalScript
 		end
 	end
 end
-coroutine.wrap(FTUOYV_fake_script)()
-local function FETJF_fake_script() -- TextButton_2.LocalScript 
+coroutine.wrap(WHERDJ_fake_script)()
+local function AQKSAYZ_fake_script() -- TextButton_2.LocalScript 
 	local script = Instance.new('LocalScript', TextButton_2)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		loadstring(game:HttpGet(("https://raw.githubusercontent.com/w1ndytannyhub/AUT/main/Check2"), true))()
 	end)
 end
-coroutine.wrap(FETJF_fake_script)()
-local function TCRWGC_fake_script() -- Frame.LocalScript 
+coroutine.wrap(AQKSAYZ_fake_script)()
+local function JWGRK_fake_script() -- Frame.LocalScript 
 	local script = Instance.new('LocalScript', Frame)
 
 	local Click = false
 	local Pos = nil
 	local FP = nil
 	local Frame = script.Parent
-	
+	local Mouse = game.Players.LocalPlayer:GetMouse()
 	Frame.InputBegan:Connect(function(i)
 		if i.UserInputType == Enum.UserInputType.MouseButton1 then
 			Click = true
@@ -669,13 +686,13 @@ local function TCRWGC_fake_script() -- Frame.LocalScript
 		end
 	end)
 	
-	game:GetService("UserInputService").InputChanged:Connect(function(i,c)
-		if not c then
-			if Click == true then
-				local Nw = FP + ((Vector2.new(i.Position.X,i.Position.Y) - Pos ) / game.Workspace.Camera.ViewportSize)
-				Frame.Position = UDim2.new(Nw.X,0,Nw.Y,0)
-			end
+	game.Players.LocalPlayer:GetMouse().Move:Connect(function()
+		if Click == true then
+			local Nw = FP + ((Vector2.new(Mouse.X,Mouse.Y) - Pos ) / game.Workspace.Camera.ViewportSize)
+			Frame.Position = UDim2.new(Nw.X,0,Nw.Y,0)
 		end
 	end)
+	
+	
 end
-coroutine.wrap(TCRWGC_fake_script)()
+coroutine.wrap(JWGRK_fake_script)()
