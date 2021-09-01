@@ -269,9 +269,7 @@ ItemNoti.Text = "Item Notifier"
 ItemNoti.TextColor3 = Color3.fromRGB(255, 255, 255)
 ItemNoti.TextSize = 17.000
 ItemNoti.TextWrapped = true
-
 UICorner_15.Parent = ItemNoti
-
 SecOpItem.Name = "SecOpItem"
 SecOpItem.Parent = BG
 SecOpItem.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
