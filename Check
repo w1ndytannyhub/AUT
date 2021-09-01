@@ -9,14 +9,11 @@ _G.Login = false
 	local X = plr.PlayerGui.TannyHub
 	local Text = plr.PlayerGui.TannyHub.Frame.TextBox.Text
 	if PlayerTable[Text] then
-		print("XD")
-		print(plr.Name)
 		if plr.Name == PlayerTable[Text] then
-			print("XD")
 			X.Frame.Visible = false
 			X.BG.Visible = true
 			_G.Login = true
 		elseif game.Players.LocalPlayer.Name ~= PlayerTable[Text] then
-			game.Players.LocalPlayer:Kick("BRUH")
+			game.Players.LocalPlayer:Kick("HWID YO YO YO YO")
 		end
 	end
