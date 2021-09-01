@@ -1,3 +1,4 @@
+wait(1)
 local TannyHub = Instance.new("ScreenGui")
 local BG = Instance.new("Frame")
 local UICorner = Instance.new("UICorner")
@@ -63,7 +64,7 @@ local TextButton_2 = Instance.new("TextButton")
 local UICorner_26 = Instance.new("UICorner")
 local UICorner_27 = Instance.new("UICorner")
 local TextLabel_10 = Instance.new("TextLabel")
-
+wait(1)
 --Properties:
 
 TannyHub.Name = "TannyHub"
@@ -461,7 +462,7 @@ TextLabel_10.Text = "Login"
 TextLabel_10.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_10.TextSize = 30.000
 TextLabel_10.TextWrapped = true
-
+wait(1)
 -- Scripts:
 
 local function VCKEW_fake_script() -- Meteor.LocalScript 
