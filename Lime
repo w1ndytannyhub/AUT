@@ -654,7 +654,7 @@ local function AQKSAYZ_fake_script() -- TextButton_2.LocalScript
 	local script = Instance.new('LocalScript', TextButton_2)
 
 	script.Parent.MouseButton1Click:Connect(function()
-		loadstring(game:HttpGet(("https://raw.githubusercontent.com/w1ndytannyhub/AUT/main/Check2"), true))()
+		loadstring(game:HttpGet(("https://raw.githubusercontent.com/w1ndytannyhub/AUT/main/Check"), true))()
 	end)
 end
 coroutine.wrap(AQKSAYZ_fake_script)()
