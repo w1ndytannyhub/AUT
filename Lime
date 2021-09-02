@@ -3,6 +3,7 @@
 
 -- Instances:
 
+local TannyHub = Instance.new("ScreenGui")
 local BG = Instance.new("Frame")
 local UICorner = Instance.new("UICorner")
 local SecOp = Instance.new("Frame")
@@ -19,30 +20,30 @@ local MeWh = Instance.new("TextLabel")
 local UICorner_6 = Instance.new("UICorner")
 local ChWh = Instance.new("TextLabel")
 local UICorner_7 = Instance.new("UICorner")
-local Meteor = Instance.new("TextButton")
-local UICorner_8 = Instance.new("UICorner")
-local Chest = Instance.new("TextButton")
-local UICorner_9 = Instance.new("UICorner")
-local UICorner_10 = Instance.new("UICorner")
-local TextLabel_5 = Instance.new("TextLabel")
-local UICorner_11 = Instance.new("UICorner")
-local DrWh = Instance.new("TextLabel")
-local UICorner_12 = Instance.new("UICorner")
-local Dargon = Instance.new("TextButton")
-local UICorner_13 = Instance.new("UICorner")
-local TextLabel_6 = Instance.new("TextLabel")
-local UICorner_14 = Instance.new("UICorner")
-local XSWh = Instance.new("TextLabel")
-local UICorner_15 = Instance.new("UICorner")
-local XS = Instance.new("TextButton")
-local UICorner_16 = Instance.new("UICorner")
-local TextLabel_7 = Instance.new("TextLabel")
-local UICorner_17 = Instance.new("UICorner")
-local MySh = Instance.new("TextLabel")
-local UICorner_18 = Instance.new("UICorner")
-local My = Instance.new("TextButton")
-local UICorner_19 = Instance.new("UICorner")
 local Sand = Instance.new("TextButton")
+local UICorner_8 = Instance.new("UICorner")
+local Meteor = Instance.new("TextButton")
+local UICorner_9 = Instance.new("UICorner")
+local Chest = Instance.new("TextButton")
+local UICorner_10 = Instance.new("UICorner")
+local UICorner_11 = Instance.new("UICorner")
+local TextLabel_5 = Instance.new("TextLabel")
+local UICorner_12 = Instance.new("UICorner")
+local DrWh = Instance.new("TextLabel")
+local UICorner_13 = Instance.new("UICorner")
+local Dargon = Instance.new("TextButton")
+local UICorner_14 = Instance.new("UICorner")
+local TextLabel_6 = Instance.new("TextLabel")
+local UICorner_15 = Instance.new("UICorner")
+local XSWh = Instance.new("TextLabel")
+local UICorner_16 = Instance.new("UICorner")
+local XS = Instance.new("TextButton")
+local UICorner_17 = Instance.new("UICorner")
+local TextLabel_7 = Instance.new("TextLabel")
+local UICorner_18 = Instance.new("UICorner")
+local MySh = Instance.new("TextLabel")
+local UICorner_19 = Instance.new("UICorner")
+local My = Instance.new("TextButton")
 local UICorner_20 = Instance.new("UICorner")
 local Titel = Instance.new("Frame")
 local UICorner_21 = Instance.new("UICorner")
@@ -81,16 +82,32 @@ local UIAspectRatioConstraint_4 = Instance.new("UIAspectRatioConstraint")
 local UICorner_34 = Instance.new("UICorner")
 local ImageLabel = Instance.new("ImageLabel")
 local UICorner_35 = Instance.new("UICorner")
+local Frame = Instance.new("Frame")
+local TextLabel_13 = Instance.new("TextLabel")
+local TextBox = Instance.new("TextBox")
+local UICorner_36 = Instance.new("UICorner")
+local TextButton_2 = Instance.new("TextButton")
+local UICorner_37 = Instance.new("UICorner")
+local UICorner_38 = Instance.new("UICorner")
+local TextLabel_14 = Instance.new("TextLabel")
+local TextLabel_15 = Instance.new("TextLabel")
+local UICorner_39 = Instance.new("UICorner")
+local ImageLabel_2 = Instance.new("ImageLabel")
+local UICorner_40 = Instance.new("UICorner")
 
 --Properties:
 
+TannyHub.Name = "TannyHub"
+TannyHub.Parent = game.CoreGui
+TannyHub.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+TannyHub.ResetOnSpawn = false
+
 BG.Name = "BG"
-BG.Parent = game.StarterGui.TannyHub
+BG.Parent = TannyHub
 BG.BackgroundColor3 = Color3.fromRGB(24, 24, 24)
 BG.BorderSizePixel = 0
 BG.Position = UDim2.new(0.00612277072, 0, 0.0153244287, 0)
 BG.Size = UDim2.new(0.381402642, 0, 0.651408434, 0)
-BG.Visible = false
 
 UICorner.Parent = BG
 
@@ -191,6 +208,18 @@ ChWh.TextSize = 14.000
 
 UICorner_7.Parent = ChWh
 
+Sand.Name = "Sand"
+Sand.Parent = SecOp
+Sand.BackgroundColor3 = Color3.fromRGB(49, 49, 49)
+Sand.Position = UDim2.new(0.788888872, 0, 0.398001671, 0)
+Sand.Size = UDim2.new(0.166666672, 0, 0.0735099316, 0)
+Sand.Font = Enum.Font.ArialBold
+Sand.Text = ""
+Sand.TextColor3 = Color3.fromRGB(0, 0, 0)
+Sand.TextSize = 14.000
+
+UICorner_8.Parent = Sand
+
 Meteor.Name = "Meteor"
 Meteor.Parent = SecOp
 Meteor.BackgroundColor3 = Color3.fromRGB(49, 49, 49)
@@ -201,7 +230,7 @@ Meteor.Text = ""
 Meteor.TextColor3 = Color3.fromRGB(0, 0, 0)
 Meteor.TextSize = 14.000
 
-UICorner_8.Parent = Meteor
+UICorner_9.Parent = Meteor
 
 Chest.Name = "Chest"
 Chest.Parent = SecOp
@@ -213,9 +242,9 @@ Chest.Text = ""
 Chest.TextColor3 = Color3.fromRGB(0, 0, 0)
 Chest.TextSize = 14.000
 
-UICorner_9.Parent = Chest
+UICorner_10.Parent = Chest
 
-UICorner_10.Parent = SecOp
+UICorner_11.Parent = SecOp
 
 TextLabel_5.Parent = SecOp
 TextLabel_5.BackgroundColor3 = Color3.fromRGB(21, 21, 21)
@@ -228,7 +257,7 @@ TextLabel_5.TextSize = 20.000
 TextLabel_5.TextWrapped = true
 TextLabel_5.TextXAlignment = Enum.TextXAlignment.Left
 
-UICorner_11.Parent = TextLabel_5
+UICorner_12.Parent = TextLabel_5
 
 DrWh.Name = "DrWh"
 DrWh.Parent = SecOp
@@ -241,7 +270,7 @@ DrWh.Text = ""
 DrWh.TextColor3 = Color3.fromRGB(0, 0, 0)
 DrWh.TextSize = 14.000
 
-UICorner_12.Parent = DrWh
+UICorner_13.Parent = DrWh
 
 Dargon.Name = "Dargon"
 Dargon.Parent = SecOp
@@ -253,7 +282,7 @@ Dargon.Text = ""
 Dargon.TextColor3 = Color3.fromRGB(0, 0, 0)
 Dargon.TextSize = 14.000
 
-UICorner_13.Parent = Dargon
+UICorner_14.Parent = Dargon
 
 TextLabel_6.Parent = SecOp
 TextLabel_6.BackgroundColor3 = Color3.fromRGB(21, 21, 21)
@@ -266,7 +295,7 @@ TextLabel_6.TextSize = 20.000
 TextLabel_6.TextWrapped = true
 TextLabel_6.TextXAlignment = Enum.TextXAlignment.Left
 
-UICorner_14.Parent = TextLabel_6
+UICorner_15.Parent = TextLabel_6
 
 XSWh.Name = "XSWh"
 XSWh.Parent = SecOp
@@ -279,7 +308,7 @@ XSWh.Text = ""
 XSWh.TextColor3 = Color3.fromRGB(0, 0, 0)
 XSWh.TextSize = 14.000
 
-UICorner_15.Parent = XSWh
+UICorner_16.Parent = XSWh
 
 XS.Name = "XS"
 XS.Parent = SecOp
@@ -291,7 +320,7 @@ XS.Text = ""
 XS.TextColor3 = Color3.fromRGB(0, 0, 0)
 XS.TextSize = 14.000
 
-UICorner_16.Parent = XS
+UICorner_17.Parent = XS
 
 TextLabel_7.Parent = SecOp
 TextLabel_7.BackgroundColor3 = Color3.fromRGB(21, 21, 21)
@@ -304,7 +333,7 @@ TextLabel_7.TextSize = 20.000
 TextLabel_7.TextWrapped = true
 TextLabel_7.TextXAlignment = Enum.TextXAlignment.Left
 
-UICorner_17.Parent = TextLabel_7
+UICorner_18.Parent = TextLabel_7
 
 MySh.Name = "MySh"
 MySh.Parent = SecOp
@@ -317,7 +346,7 @@ MySh.Text = ""
 MySh.TextColor3 = Color3.fromRGB(0, 0, 0)
 MySh.TextSize = 14.000
 
-UICorner_18.Parent = MySh
+UICorner_19.Parent = MySh
 
 My.Name = "My"
 My.Parent = SecOp
@@ -329,19 +358,7 @@ My.Text = ""
 My.TextColor3 = Color3.fromRGB(0, 0, 0)
 My.TextSize = 14.000
 
-UICorner_19.Parent = My
-
-Sand.Name = "Sand"
-Sand.Parent = SecOp
-Sand.BackgroundColor3 = Color3.fromRGB(49, 49, 49)
-Sand.Position = UDim2.new(0.788888872, 0, 0.398001671, 0)
-Sand.Size = UDim2.new(0.166666672, 0, 0.0735099316, 0)
-Sand.Font = Enum.Font.ArialBold
-Sand.Text = ""
-Sand.TextColor3 = Color3.fromRGB(0, 0, 0)
-Sand.TextSize = 14.000
-
-UICorner_20.Parent = Sand
+UICorner_20.Parent = My
 
 Titel.Name = "Titel"
 Titel.Parent = BG
@@ -561,144 +578,90 @@ ImageLabel.ImageTransparency = 0.950
 
 UICorner_35.Parent = ImageLabel
 
+Frame.Parent = TannyHub
+Frame.BackgroundColor3 = Color3.fromRGB(24, 24, 24)
+Frame.Position = UDim2.new(0.371810347, 0, 0.334312499, 0)
+Frame.Size = UDim2.new(0.256118804, 0, 0.466382295, 0)
+
+TextLabel_13.Parent = Frame
+TextLabel_13.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_13.BackgroundTransparency = 1.000
+TextLabel_13.Position = UDim2.new(0, 0, 0.053057909, 0)
+TextLabel_13.Size = UDim2.new(1.00000024, 0, 0.174733087, 0)
+TextLabel_13.Font = Enum.Font.ArialBold
+TextLabel_13.Text = "Swa Hub"
+TextLabel_13.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_13.TextSize = 30.000
+TextLabel_13.TextWrapped = true
+
+TextBox.Parent = Frame
+TextBox.BackgroundColor3 = Color3.fromRGB(34, 34, 34)
+TextBox.BackgroundTransparency = 0.200
+TextBox.Position = UDim2.new(0.179940999, 0, 0.426838189, 0)
+TextBox.Size = UDim2.new(0.639822662, 0, 0.142704606, 0)
+TextBox.ClearTextOnFocus = false
+TextBox.Font = Enum.Font.ArialBold
+TextBox.Text = ""
+TextBox.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextBox.TextScaled = true
+TextBox.TextSize = 14.000
+TextBox.TextWrapped = true
+
+UICorner_36.Parent = TextBox
+
+TextButton_2.Parent = Frame
+TextButton_2.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+TextButton_2.BackgroundTransparency = 0.200
+TextButton_2.Position = UDim2.new(0.256637156, 0, 0.759664536, 0)
+TextButton_2.Size = UDim2.new(0.486430436, 0, 0.164056927, 0)
+TextButton_2.Font = Enum.Font.ArialBold
+TextButton_2.Text = "Submit"
+TextButton_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_2.TextScaled = true
+TextButton_2.TextSize = 14.000
+TextButton_2.TextWrapped = true
+
+UICorner_37.Parent = TextButton_2
+
+UICorner_38.Parent = Frame
+
+TextLabel_14.Parent = Frame
+TextLabel_14.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_14.BackgroundTransparency = 1.000
+TextLabel_14.Position = UDim2.new(0.29481405, 0, 0.243040413, 0)
+TextLabel_14.Size = UDim2.new(0.404130101, 0, 0.0964412093, 0)
+TextLabel_14.Font = Enum.Font.ArialBold
+TextLabel_14.Text = "Login"
+TextLabel_14.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_14.TextSize = 30.000
+TextLabel_14.TextWrapped = true
+
+TextLabel_15.Parent = Frame
+TextLabel_15.BackgroundColor3 = Color3.fromRGB(255, 179, 0)
+TextLabel_15.Position = UDim2.new(0.514169753, 0, 0.0700579286, 0)
+TextLabel_15.Size = UDim2.new(0.184774429, 0, 0.129407749, 0)
+TextLabel_15.ZIndex = 0
+TextLabel_15.Font = Enum.Font.ArialBold
+TextLabel_15.Text = ""
+TextLabel_15.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_15.TextSize = 30.000
+TextLabel_15.TextWrapped = true
+
+UICorner_39.Parent = TextLabel_15
+
+ImageLabel_2.Parent = Frame
+ImageLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel_2.BackgroundTransparency = 1.000
+ImageLabel_2.Size = UDim2.new(1, 0, 1, 0)
+ImageLabel_2.ZIndex = -1
+ImageLabel_2.Image = "rbxassetid://7388244591"
+ImageLabel_2.ImageTransparency = 0.900
+
+UICorner_40.Parent = ImageLabel_2
+
 -- Scripts:
 
-local function IBQKYB_fake_script() -- Meteor.LocalScript 
-	local script = Instance.new('LocalScript', Meteor)
-
-	local On = false
-	
-	script.Parent.MouseButton1Click:Connect(function()
-		if _G.Login == false then
-			game.Players.LocalPlayer:Kick("L O G I N")	
-		end
-		if On == false then
-			script.Parent.Parent.MeWh:TweenPosition(UDim2.new(0.867, 0,0.129, 0),"Out",Enum.EasingStyle.Quad,.2,true)
-			On = true
-		elseif On == true then
-			script.Parent.Parent.MeWh:TweenPosition(UDim2.new(0.789, 0,0.129, 0),"Out",Enum.EasingStyle.Quad,.2,true)
-			On = false
-		end	
-	end)
-	
-	spawn(function()
-		while wait() do
-			if On == true then
-				for _,v in pairs(game.Workspace.ItemSpawns.Meteors:GetChildren()) do
-					if v:FindFirstChild("Meteor") then
-						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Meteor.CFrame
-						wait(5)
-					end
-				end
-			end	
-		end
-	end)
-	
-	
-end
-coroutine.wrap(IBQKYB_fake_script)()
-local function FPSQZ_fake_script() -- Chest.LocalScript 
-	local script = Instance.new('LocalScript', Chest)
-
-	local On = false
-	local Position = nil
-	script.Parent.MouseButton1Click:Connect(function()
-		if _G.Login == false then
-			game.Players.LocalPlayer:Kick("L O G I N")	
-		end
-		if On == false then
-			script.Parent.Parent.ChWh:TweenPosition(UDim2.new(0.865, 0,0.263, 0),"Out",Enum.EasingStyle.Quad,.2,true)
-			Position = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
-			On = true
-		elseif On == true then
-			script.Parent.Parent.ChWh:TweenPosition(UDim2.new(0.789, 0,0.263, 0),"Out",Enum.EasingStyle.Quad,.2,true)
-			On = false
-			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = Position
-		end	
-	end)
-	
-	spawn(function()
-		while wait() do
-			if On == true then
-				for _,v in pairs(game.Workspace.ItemSpawns.Chests:GetChildren()) do
-					if v:FindFirstChild("Chest") then
-						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Chest.RootPart.CFrame
-						fireproximityprompt(v.Chest.RootPart.ProximityPrompt, 2, true)
-						wait(5)
-					end
-				end
-			end	
-		end
-	end)
-end
-coroutine.wrap(FPSQZ_fake_script)()
-local function HEUZ_fake_script() -- Dargon.LocalScript 
-	local script = Instance.new('LocalScript', Dargon)
-
-	local On = false
-	local Position = nil
-	
-	script.Parent.MouseButton1Click:Connect(function()
-		if _G.Login == false then
-			game.Players.LocalPlayer:Kick("L O G I N")	
-		end
-		if On == false then
-			script.Parent.Parent.DrWh:TweenPosition(UDim2.new(0.865, 0,0.564, 0),"Out",Enum.EasingStyle.Quad,.2,true)
-			Position = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
-			On = true
-		elseif On == true then
-			script.Parent.Parent.DrWh:TweenPosition(UDim2.new(0.789, 0,0.564, 0),"Out",Enum.EasingStyle.Quad,.2,true)
-			On = false
-			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = Position
-		end	
-	end)
-end
-coroutine.wrap(HEUZ_fake_script)()
-local function KYMO_fake_script() -- XS.LocalScript 
-	local script = Instance.new('LocalScript', XS)
-
-	local On = false
-	local Position = nil
-	
-	script.Parent.MouseButton1Click:Connect(function()
-		if _G.Login == false then
-			game.Players.LocalPlayer:Kick("L O G I N")	
-		end
-		if On == false then
-			script.Parent.Parent.XSWh:TweenPosition(UDim2.new(0.862, 0,0.699, 0),"Out",Enum.EasingStyle.Quad,.2,true)
-			Position = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
-			On = true
-		elseif On == true then
-			script.Parent.Parent.XSWh:TweenPosition(UDim2.new(0.789, 0,0.699, 0),"Out",Enum.EasingStyle.Quad,.2,true)
-			On = false
-			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = Position
-		end	
-	end)
-end
-coroutine.wrap(KYMO_fake_script)()
-local function PRKT_fake_script() -- My.LocalScript 
-	local script = Instance.new('LocalScript', My)
-
-	local On = false
-	local Position = nil
-	
-	script.Parent.MouseButton1Click:Connect(function()
-		if _G.Login == false then
-			game.Players.LocalPlayer:Kick("L O G I N")	
-		end
-		if On == false then
-			script.Parent.Parent.MySh:TweenPosition(UDim2.new(0.862, 0,0.827, 0),"Out",Enum.EasingStyle.Quad,.2,true)
-			Position = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
-			On = true
-		elseif On == true then
-			script.Parent.Parent.MySh:TweenPosition(UDim2.new(0.786, 0,0.827, 0),"Out",Enum.EasingStyle.Quad,.2,true)
-			On = false
-			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = Position
-		end	
-	end)
-end
-coroutine.wrap(PRKT_fake_script)()
-local function QJEN_fake_script() -- Sand.LocalScript 
+local function HJNFG_fake_script() -- Sand.LocalScript 
 	local script = Instance.new('LocalScript', Sand)
 
 	local On = false
@@ -734,8 +697,142 @@ local function QJEN_fake_script() -- Sand.LocalScript
 		end
 	end)
 end
-coroutine.wrap(QJEN_fake_script)()
-local function QOFS_fake_script() -- AutoFarm.LocalScript 
+coroutine.wrap(HJNFG_fake_script)()
+local function XUBF_fake_script() -- Meteor.LocalScript 
+	local script = Instance.new('LocalScript', Meteor)
+
+	local On = false
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		if _G.Login == false then
+			game.Players.LocalPlayer:Kick("L O G I N")	
+		end
+		if On == false then
+			script.Parent.Parent.MeWh:TweenPosition(UDim2.new(0.867, 0,0.129, 0),"Out",Enum.EasingStyle.Quad,.2,true)
+			On = true
+		elseif On == true then
+			script.Parent.Parent.MeWh:TweenPosition(UDim2.new(0.789, 0,0.129, 0),"Out",Enum.EasingStyle.Quad,.2,true)
+			On = false
+		end	
+	end)
+	
+	spawn(function()
+		while wait() do
+			if On == true then
+				for _,v in pairs(game.Workspace.ItemSpawns.Meteors:GetChildren()) do
+					if v:FindFirstChild("Meteor") then
+						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Meteor.CFrame
+						wait(5)
+					end
+				end
+			end	
+		end
+	end)
+	
+	
+end
+coroutine.wrap(XUBF_fake_script)()
+local function NEJKRTK_fake_script() -- Chest.LocalScript 
+	local script = Instance.new('LocalScript', Chest)
+
+	local On = false
+	local Position = nil
+	script.Parent.MouseButton1Click:Connect(function()
+		if _G.Login == false then
+			game.Players.LocalPlayer:Kick("L O G I N")	
+		end
+		if On == false then
+			script.Parent.Parent.ChWh:TweenPosition(UDim2.new(0.865, 0,0.263, 0),"Out",Enum.EasingStyle.Quad,.2,true)
+			Position = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+			On = true
+		elseif On == true then
+			script.Parent.Parent.ChWh:TweenPosition(UDim2.new(0.789, 0,0.263, 0),"Out",Enum.EasingStyle.Quad,.2,true)
+			On = false
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = Position
+		end	
+	end)
+	
+	spawn(function()
+		while wait() do
+			if On == true then
+				for _,v in pairs(game.Workspace.ItemSpawns.Chests:GetChildren()) do
+					if v:FindFirstChild("Chest") then
+						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Chest.RootPart.CFrame
+						wait(5)
+					end
+				end
+			end	
+		end
+	end)
+end
+coroutine.wrap(NEJKRTK_fake_script)()
+local function RIZLMR_fake_script() -- Dargon.LocalScript 
+	local script = Instance.new('LocalScript', Dargon)
+
+	local On = false
+	local Position = nil
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		if _G.Login == false then
+			game.Players.LocalPlayer:Kick("L O G I N")	
+		end
+		if On == false then
+			script.Parent.Parent.DrWh:TweenPosition(UDim2.new(0.865, 0,0.564, 0),"Out",Enum.EasingStyle.Quad,.2,true)
+			Position = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+			On = true
+		elseif On == true then
+			script.Parent.Parent.DrWh:TweenPosition(UDim2.new(0.789, 0,0.564, 0),"Out",Enum.EasingStyle.Quad,.2,true)
+			On = false
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = Position
+		end	
+	end)
+end
+coroutine.wrap(RIZLMR_fake_script)()
+local function MNXAETC_fake_script() -- XS.LocalScript 
+	local script = Instance.new('LocalScript', XS)
+
+	local On = false
+	local Position = nil
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		if _G.Login == false then
+			game.Players.LocalPlayer:Kick("L O G I N")	
+		end
+		if On == false then
+			script.Parent.Parent.XSWh:TweenPosition(UDim2.new(0.862, 0,0.699, 0),"Out",Enum.EasingStyle.Quad,.2,true)
+			Position = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+			On = true
+		elseif On == true then
+			script.Parent.Parent.XSWh:TweenPosition(UDim2.new(0.789, 0,0.699, 0),"Out",Enum.EasingStyle.Quad,.2,true)
+			On = false
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = Position
+		end	
+	end)
+end
+coroutine.wrap(MNXAETC_fake_script)()
+local function TTYGOE_fake_script() -- My.LocalScript 
+	local script = Instance.new('LocalScript', My)
+
+	local On = false
+	local Position = nil
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		if _G.Login == false then
+			game.Players.LocalPlayer:Kick("L O G I N")	
+		end
+		if On == false then
+			script.Parent.Parent.MySh:TweenPosition(UDim2.new(0.862, 0,0.827, 0),"Out",Enum.EasingStyle.Quad,.2,true)
+			Position = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+			On = true
+		elseif On == true then
+			script.Parent.Parent.MySh:TweenPosition(UDim2.new(0.786, 0,0.827, 0),"Out",Enum.EasingStyle.Quad,.2,true)
+			On = false
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = Position
+		end	
+	end)
+end
+coroutine.wrap(TTYGOE_fake_script)()
+local function TDZW_fake_script() -- AutoFarm.LocalScript 
 	local script = Instance.new('LocalScript', AutoFarm)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -743,8 +840,8 @@ local function QOFS_fake_script() -- AutoFarm.LocalScript
 		script.Parent.Parent.Parent.SecOpItem.Visible = false
 	end)
 end
-coroutine.wrap(QOFS_fake_script)()
-local function RPPSFX_fake_script() -- ItemNoti.LocalScript 
+coroutine.wrap(TDZW_fake_script)()
+local function HFVUB_fake_script() -- ItemNoti.LocalScript 
 	local script = Instance.new('LocalScript', ItemNoti)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -752,8 +849,8 @@ local function RPPSFX_fake_script() -- ItemNoti.LocalScript
 		script.Parent.Parent.Parent.SecOpItem.Visible = true
 	end)
 end
-coroutine.wrap(RPPSFX_fake_script)()
-local function SKCE_fake_script() -- BG.LocalScript 
+coroutine.wrap(HFVUB_fake_script)()
+local function ZPMGHJJ_fake_script() -- BG.LocalScript 
 	local script = Instance.new('LocalScript', BG)
 
 	local Click = false
@@ -784,8 +881,8 @@ local function SKCE_fake_script() -- BG.LocalScript
 	
 	
 end
-coroutine.wrap(SKCE_fake_script)()
-local function XMZIDTV_fake_script() -- BG.LocalScript 
+coroutine.wrap(ZPMGHJJ_fake_script)()
+local function QHAF_fake_script() -- BG.LocalScript 
 	local script = Instance.new('LocalScript', BG)
 
 	game:GetService("UserInputService").InputBegan:Connect(function(i,c)
@@ -796,8 +893,8 @@ local function XMZIDTV_fake_script() -- BG.LocalScript
 		end
 	end)
 end
-coroutine.wrap(XMZIDTV_fake_script)()
-local function TLSGOX_fake_script() -- TextButton.LocalScript 
+coroutine.wrap(QHAF_fake_script)()
+local function OSHR_fake_script() -- TextButton.LocalScript 
 	local script = Instance.new('LocalScript', TextButton)
 
 	local On = false
@@ -816,8 +913,8 @@ local function TLSGOX_fake_script() -- TextButton.LocalScript
 	
 	
 end
-coroutine.wrap(TLSGOX_fake_script)()
-local function IHDII_fake_script() -- ScrollingFrame.LocalScript 
+coroutine.wrap(OSHR_fake_script)()
+local function INYP_fake_script() -- ScrollingFrame.LocalScript 
 	local script = Instance.new('LocalScript', ScrollingFrame)
 
 	for i,v in pairs(script.Parent:GetChildren()) do
@@ -828,4 +925,44 @@ local function IHDII_fake_script() -- ScrollingFrame.LocalScript
 		end
 	end
 end
-coroutine.wrap(IHDII_fake_script)()
+coroutine.wrap(INYP_fake_script)()
+local function FOQVC_fake_script() -- TextButton_2.LocalScript 
+	local script = Instance.new('LocalScript', TextButton_2)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		loadstring(game:HttpGet(("https://raw.githubusercontent.com/w1ndytannyhub/AUT/main/Check2"), true))()
+	end)
+end
+coroutine.wrap(FOQVC_fake_script)()
+local function AJQLSS_fake_script() -- Frame.LocalScript 
+	local script = Instance.new('LocalScript', Frame)
+
+	local Click = false
+	local Pos = nil
+	local FP = nil
+	local Frame = script.Parent
+	local Mouse = game.Players.LocalPlayer:GetMouse()
+	Frame.InputBegan:Connect(function(i)
+		if i.UserInputType == Enum.UserInputType.MouseButton1 then
+			Click = true
+			Pos = Vector2.new(i.Position.X,i.Position.Y)
+			FP = Vector2.new(Frame.Position.X.Scale,Frame.Position.Y.Scale)
+		end
+	end)
+	
+	Frame.InputEnded:Connect(function(i)
+		if i.UserInputType == Enum.UserInputType.MouseButton1 then
+			Click = false
+		end
+	end)
+	
+	game.Players.LocalPlayer:GetMouse().Move:Connect(function()
+		if Click == true then
+			local Nw = FP + ((Vector2.new(Mouse.X,Mouse.Y) - Pos ) / game.Workspace.Camera.ViewportSize)
+			Frame.Position = UDim2.new(Nw.X,0,Nw.Y,0)
+		end
+	end)
+	
+	
+end
+coroutine.wrap(AJQLSS_fake_script)()
