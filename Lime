@@ -1,3 +1,8 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
 local TannyHub = Instance.new("ScreenGui")
 local BG = Instance.new("Frame")
 local UICorner = Instance.new("UICorner")
@@ -657,7 +662,7 @@ UICorner_40.Parent = ImageLabel_2
 
 -- Scripts:
 
-local function FYMMPW_fake_script() -- Meteor.LocalScript 
+local function ZTJER_fake_script() -- Meteor.LocalScript 
 	local script = Instance.new('LocalScript', Meteor)
 
 	local On = false
@@ -681,6 +686,7 @@ local function FYMMPW_fake_script() -- Meteor.LocalScript
 				for _,v in pairs(game.Workspace.ItemSpawns.Meteors:GetChildren()) do
 					if v:FindFirstChild("Meteor") then
 						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Meteor.CFrame
+						fireproximityprompt(v.Meteor.ProximityPrompt, 2, true)
 						wait(5)
 					end
 				end
@@ -690,8 +696,8 @@ local function FYMMPW_fake_script() -- Meteor.LocalScript
 	
 	
 end
-coroutine.wrap(FYMMPW_fake_script)()
-local function WCYMU_fake_script() -- Chest.LocalScript 
+coroutine.wrap(ZTJER_fake_script)()
+local function DTTS_fake_script() -- Chest.LocalScript 
 	local script = Instance.new('LocalScript', Chest)
 
 	local On = false
@@ -725,8 +731,8 @@ local function WCYMU_fake_script() -- Chest.LocalScript
 		end
 	end)
 end
-coroutine.wrap(WCYMU_fake_script)()
-local function PTWEFJ_fake_script() -- Dargon.LocalScript 
+coroutine.wrap(DTTS_fake_script)()
+local function OFOBXKK_fake_script() -- Dargon.LocalScript 
 	local script = Instance.new('LocalScript', Dargon)
 
 	local On = false
@@ -747,8 +753,8 @@ local function PTWEFJ_fake_script() -- Dargon.LocalScript
 		end	
 	end)
 end
-coroutine.wrap(PTWEFJ_fake_script)()
-local function HCARWZD_fake_script() -- XS.LocalScript 
+coroutine.wrap(OFOBXKK_fake_script)()
+local function HYEOE_fake_script() -- XS.LocalScript 
 	local script = Instance.new('LocalScript', XS)
 
 	local On = false
@@ -769,8 +775,8 @@ local function HCARWZD_fake_script() -- XS.LocalScript
 		end	
 	end)
 end
-coroutine.wrap(HCARWZD_fake_script)()
-local function TSCNUJI_fake_script() -- My.LocalScript 
+coroutine.wrap(HYEOE_fake_script)()
+local function IKZMUJ_fake_script() -- My.LocalScript 
 	local script = Instance.new('LocalScript', My)
 
 	local On = false
@@ -791,8 +797,8 @@ local function TSCNUJI_fake_script() -- My.LocalScript
 		end	
 	end)
 end
-coroutine.wrap(TSCNUJI_fake_script)()
-local function DUTJJ_fake_script() -- Sand.LocalScript 
+coroutine.wrap(IKZMUJ_fake_script)()
+local function ONZJWW_fake_script() -- Sand.LocalScript 
 	local script = Instance.new('LocalScript', Sand)
 
 	local On = false
@@ -828,8 +834,8 @@ local function DUTJJ_fake_script() -- Sand.LocalScript
 		end
 	end)
 end
-coroutine.wrap(DUTJJ_fake_script)()
-local function ZBRUVA_fake_script() -- AutoFarm.LocalScript 
+coroutine.wrap(ONZJWW_fake_script)()
+local function TTPIMWQ_fake_script() -- AutoFarm.LocalScript 
 	local script = Instance.new('LocalScript', AutoFarm)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -837,8 +843,8 @@ local function ZBRUVA_fake_script() -- AutoFarm.LocalScript
 		script.Parent.Parent.Parent.SecOpItem.Visible = false
 	end)
 end
-coroutine.wrap(ZBRUVA_fake_script)()
-local function GTIQBJ_fake_script() -- ItemNoti.LocalScript 
+coroutine.wrap(TTPIMWQ_fake_script)()
+local function HYBGBD_fake_script() -- ItemNoti.LocalScript 
 	local script = Instance.new('LocalScript', ItemNoti)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -846,8 +852,8 @@ local function GTIQBJ_fake_script() -- ItemNoti.LocalScript
 		script.Parent.Parent.Parent.SecOpItem.Visible = true
 	end)
 end
-coroutine.wrap(GTIQBJ_fake_script)()
-local function PISK_fake_script() -- BG.LocalScript 
+coroutine.wrap(HYBGBD_fake_script)()
+local function INKHCB_fake_script() -- BG.LocalScript 
 	local script = Instance.new('LocalScript', BG)
 
 	local Click = false
@@ -878,8 +884,8 @@ local function PISK_fake_script() -- BG.LocalScript
 	
 	
 end
-coroutine.wrap(PISK_fake_script)()
-local function JSQP_fake_script() -- BG.LocalScript 
+coroutine.wrap(INKHCB_fake_script)()
+local function VEFTQT_fake_script() -- BG.LocalScript 
 	local script = Instance.new('LocalScript', BG)
 
 	game:GetService("UserInputService").InputBegan:Connect(function(i,c)
@@ -890,8 +896,8 @@ local function JSQP_fake_script() -- BG.LocalScript
 		end
 	end)
 end
-coroutine.wrap(JSQP_fake_script)()
-local function KBXSEA_fake_script() -- TextButton.LocalScript 
+coroutine.wrap(VEFTQT_fake_script)()
+local function ZOLXQ_fake_script() -- TextButton.LocalScript 
 	local script = Instance.new('LocalScript', TextButton)
 
 	local On = false
@@ -910,8 +916,8 @@ local function KBXSEA_fake_script() -- TextButton.LocalScript
 	
 	
 end
-coroutine.wrap(KBXSEA_fake_script)()
-local function MHPWM_fake_script() -- ScrollingFrame.LocalScript 
+coroutine.wrap(ZOLXQ_fake_script)()
+local function MGQWEY_fake_script() -- ScrollingFrame.LocalScript 
 	local script = Instance.new('LocalScript', ScrollingFrame)
 
 	for i,v in pairs(script.Parent:GetChildren()) do
@@ -922,16 +928,16 @@ local function MHPWM_fake_script() -- ScrollingFrame.LocalScript
 		end
 	end
 end
-coroutine.wrap(MHPWM_fake_script)()
-local function CWKGHU_fake_script() -- TextButton_2.LocalScript 
+coroutine.wrap(MGQWEY_fake_script)()
+local function TZWD_fake_script() -- TextButton_2.LocalScript 
 	local script = Instance.new('LocalScript', TextButton_2)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		loadstring(game:HttpGet(("https://raw.githubusercontent.com/w1ndytannyhub/AUT/main/Check2"), true))()
 	end)
 end
-coroutine.wrap(CWKGHU_fake_script)()
-local function BMGKQBQ_fake_script() -- Frame.LocalScript 
+coroutine.wrap(TZWD_fake_script)()
+local function MCQR_fake_script() -- Frame.LocalScript 
 	local script = Instance.new('LocalScript', Frame)
 
 	local Click = false
@@ -962,4 +968,4 @@ local function BMGKQBQ_fake_script() -- Frame.LocalScript
 	
 	
 end
-coroutine.wrap(BMGKQBQ_fake_script)()
+coroutine.wrap(MCQR_fake_script)()
