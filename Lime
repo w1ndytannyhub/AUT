@@ -1,8 +1,3 @@
--- Gui to Lua
--- Version: 3.2
-
--- Instances:
-
 local TannyHub = Instance.new("ScreenGui")
 local BG = Instance.new("Frame")
 local UICorner = Instance.new("UICorner")
@@ -20,30 +15,30 @@ local MeWh = Instance.new("TextLabel")
 local UICorner_6 = Instance.new("UICorner")
 local ChWh = Instance.new("TextLabel")
 local UICorner_7 = Instance.new("UICorner")
-local Sand = Instance.new("TextButton")
-local UICorner_8 = Instance.new("UICorner")
 local Meteor = Instance.new("TextButton")
-local UICorner_9 = Instance.new("UICorner")
+local UICorner_8 = Instance.new("UICorner")
 local Chest = Instance.new("TextButton")
+local UICorner_9 = Instance.new("UICorner")
 local UICorner_10 = Instance.new("UICorner")
-local UICorner_11 = Instance.new("UICorner")
 local TextLabel_5 = Instance.new("TextLabel")
-local UICorner_12 = Instance.new("UICorner")
+local UICorner_11 = Instance.new("UICorner")
 local DrWh = Instance.new("TextLabel")
-local UICorner_13 = Instance.new("UICorner")
+local UICorner_12 = Instance.new("UICorner")
 local Dargon = Instance.new("TextButton")
-local UICorner_14 = Instance.new("UICorner")
+local UICorner_13 = Instance.new("UICorner")
 local TextLabel_6 = Instance.new("TextLabel")
-local UICorner_15 = Instance.new("UICorner")
+local UICorner_14 = Instance.new("UICorner")
 local XSWh = Instance.new("TextLabel")
-local UICorner_16 = Instance.new("UICorner")
+local UICorner_15 = Instance.new("UICorner")
 local XS = Instance.new("TextButton")
-local UICorner_17 = Instance.new("UICorner")
+local UICorner_16 = Instance.new("UICorner")
 local TextLabel_7 = Instance.new("TextLabel")
-local UICorner_18 = Instance.new("UICorner")
+local UICorner_17 = Instance.new("UICorner")
 local MySh = Instance.new("TextLabel")
-local UICorner_19 = Instance.new("UICorner")
+local UICorner_18 = Instance.new("UICorner")
 local My = Instance.new("TextButton")
+local UICorner_19 = Instance.new("UICorner")
+local Sand = Instance.new("TextButton")
 local UICorner_20 = Instance.new("UICorner")
 local Titel = Instance.new("Frame")
 local UICorner_21 = Instance.new("UICorner")
@@ -98,7 +93,7 @@ local UICorner_40 = Instance.new("UICorner")
 --Properties:
 
 TannyHub.Name = "TannyHub"
-TannyHub.Parent = game.CoreGui
+TannyHub.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 TannyHub.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 TannyHub.ResetOnSpawn = false
 
@@ -108,6 +103,7 @@ BG.BackgroundColor3 = Color3.fromRGB(24, 24, 24)
 BG.BorderSizePixel = 0
 BG.Position = UDim2.new(0.00612277072, 0, 0.0153244287, 0)
 BG.Size = UDim2.new(0.381402642, 0, 0.651408434, 0)
+BG.Visible = false
 
 UICorner.Parent = BG
 
@@ -208,18 +204,6 @@ ChWh.TextSize = 14.000
 
 UICorner_7.Parent = ChWh
 
-Sand.Name = "Sand"
-Sand.Parent = SecOp
-Sand.BackgroundColor3 = Color3.fromRGB(49, 49, 49)
-Sand.Position = UDim2.new(0.788888872, 0, 0.398001671, 0)
-Sand.Size = UDim2.new(0.166666672, 0, 0.0735099316, 0)
-Sand.Font = Enum.Font.ArialBold
-Sand.Text = ""
-Sand.TextColor3 = Color3.fromRGB(0, 0, 0)
-Sand.TextSize = 14.000
-
-UICorner_8.Parent = Sand
-
 Meteor.Name = "Meteor"
 Meteor.Parent = SecOp
 Meteor.BackgroundColor3 = Color3.fromRGB(49, 49, 49)
@@ -230,7 +214,7 @@ Meteor.Text = ""
 Meteor.TextColor3 = Color3.fromRGB(0, 0, 0)
 Meteor.TextSize = 14.000
 
-UICorner_9.Parent = Meteor
+UICorner_8.Parent = Meteor
 
 Chest.Name = "Chest"
 Chest.Parent = SecOp
@@ -242,9 +226,9 @@ Chest.Text = ""
 Chest.TextColor3 = Color3.fromRGB(0, 0, 0)
 Chest.TextSize = 14.000
 
-UICorner_10.Parent = Chest
+UICorner_9.Parent = Chest
 
-UICorner_11.Parent = SecOp
+UICorner_10.Parent = SecOp
 
 TextLabel_5.Parent = SecOp
 TextLabel_5.BackgroundColor3 = Color3.fromRGB(21, 21, 21)
@@ -257,7 +241,7 @@ TextLabel_5.TextSize = 20.000
 TextLabel_5.TextWrapped = true
 TextLabel_5.TextXAlignment = Enum.TextXAlignment.Left
 
-UICorner_12.Parent = TextLabel_5
+UICorner_11.Parent = TextLabel_5
 
 DrWh.Name = "DrWh"
 DrWh.Parent = SecOp
@@ -270,7 +254,7 @@ DrWh.Text = ""
 DrWh.TextColor3 = Color3.fromRGB(0, 0, 0)
 DrWh.TextSize = 14.000
 
-UICorner_13.Parent = DrWh
+UICorner_12.Parent = DrWh
 
 Dargon.Name = "Dargon"
 Dargon.Parent = SecOp
@@ -282,7 +266,7 @@ Dargon.Text = ""
 Dargon.TextColor3 = Color3.fromRGB(0, 0, 0)
 Dargon.TextSize = 14.000
 
-UICorner_14.Parent = Dargon
+UICorner_13.Parent = Dargon
 
 TextLabel_6.Parent = SecOp
 TextLabel_6.BackgroundColor3 = Color3.fromRGB(21, 21, 21)
@@ -295,7 +279,7 @@ TextLabel_6.TextSize = 20.000
 TextLabel_6.TextWrapped = true
 TextLabel_6.TextXAlignment = Enum.TextXAlignment.Left
 
-UICorner_15.Parent = TextLabel_6
+UICorner_14.Parent = TextLabel_6
 
 XSWh.Name = "XSWh"
 XSWh.Parent = SecOp
@@ -308,7 +292,7 @@ XSWh.Text = ""
 XSWh.TextColor3 = Color3.fromRGB(0, 0, 0)
 XSWh.TextSize = 14.000
 
-UICorner_16.Parent = XSWh
+UICorner_15.Parent = XSWh
 
 XS.Name = "XS"
 XS.Parent = SecOp
@@ -320,7 +304,7 @@ XS.Text = ""
 XS.TextColor3 = Color3.fromRGB(0, 0, 0)
 XS.TextSize = 14.000
 
-UICorner_17.Parent = XS
+UICorner_16.Parent = XS
 
 TextLabel_7.Parent = SecOp
 TextLabel_7.BackgroundColor3 = Color3.fromRGB(21, 21, 21)
@@ -333,7 +317,7 @@ TextLabel_7.TextSize = 20.000
 TextLabel_7.TextWrapped = true
 TextLabel_7.TextXAlignment = Enum.TextXAlignment.Left
 
-UICorner_18.Parent = TextLabel_7
+UICorner_17.Parent = TextLabel_7
 
 MySh.Name = "MySh"
 MySh.Parent = SecOp
@@ -346,7 +330,7 @@ MySh.Text = ""
 MySh.TextColor3 = Color3.fromRGB(0, 0, 0)
 MySh.TextSize = 14.000
 
-UICorner_19.Parent = MySh
+UICorner_18.Parent = MySh
 
 My.Name = "My"
 My.Parent = SecOp
@@ -358,7 +342,19 @@ My.Text = ""
 My.TextColor3 = Color3.fromRGB(0, 0, 0)
 My.TextSize = 14.000
 
-UICorner_20.Parent = My
+UICorner_19.Parent = My
+
+Sand.Name = "Sand"
+Sand.Parent = SecOp
+Sand.BackgroundColor3 = Color3.fromRGB(49, 49, 49)
+Sand.Position = UDim2.new(0.788888872, 0, 0.398001671, 0)
+Sand.Size = UDim2.new(0.166666672, 0, 0.0735099316, 0)
+Sand.Font = Enum.Font.ArialBold
+Sand.Text = ""
+Sand.TextColor3 = Color3.fromRGB(0, 0, 0)
+Sand.TextSize = 14.000
+
+UICorner_20.Parent = Sand
 
 Titel.Name = "Titel"
 Titel.Parent = BG
@@ -661,7 +657,142 @@ UICorner_40.Parent = ImageLabel_2
 
 -- Scripts:
 
-local function HJNFG_fake_script() -- Sand.LocalScript 
+local function FYMMPW_fake_script() -- Meteor.LocalScript 
+	local script = Instance.new('LocalScript', Meteor)
+
+	local On = false
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		if _G.Login == false then
+			game.Players.LocalPlayer:Kick("L O G I N")	
+		end
+		if On == false then
+			script.Parent.Parent.MeWh:TweenPosition(UDim2.new(0.867, 0,0.129, 0),"Out",Enum.EasingStyle.Quad,.2,true)
+			On = true
+		elseif On == true then
+			script.Parent.Parent.MeWh:TweenPosition(UDim2.new(0.789, 0,0.129, 0),"Out",Enum.EasingStyle.Quad,.2,true)
+			On = false
+		end	
+	end)
+	
+	spawn(function()
+		while wait() do
+			if On == true then
+				for _,v in pairs(game.Workspace.ItemSpawns.Meteors:GetChildren()) do
+					if v:FindFirstChild("Meteor") then
+						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Meteor.CFrame
+						wait(5)
+					end
+				end
+			end	
+		end
+	end)
+	
+	
+end
+coroutine.wrap(FYMMPW_fake_script)()
+local function WCYMU_fake_script() -- Chest.LocalScript 
+	local script = Instance.new('LocalScript', Chest)
+
+	local On = false
+	local Position = nil
+	script.Parent.MouseButton1Click:Connect(function()
+		if _G.Login == false then
+			game.Players.LocalPlayer:Kick("L O G I N")	
+		end
+		if On == false then
+			script.Parent.Parent.ChWh:TweenPosition(UDim2.new(0.865, 0,0.263, 0),"Out",Enum.EasingStyle.Quad,.2,true)
+			Position = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+			On = true
+		elseif On == true then
+			script.Parent.Parent.ChWh:TweenPosition(UDim2.new(0.789, 0,0.263, 0),"Out",Enum.EasingStyle.Quad,.2,true)
+			On = false
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = Position
+		end	
+	end)
+	
+	spawn(function()
+		while wait() do
+			if On == true then
+				for _,v in pairs(game.Workspace.ItemSpawns.Chests:GetChildren()) do
+					if v:FindFirstChild("Chest") then
+						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Chest.RootPart.CFrame
+						fireproximityprompt(v.Chest.RootPart.ProximityPrompt, 2, true)
+						wait(5)
+					end
+				end
+			end	
+		end
+	end)
+end
+coroutine.wrap(WCYMU_fake_script)()
+local function PTWEFJ_fake_script() -- Dargon.LocalScript 
+	local script = Instance.new('LocalScript', Dargon)
+
+	local On = false
+	local Position = nil
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		if _G.Login == false then
+			game.Players.LocalPlayer:Kick("L O G I N")	
+		end
+		if On == false then
+			script.Parent.Parent.DrWh:TweenPosition(UDim2.new(0.865, 0,0.564, 0),"Out",Enum.EasingStyle.Quad,.2,true)
+			Position = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+			On = true
+		elseif On == true then
+			script.Parent.Parent.DrWh:TweenPosition(UDim2.new(0.789, 0,0.564, 0),"Out",Enum.EasingStyle.Quad,.2,true)
+			On = false
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = Position
+		end	
+	end)
+end
+coroutine.wrap(PTWEFJ_fake_script)()
+local function HCARWZD_fake_script() -- XS.LocalScript 
+	local script = Instance.new('LocalScript', XS)
+
+	local On = false
+	local Position = nil
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		if _G.Login == false then
+			game.Players.LocalPlayer:Kick("L O G I N")	
+		end
+		if On == false then
+			script.Parent.Parent.XSWh:TweenPosition(UDim2.new(0.862, 0,0.699, 0),"Out",Enum.EasingStyle.Quad,.2,true)
+			Position = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+			On = true
+		elseif On == true then
+			script.Parent.Parent.XSWh:TweenPosition(UDim2.new(0.789, 0,0.699, 0),"Out",Enum.EasingStyle.Quad,.2,true)
+			On = false
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = Position
+		end	
+	end)
+end
+coroutine.wrap(HCARWZD_fake_script)()
+local function TSCNUJI_fake_script() -- My.LocalScript 
+	local script = Instance.new('LocalScript', My)
+
+	local On = false
+	local Position = nil
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		if _G.Login == false then
+			game.Players.LocalPlayer:Kick("L O G I N")	
+		end
+		if On == false then
+			script.Parent.Parent.MySh:TweenPosition(UDim2.new(0.862, 0,0.827, 0),"Out",Enum.EasingStyle.Quad,.2,true)
+			Position = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+			On = true
+		elseif On == true then
+			script.Parent.Parent.MySh:TweenPosition(UDim2.new(0.786, 0,0.827, 0),"Out",Enum.EasingStyle.Quad,.2,true)
+			On = false
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = Position
+		end	
+	end)
+end
+coroutine.wrap(TSCNUJI_fake_script)()
+local function DUTJJ_fake_script() -- Sand.LocalScript 
 	local script = Instance.new('LocalScript', Sand)
 
 	local On = false
@@ -697,142 +828,8 @@ local function HJNFG_fake_script() -- Sand.LocalScript
 		end
 	end)
 end
-coroutine.wrap(HJNFG_fake_script)()
-local function XUBF_fake_script() -- Meteor.LocalScript 
-	local script = Instance.new('LocalScript', Meteor)
-
-	local On = false
-	
-	script.Parent.MouseButton1Click:Connect(function()
-		if _G.Login == false then
-			game.Players.LocalPlayer:Kick("L O G I N")	
-		end
-		if On == false then
-			script.Parent.Parent.MeWh:TweenPosition(UDim2.new(0.867, 0,0.129, 0),"Out",Enum.EasingStyle.Quad,.2,true)
-			On = true
-		elseif On == true then
-			script.Parent.Parent.MeWh:TweenPosition(UDim2.new(0.789, 0,0.129, 0),"Out",Enum.EasingStyle.Quad,.2,true)
-			On = false
-		end	
-	end)
-	
-	spawn(function()
-		while wait() do
-			if On == true then
-				for _,v in pairs(game.Workspace.ItemSpawns.Meteors:GetChildren()) do
-					if v:FindFirstChild("Meteor") then
-						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Meteor.CFrame
-						wait(5)
-					end
-				end
-			end	
-		end
-	end)
-	
-	
-end
-coroutine.wrap(XUBF_fake_script)()
-local function NEJKRTK_fake_script() -- Chest.LocalScript 
-	local script = Instance.new('LocalScript', Chest)
-
-	local On = false
-	local Position = nil
-	script.Parent.MouseButton1Click:Connect(function()
-		if _G.Login == false then
-			game.Players.LocalPlayer:Kick("L O G I N")	
-		end
-		if On == false then
-			script.Parent.Parent.ChWh:TweenPosition(UDim2.new(0.865, 0,0.263, 0),"Out",Enum.EasingStyle.Quad,.2,true)
-			Position = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
-			On = true
-		elseif On == true then
-			script.Parent.Parent.ChWh:TweenPosition(UDim2.new(0.789, 0,0.263, 0),"Out",Enum.EasingStyle.Quad,.2,true)
-			On = false
-			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = Position
-		end	
-	end)
-	
-	spawn(function()
-		while wait() do
-			if On == true then
-				for _,v in pairs(game.Workspace.ItemSpawns.Chests:GetChildren()) do
-					if v:FindFirstChild("Chest") then
-						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Chest.RootPart.CFrame
-						wait(5)
-					end
-				end
-			end	
-		end
-	end)
-end
-coroutine.wrap(NEJKRTK_fake_script)()
-local function RIZLMR_fake_script() -- Dargon.LocalScript 
-	local script = Instance.new('LocalScript', Dargon)
-
-	local On = false
-	local Position = nil
-	
-	script.Parent.MouseButton1Click:Connect(function()
-		if _G.Login == false then
-			game.Players.LocalPlayer:Kick("L O G I N")	
-		end
-		if On == false then
-			script.Parent.Parent.DrWh:TweenPosition(UDim2.new(0.865, 0,0.564, 0),"Out",Enum.EasingStyle.Quad,.2,true)
-			Position = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
-			On = true
-		elseif On == true then
-			script.Parent.Parent.DrWh:TweenPosition(UDim2.new(0.789, 0,0.564, 0),"Out",Enum.EasingStyle.Quad,.2,true)
-			On = false
-			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = Position
-		end	
-	end)
-end
-coroutine.wrap(RIZLMR_fake_script)()
-local function MNXAETC_fake_script() -- XS.LocalScript 
-	local script = Instance.new('LocalScript', XS)
-
-	local On = false
-	local Position = nil
-	
-	script.Parent.MouseButton1Click:Connect(function()
-		if _G.Login == false then
-			game.Players.LocalPlayer:Kick("L O G I N")	
-		end
-		if On == false then
-			script.Parent.Parent.XSWh:TweenPosition(UDim2.new(0.862, 0,0.699, 0),"Out",Enum.EasingStyle.Quad,.2,true)
-			Position = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
-			On = true
-		elseif On == true then
-			script.Parent.Parent.XSWh:TweenPosition(UDim2.new(0.789, 0,0.699, 0),"Out",Enum.EasingStyle.Quad,.2,true)
-			On = false
-			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = Position
-		end	
-	end)
-end
-coroutine.wrap(MNXAETC_fake_script)()
-local function TTYGOE_fake_script() -- My.LocalScript 
-	local script = Instance.new('LocalScript', My)
-
-	local On = false
-	local Position = nil
-	
-	script.Parent.MouseButton1Click:Connect(function()
-		if _G.Login == false then
-			game.Players.LocalPlayer:Kick("L O G I N")	
-		end
-		if On == false then
-			script.Parent.Parent.MySh:TweenPosition(UDim2.new(0.862, 0,0.827, 0),"Out",Enum.EasingStyle.Quad,.2,true)
-			Position = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
-			On = true
-		elseif On == true then
-			script.Parent.Parent.MySh:TweenPosition(UDim2.new(0.786, 0,0.827, 0),"Out",Enum.EasingStyle.Quad,.2,true)
-			On = false
-			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = Position
-		end	
-	end)
-end
-coroutine.wrap(TTYGOE_fake_script)()
-local function TDZW_fake_script() -- AutoFarm.LocalScript 
+coroutine.wrap(DUTJJ_fake_script)()
+local function ZBRUVA_fake_script() -- AutoFarm.LocalScript 
 	local script = Instance.new('LocalScript', AutoFarm)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -840,8 +837,8 @@ local function TDZW_fake_script() -- AutoFarm.LocalScript
 		script.Parent.Parent.Parent.SecOpItem.Visible = false
 	end)
 end
-coroutine.wrap(TDZW_fake_script)()
-local function HFVUB_fake_script() -- ItemNoti.LocalScript 
+coroutine.wrap(ZBRUVA_fake_script)()
+local function GTIQBJ_fake_script() -- ItemNoti.LocalScript 
 	local script = Instance.new('LocalScript', ItemNoti)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -849,8 +846,8 @@ local function HFVUB_fake_script() -- ItemNoti.LocalScript
 		script.Parent.Parent.Parent.SecOpItem.Visible = true
 	end)
 end
-coroutine.wrap(HFVUB_fake_script)()
-local function ZPMGHJJ_fake_script() -- BG.LocalScript 
+coroutine.wrap(GTIQBJ_fake_script)()
+local function PISK_fake_script() -- BG.LocalScript 
 	local script = Instance.new('LocalScript', BG)
 
 	local Click = false
@@ -881,8 +878,8 @@ local function ZPMGHJJ_fake_script() -- BG.LocalScript
 	
 	
 end
-coroutine.wrap(ZPMGHJJ_fake_script)()
-local function QHAF_fake_script() -- BG.LocalScript 
+coroutine.wrap(PISK_fake_script)()
+local function JSQP_fake_script() -- BG.LocalScript 
 	local script = Instance.new('LocalScript', BG)
 
 	game:GetService("UserInputService").InputBegan:Connect(function(i,c)
@@ -893,8 +890,8 @@ local function QHAF_fake_script() -- BG.LocalScript
 		end
 	end)
 end
-coroutine.wrap(QHAF_fake_script)()
-local function OSHR_fake_script() -- TextButton.LocalScript 
+coroutine.wrap(JSQP_fake_script)()
+local function KBXSEA_fake_script() -- TextButton.LocalScript 
 	local script = Instance.new('LocalScript', TextButton)
 
 	local On = false
@@ -913,8 +910,8 @@ local function OSHR_fake_script() -- TextButton.LocalScript
 	
 	
 end
-coroutine.wrap(OSHR_fake_script)()
-local function INYP_fake_script() -- ScrollingFrame.LocalScript 
+coroutine.wrap(KBXSEA_fake_script)()
+local function MHPWM_fake_script() -- ScrollingFrame.LocalScript 
 	local script = Instance.new('LocalScript', ScrollingFrame)
 
 	for i,v in pairs(script.Parent:GetChildren()) do
@@ -925,16 +922,16 @@ local function INYP_fake_script() -- ScrollingFrame.LocalScript
 		end
 	end
 end
-coroutine.wrap(INYP_fake_script)()
-local function FOQVC_fake_script() -- TextButton_2.LocalScript 
+coroutine.wrap(MHPWM_fake_script)()
+local function CWKGHU_fake_script() -- TextButton_2.LocalScript 
 	local script = Instance.new('LocalScript', TextButton_2)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		loadstring(game:HttpGet(("https://raw.githubusercontent.com/w1ndytannyhub/AUT/main/Check2"), true))()
 	end)
 end
-coroutine.wrap(FOQVC_fake_script)()
-local function AJQLSS_fake_script() -- Frame.LocalScript 
+coroutine.wrap(CWKGHU_fake_script)()
+local function BMGKQBQ_fake_script() -- Frame.LocalScript 
 	local script = Instance.new('LocalScript', Frame)
 
 	local Click = false
@@ -965,4 +962,4 @@ local function AJQLSS_fake_script() -- Frame.LocalScript
 	
 	
 end
-coroutine.wrap(AJQLSS_fake_script)()
+coroutine.wrap(BMGKQBQ_fake_script)()
