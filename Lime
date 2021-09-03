@@ -1,7 +1,6 @@
 -- Gui to Lua
 -- Version: 3.2
 
--- Instances:
 _G.Login = false
 local function fireproximityprompt(Obj, Amount, Skip)
 	if Obj.ClassName == "ProximityPrompt" then 
@@ -22,10 +21,8 @@ local function fireproximityprompt(Obj, Amount, Skip)
 		error("userdata<ProximityPrompt> expected")
 	end
 end
+-- Instances:
 
-
-
-local TannyHub = Instance.new("ScreenGui")
 local BG = Instance.new("Frame")
 local UICorner = Instance.new("UICorner")
 local SecOp = Instance.new("Frame")
@@ -104,28 +101,11 @@ local UIAspectRatioConstraint_4 = Instance.new("UIAspectRatioConstraint")
 local UICorner_34 = Instance.new("UICorner")
 local ImageLabel = Instance.new("ImageLabel")
 local UICorner_35 = Instance.new("UICorner")
-local Frame = Instance.new("Frame")
-local TextLabel_13 = Instance.new("TextLabel")
-local TextBox = Instance.new("TextBox")
-local UICorner_36 = Instance.new("UICorner")
-local TextButton_2 = Instance.new("TextButton")
-local UICorner_37 = Instance.new("UICorner")
-local UICorner_38 = Instance.new("UICorner")
-local TextLabel_14 = Instance.new("TextLabel")
-local TextLabel_15 = Instance.new("TextLabel")
-local UICorner_39 = Instance.new("UICorner")
-local ImageLabel_2 = Instance.new("ImageLabel")
-local UICorner_40 = Instance.new("UICorner")
 
 --Properties:
 
-TannyHub.Name = "TannyHub"
-TannyHub.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-TannyHub.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-TannyHub.ResetOnSpawn = false
-
 BG.Name = "BG"
-BG.Parent = TannyHub
+BG.Parent = game.StarterGui.TannyHub
 BG.BackgroundColor3 = Color3.fromRGB(24, 24, 24)
 BG.BorderSizePixel = 0
 BG.Position = UDim2.new(0.00612277072, 0, 0.0153244287, 0)
@@ -601,90 +581,9 @@ ImageLabel.ImageTransparency = 0.950
 
 UICorner_35.Parent = ImageLabel
 
-Frame.Parent = TannyHub
-Frame.BackgroundColor3 = Color3.fromRGB(24, 24, 24)
-Frame.Position = UDim2.new(0.371810347, 0, 0.334312499, 0)
-Frame.Size = UDim2.new(0.256118804, 0, 0.466382295, 0)
-
-TextLabel_13.Parent = Frame
-TextLabel_13.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_13.BackgroundTransparency = 1.000
-TextLabel_13.Position = UDim2.new(0, 0, 0.053057909, 0)
-TextLabel_13.Size = UDim2.new(1.00000024, 0, 0.174733087, 0)
-TextLabel_13.Font = Enum.Font.ArialBold
-TextLabel_13.Text = "Swa Hub"
-TextLabel_13.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_13.TextSize = 30.000
-TextLabel_13.TextWrapped = true
-
-TextBox.Parent = Frame
-TextBox.BackgroundColor3 = Color3.fromRGB(34, 34, 34)
-TextBox.BackgroundTransparency = 0.200
-TextBox.Position = UDim2.new(0.179940999, 0, 0.426838189, 0)
-TextBox.Size = UDim2.new(0.639822662, 0, 0.142704606, 0)
-TextBox.ClearTextOnFocus = false
-TextBox.Font = Enum.Font.ArialBold
-TextBox.Text = ""
-TextBox.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextBox.TextScaled = true
-TextBox.TextSize = 14.000
-TextBox.TextWrapped = true
-
-UICorner_36.Parent = TextBox
-
-TextButton_2.Parent = Frame
-TextButton_2.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
-TextButton_2.BackgroundTransparency = 0.200
-TextButton_2.Position = UDim2.new(0.256637156, 0, 0.759664536, 0)
-TextButton_2.Size = UDim2.new(0.486430436, 0, 0.164056927, 0)
-TextButton_2.Font = Enum.Font.ArialBold
-TextButton_2.Text = "Submit"
-TextButton_2.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextButton_2.TextScaled = true
-TextButton_2.TextSize = 14.000
-TextButton_2.TextWrapped = true
-
-UICorner_37.Parent = TextButton_2
-
-UICorner_38.Parent = Frame
-
-TextLabel_14.Parent = Frame
-TextLabel_14.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_14.BackgroundTransparency = 1.000
-TextLabel_14.Position = UDim2.new(0.29481405, 0, 0.243040413, 0)
-TextLabel_14.Size = UDim2.new(0.404130101, 0, 0.0964412093, 0)
-TextLabel_14.Font = Enum.Font.ArialBold
-TextLabel_14.Text = "Login"
-TextLabel_14.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_14.TextSize = 30.000
-TextLabel_14.TextWrapped = true
-
-TextLabel_15.Parent = Frame
-TextLabel_15.BackgroundColor3 = Color3.fromRGB(255, 179, 0)
-TextLabel_15.Position = UDim2.new(0.514169753, 0, 0.0700579286, 0)
-TextLabel_15.Size = UDim2.new(0.184774429, 0, 0.129407749, 0)
-TextLabel_15.ZIndex = 0
-TextLabel_15.Font = Enum.Font.ArialBold
-TextLabel_15.Text = ""
-TextLabel_15.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_15.TextSize = 30.000
-TextLabel_15.TextWrapped = true
-
-UICorner_39.Parent = TextLabel_15
-
-ImageLabel_2.Parent = Frame
-ImageLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-ImageLabel_2.BackgroundTransparency = 1.000
-ImageLabel_2.Size = UDim2.new(1, 0, 1, 0)
-ImageLabel_2.ZIndex = -1
-ImageLabel_2.Image = "rbxassetid://7388244591"
-ImageLabel_2.ImageTransparency = 0.900
-
-UICorner_40.Parent = ImageLabel_2
-
 -- Scripts:
 
-local function IIYTLUD_fake_script() -- Meteor.LocalScript 
+local function UTTM_fake_script() -- Meteor.LocalScript 
 	local script = Instance.new('LocalScript', Meteor)
 
 	local On = false
@@ -708,9 +607,8 @@ local function IIYTLUD_fake_script() -- Meteor.LocalScript
 				for _,v in pairs(game.Workspace.ItemSpawns.Meteors:GetChildren()) do
 					if v:FindFirstChild("Meteor") then
 						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Meteor.CFrame
-						wait(.1)
-						fireproximityprompt(v.Meteor.ProximityAttachment.Interaction, 1, true)
-						wait(5)
+						fireproximityprompt(v.Meteor.ProximityPrompt, 1, true)
+						wait(.5)
 					end
 				end
 			end	
@@ -719,8 +617,8 @@ local function IIYTLUD_fake_script() -- Meteor.LocalScript
 	
 	
 end
-coroutine.wrap(IIYTLUD_fake_script)()
-local function JSJN_fake_script() -- Chest.LocalScript 
+coroutine.wrap(UTTM_fake_script)()
+local function AFVHF_fake_script() -- Chest.LocalScript 
 	local script = Instance.new('LocalScript', Chest)
 
 	local On = false
@@ -746,17 +644,16 @@ local function JSJN_fake_script() -- Chest.LocalScript
 				for _,v in pairs(game.Workspace.ItemSpawns.Chests:GetChildren()) do
 					if v:FindFirstChild("Chest") then
 						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Chest.RootPart.CFrame
-						wait(.2)
-						fireproximityprompt(v.Chest.RootPart.ProximityAttachment.Interaction, 1, true) 
-						wait(5)
+						fireproximityprompt(v.Chest.RootPart.ProximityPrompt, 1, true)
+						wait(.5)
 					end
 				end
 			end	
 		end
 	end)
 end
-coroutine.wrap(JSJN_fake_script)()
-local function LFKLL_fake_script() -- Dargon.LocalScript 
+coroutine.wrap(AFVHF_fake_script)()
+local function IMSDQ_fake_script() -- Dargon.LocalScript 
 	local script = Instance.new('LocalScript', Dargon)
 
 	local On = false
@@ -776,9 +673,22 @@ local function LFKLL_fake_script() -- Dargon.LocalScript
 			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = Position
 		end	
 	end)
+	
+	while wait() do
+		if On == true then
+			for _,v in pairs(game.Workspace.ItemSpawns["StandardItems"]:GetChildren()) do
+				if v:FindFirstChild("Dragon Ball") then
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v["Dragon Ball"].CFrame
+					wait(.2)
+					fireproximityprompt(v["Dragon Ball"].ProximityAttachment.Interaction, 1, true) 
+					wait(.5)
+				end
+			end
+		end
+	end
 end
-coroutine.wrap(LFKLL_fake_script)()
-local function PDXS_fake_script() -- XS.LocalScript 
+coroutine.wrap(IMSDQ_fake_script)()
+local function NEDQHY_fake_script() -- XS.LocalScript 
 	local script = Instance.new('LocalScript', XS)
 
 	local On = false
@@ -798,9 +708,22 @@ local function PDXS_fake_script() -- XS.LocalScript
 			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = Position
 		end	
 	end)
+	
+	while wait() do
+		if On == true then
+			for _,v in pairs(game.Workspace.ItemSpawns["StandardItems"]:GetChildren()) do
+				if v:FindFirstChild("XSoul") then
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v["XSoul"].CFrame
+					wait(.2)
+					fireproximityprompt(v["XSoul"].ProximityAttachment.Interaction, 1, true) 
+					wait(.1)
+				end
+			end
+		end
+	end
 end
-coroutine.wrap(PDXS_fake_script)()
-local function QBXOW_fake_script() -- My.LocalScript 
+coroutine.wrap(NEDQHY_fake_script)()
+local function ZIWCI_fake_script() -- My.LocalScript 
 	local script = Instance.new('LocalScript', My)
 
 	local On = false
@@ -820,9 +743,23 @@ local function QBXOW_fake_script() -- My.LocalScript
 			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = Position
 		end	
 	end)
+	
+	
+	while wait() do
+		if On == true then
+			for _,v in pairs(game.Workspace.ItemSpawns["StandardItems"]:GetChildren()) do
+				if v:FindFirstChild("Mysterious Hat") then
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v["Mysterious Hat"].CFrame
+					wait(.2)
+					fireproximityprompt(v["Mysterious Hat"].ProximityAttachment.Interaction, 1, true) 
+					wait(.5)
+				end
+			end
+		end
+	end
 end
-coroutine.wrap(QBXOW_fake_script)()
-local function GNKLP_fake_script() -- Sand.LocalScript 
+coroutine.wrap(ZIWCI_fake_script)()
+local function IOMZSSP_fake_script() -- Sand.LocalScript 
 	local script = Instance.new('LocalScript', Sand)
 
 	local On = false
@@ -850,19 +787,17 @@ local function GNKLP_fake_script() -- Sand.LocalScript
 				for _,v in pairs(game.Workspace.ItemSpawns["Sand Debris"]:GetChildren()) do
 					if v:FindFirstChild("SandDebris") then
 						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.SandDebris.CFrame
-						wait(.2)
 						fireproximityprompt(v.SandDebris.ProximityAttachment.Interaction, 1, true) 
-						wait(5)
+						wait(.1)
 						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = Position
-						wait(5)
 					end
 				end
 			end	
 		end
 	end)
 end
-coroutine.wrap(GNKLP_fake_script)()
-local function VHZKHDS_fake_script() -- AutoFarm.LocalScript 
+coroutine.wrap(IOMZSSP_fake_script)()
+local function DMPOE_fake_script() -- AutoFarm.LocalScript 
 	local script = Instance.new('LocalScript', AutoFarm)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -870,8 +805,8 @@ local function VHZKHDS_fake_script() -- AutoFarm.LocalScript
 		script.Parent.Parent.Parent.SecOpItem.Visible = false
 	end)
 end
-coroutine.wrap(VHZKHDS_fake_script)()
-local function NFQKHTP_fake_script() -- ItemNoti.LocalScript 
+coroutine.wrap(DMPOE_fake_script)()
+local function HZJSK_fake_script() -- ItemNoti.LocalScript 
 	local script = Instance.new('LocalScript', ItemNoti)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -879,8 +814,8 @@ local function NFQKHTP_fake_script() -- ItemNoti.LocalScript
 		script.Parent.Parent.Parent.SecOpItem.Visible = true
 	end)
 end
-coroutine.wrap(NFQKHTP_fake_script)()
-local function RNOC_fake_script() -- BG.LocalScript 
+coroutine.wrap(HZJSK_fake_script)()
+local function YPAL_fake_script() -- BG.LocalScript 
 	local script = Instance.new('LocalScript', BG)
 
 	local Click = false
@@ -911,8 +846,8 @@ local function RNOC_fake_script() -- BG.LocalScript
 	
 	
 end
-coroutine.wrap(RNOC_fake_script)()
-local function MKLGBDD_fake_script() -- BG.LocalScript 
+coroutine.wrap(YPAL_fake_script)()
+local function JUTW_fake_script() -- BG.LocalScript 
 	local script = Instance.new('LocalScript', BG)
 
 	game:GetService("UserInputService").InputBegan:Connect(function(i,c)
@@ -923,8 +858,8 @@ local function MKLGBDD_fake_script() -- BG.LocalScript
 		end
 	end)
 end
-coroutine.wrap(MKLGBDD_fake_script)()
-local function MOORL_fake_script() -- TextButton.LocalScript 
+coroutine.wrap(JUTW_fake_script)()
+local function WLCA_fake_script() -- TextButton.LocalScript 
 	local script = Instance.new('LocalScript', TextButton)
 
 	local On = false
@@ -943,8 +878,8 @@ local function MOORL_fake_script() -- TextButton.LocalScript
 	
 	
 end
-coroutine.wrap(MOORL_fake_script)()
-local function DHBPH_fake_script() -- ScrollingFrame.LocalScript 
+coroutine.wrap(WLCA_fake_script)()
+local function RFRTQHF_fake_script() -- ScrollingFrame.LocalScript 
 	local script = Instance.new('LocalScript', ScrollingFrame)
 
 	for i,v in pairs(script.Parent:GetChildren()) do
@@ -955,44 +890,4 @@ local function DHBPH_fake_script() -- ScrollingFrame.LocalScript
 		end
 	end
 end
-coroutine.wrap(DHBPH_fake_script)()
-local function QPHOBZ_fake_script() -- TextButton_2.LocalScript 
-	local script = Instance.new('LocalScript', TextButton_2)
-
-	script.Parent.MouseButton1Click:Connect(function()
-		loadstring(game:HttpGet(("https://raw.githubusercontent.com/w1ndytannyhub/AUT/main/Check"), true))()
-	end)
-end
-coroutine.wrap(QPHOBZ_fake_script)()
-local function MFYTVJ_fake_script() -- Frame.LocalScript 
-	local script = Instance.new('LocalScript', Frame)
-
-	local Click = false
-	local Pos = nil
-	local FP = nil
-	local Frame = script.Parent
-	local Mouse = game.Players.LocalPlayer:GetMouse()
-	Frame.InputBegan:Connect(function(i)
-		if i.UserInputType == Enum.UserInputType.MouseButton1 then
-			Click = true
-			Pos = Vector2.new(i.Position.X,i.Position.Y)
-			FP = Vector2.new(Frame.Position.X.Scale,Frame.Position.Y.Scale)
-		end
-	end)
-	
-	Frame.InputEnded:Connect(function(i)
-		if i.UserInputType == Enum.UserInputType.MouseButton1 then
-			Click = false
-		end
-	end)
-	
-	game.Players.LocalPlayer:GetMouse().Move:Connect(function()
-		if Click == true then
-			local Nw = FP + ((Vector2.new(Mouse.X,Mouse.Y) - Pos ) / game.Workspace.Camera.ViewportSize)
-			Frame.Position = UDim2.new(Nw.X,0,Nw.Y,0)
-		end
-	end)
-	
-	
-end
-coroutine.wrap(MFYTVJ_fake_script)()
+coroutine.wrap(RFRTQHF_fake_script)()
