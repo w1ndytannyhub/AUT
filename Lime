@@ -583,11 +583,11 @@ UICorner_35.Parent = ImageLabel
 
 -- Scripts:
 
-local function UTTM_fake_script() -- Meteor.LocalScript 
-	local script = Instance.new('LocalScript', Meteor)
+spawn(function()
+local script = Instance.new('LocalScript', Meteor)
 
 	local On = false
-	
+
 	script.Parent.MouseButton1Click:Connect(function()
 		if _G.Login == false then
 			game.Players.LocalPlayer:Kick("L O G I N")	
@@ -600,7 +600,7 @@ local function UTTM_fake_script() -- Meteor.LocalScript
 			On = false
 		end	
 	end)
-	
+
 	spawn(function()
 		while wait() do
 			if On == true then
@@ -614,12 +614,11 @@ local function UTTM_fake_script() -- Meteor.LocalScript
 			end	
 		end
 	end)
-	
-	
-end
-coroutine.wrap(UTTM_fake_script)()
-local function AFVHF_fake_script() -- Chest.LocalScript 
-	local script = Instance.new('LocalScript', Chest)
+
+
+end)
+spawn(function()
+local script = Instance.new('LocalScript', Chest)
 
 	local On = false
 	local Position = nil
@@ -637,7 +636,7 @@ local function AFVHF_fake_script() -- Chest.LocalScript
 			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = Position
 		end	
 	end)
-	
+
 	spawn(function()
 		while wait() do
 			if On == true then
@@ -651,14 +650,13 @@ local function AFVHF_fake_script() -- Chest.LocalScript
 			end	
 		end
 	end)
-end
-coroutine.wrap(AFVHF_fake_script)()
-local function IMSDQ_fake_script() -- Dargon.LocalScript 
+end)
+spawn(function()
 	local script = Instance.new('LocalScript', Dargon)
 
 	local On = false
 	local Position = nil
-	
+
 	script.Parent.MouseButton1Click:Connect(function()
 		if _G.Login == false then
 			game.Players.LocalPlayer:Kick("L O G I N")	
@@ -673,7 +671,7 @@ local function IMSDQ_fake_script() -- Dargon.LocalScript
 			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = Position
 		end	
 	end)
-	
+
 	while wait() do
 		if On == true then
 			for _,v in pairs(game.Workspace.ItemSpawns["StandardItems"]:GetChildren()) do
@@ -686,14 +684,14 @@ local function IMSDQ_fake_script() -- Dargon.LocalScript
 			end
 		end
 	end
-end
-coroutine.wrap(IMSDQ_fake_script)()
-local function NEDQHY_fake_script() -- XS.LocalScript 
+end)
+
+spawn(function()
 	local script = Instance.new('LocalScript', XS)
 
 	local On = false
 	local Position = nil
-	
+
 	script.Parent.MouseButton1Click:Connect(function()
 		if _G.Login == false then
 			game.Players.LocalPlayer:Kick("L O G I N")	
@@ -708,7 +706,7 @@ local function NEDQHY_fake_script() -- XS.LocalScript
 			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = Position
 		end	
 	end)
-	
+
 	while wait() do
 		if On == true then
 			for _,v in pairs(game.Workspace.ItemSpawns["StandardItems"]:GetChildren()) do
@@ -721,14 +719,14 @@ local function NEDQHY_fake_script() -- XS.LocalScript
 			end
 		end
 	end
-end
-coroutine.wrap(NEDQHY_fake_script)()
-local function ZIWCI_fake_script() -- My.LocalScript 
+end)
+
+spawn(function()
 	local script = Instance.new('LocalScript', My)
 
 	local On = false
 	local Position = nil
-	
+
 	script.Parent.MouseButton1Click:Connect(function()
 		if _G.Login == false then
 			game.Players.LocalPlayer:Kick("L O G I N")	
@@ -743,8 +741,8 @@ local function ZIWCI_fake_script() -- My.LocalScript
 			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = Position
 		end	
 	end)
-	
-	
+
+
 	while wait() do
 		if On == true then
 			for _,v in pairs(game.Workspace.ItemSpawns["StandardItems"]:GetChildren()) do
@@ -757,14 +755,15 @@ local function ZIWCI_fake_script() -- My.LocalScript
 			end
 		end
 	end
-end
-coroutine.wrap(ZIWCI_fake_script)()
-local function IOMZSSP_fake_script() -- Sand.LocalScript 
+end)
+
+
+spawn(function()
 	local script = Instance.new('LocalScript', Sand)
 
 	local On = false
 	local Position = nil
-	
+
 	script.Parent.MouseButton1Click:Connect(function()
 		if _G.Login == false then
 			game.Players.LocalPlayer:Kick("L O G I N")	
@@ -779,8 +778,8 @@ local function IOMZSSP_fake_script() -- Sand.LocalScript
 			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = Position
 		end	
 	end)
-	
-	
+
+
 	spawn(function()
 		while wait() do
 			if On == true and _G.Login == true then
@@ -795,27 +794,26 @@ local function IOMZSSP_fake_script() -- Sand.LocalScript
 			end	
 		end
 	end)
-end
-coroutine.wrap(IOMZSSP_fake_script)()
-local function DMPOE_fake_script() -- AutoFarm.LocalScript 
-	local script = Instance.new('LocalScript', AutoFarm)
+end)
 
+spawn(function()
+	local script = Instance.new('LocalScript', AutoFarm)
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Parent.SecOp.Visible = true
 		script.Parent.Parent.Parent.SecOpItem.Visible = false
 	end)
-end
-coroutine.wrap(DMPOE_fake_script)()
-local function HZJSK_fake_script() -- ItemNoti.LocalScript 
+end)
+
+spawn(function()
 	local script = Instance.new('LocalScript', ItemNoti)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Parent.SecOp.Visible = false
 		script.Parent.Parent.Parent.SecOpItem.Visible = true
 	end)
-end
-coroutine.wrap(HZJSK_fake_script)()
-local function YPAL_fake_script() -- BG.LocalScript 
+end)
+
+spawn(function()
 	local script = Instance.new('LocalScript', BG)
 
 	local Click = false
@@ -830,24 +828,24 @@ local function YPAL_fake_script() -- BG.LocalScript
 			FP = Vector2.new(Frame.Position.X.Scale,Frame.Position.Y.Scale)
 		end
 	end)
-	
+
 	Frame.InputEnded:Connect(function(i)
 		if i.UserInputType == Enum.UserInputType.MouseButton1 then
 			Click = false
 		end
 	end)
-	
+
 	game.Players.LocalPlayer:GetMouse().Move:Connect(function()
 		if Click == true then
 			local Nw = FP + ((Vector2.new(Mouse.X,Mouse.Y) - Pos ) / game.Workspace.Camera.ViewportSize)
 			Frame.Position = UDim2.new(Nw.X,0,Nw.Y,0)
 		end
 	end)
-	
-	
-end
-coroutine.wrap(YPAL_fake_script)()
-local function JUTW_fake_script() -- BG.LocalScript 
+
+
+end)
+
+spawn(function()
 	local script = Instance.new('LocalScript', BG)
 
 	game:GetService("UserInputService").InputBegan:Connect(function(i,c)
@@ -857,9 +855,8 @@ local function JUTW_fake_script() -- BG.LocalScript
 			end
 		end
 	end)
-end
-coroutine.wrap(JUTW_fake_script)()
-local function WLCA_fake_script() -- TextButton.LocalScript 
+end)
+spawn(function()	
 	local script = Instance.new('LocalScript', TextButton)
 
 	local On = false
@@ -875,11 +872,10 @@ local function WLCA_fake_script() -- TextButton.LocalScript
 			On = false
 		end	
 	end)
-	
-	
-end
-coroutine.wrap(WLCA_fake_script)()
-local function RFRTQHF_fake_script() -- ScrollingFrame.LocalScript 
+end)
+
+
+spawn(function()
 	local script = Instance.new('LocalScript', ScrollingFrame)
 
 	for i,v in pairs(script.Parent:GetChildren()) do
@@ -889,5 +885,4 @@ local function RFRTQHF_fake_script() -- ScrollingFrame.LocalScript
 			end)
 		end
 	end
-end
-coroutine.wrap(RFRTQHF_fake_script)()
+end)
