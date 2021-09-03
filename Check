@@ -8,12 +8,15 @@ local PlayerTable = {
 local X = game.CoreGui.TannyHub
 local Text = X.Frame.TextBox.Text
 local plr = game.Players.LocalPlayer
-print(Text)
 if PlayerTable[Text] then
+print(Text)
+
 	if plr.Name == PlayerTable[Text] then
+	print("X")
 		X.Frame.Visible = false
 		X.BG.Visible = true
 		_G.Login = true
+		print("SUC TANNY")
 	elseif game.Players.LocalPlayer.Name ~= PlayerTable[Text] then
 		game.Players.LocalPlayer:Kick("HWID YO YO YO YO")
 	end
