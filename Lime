@@ -874,6 +874,7 @@ local function PLWA_fake_script() -- Sand.LocalScript
 		if On == false then
 			script.Parent.Parent.SaWh:TweenPosition(UDim2.new(0.865, 0,0.397, 0),"Out",Enum.EasingStyle.Quad,.2,true)
 			Position = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace.Map["AUT MAP"].Forest.Collisions.Pathway.CFrame
 			On = true
 		elseif On == true then
 			script.Parent.Parent.SaWh:TweenPosition(UDim2.new(0.789, 0,0.397, 0),"Out",Enum.EasingStyle.Quad,.2,true)
