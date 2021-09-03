@@ -1,4 +1,3 @@
-_G.Login = false
 	local PlayerTable = {
 		["Tanny"] = "agrrjk",
 		["W1ndy"] = "W1ndyxDemon",
@@ -6,9 +5,9 @@ _G.Login = false
 		["rov"] = "rovgame2009",
 		["bank"] = "Bog_BigBank"
 	}
-	local plr = game.Players.LocalPlayer
 	local X = game.CoreGui.TannyHub
 	local Text = X.Frame.TextBox.Text
+	print(Text)
 	if PlayerTable[Text] then
 		if plr.Name == PlayerTable[Text] then
 			X.Frame.Visible = false
