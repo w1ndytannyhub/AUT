@@ -1,19 +1,20 @@
-	local PlayerTable = {
-		["Tanny"] = "agrrjk",
-		["W1ndy"] = "W1ndyxDemon",
-		["smart"] = "smartxddddfg",
-		["rov"] = "rovgame2009",
-		["bank"] = "Bog_BigBank"
-	}
-	local X = game.CoreGui.TannyHub
-	local Text = X.Frame.TextBox.Text
-	print(Text)
-	if PlayerTable[Text] then
-		if plr.Name == PlayerTable[Text] then
-			X.Frame.Visible = false
-			X.BG.Visible = true
-			_G.Login = true
-		elseif game.Players.LocalPlayer.Name ~= PlayerTable[Text] then
-			game.Players.LocalPlayer:Kick("HWID YO YO YO YO")
-		end
+local PlayerTable = {
+	["Tanny"] = "agrrjk",
+	["W1ndy"] = "W1ndyxDemon",
+	["smart"] = "smartxddddfg",
+	["rov"] = "rovgame2009",
+	["bank"] = "Bog_BigBank"
+}
+local X = game.CoreGui.TannyHub
+local Text = X.Frame.TextBox.Text
+local plr = game.Players.LocalPlayer
+print(Text)
+if PlayerTable[Text] then
+	if plr.Name == PlayerTable[Text] then
+		X.Frame.Visible = false
+		X.BG.Visible = true
+		_G.Login = true
+	elseif game.Players.LocalPlayer.Name ~= PlayerTable[Text] then
+		game.Players.LocalPlayer:Kick("HWID YO YO YO YO")
 	end
+end
