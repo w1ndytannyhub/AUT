@@ -117,7 +117,7 @@ local UICorner_40 = Instance.new("UICorner")
 --Properties:
 
 TannyHub.Name = "TannyHub"
-TannyHub.Parent = game.CoreGui
+TannyHub.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 TannyHub.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 TannyHub.ResetOnSpawn = false
 
@@ -413,6 +413,7 @@ TextLabel_9.TextSize = 20.000
 TextLabel_9.TextWrapped = true
 TextLabel_9.TextXAlignment = Enum.TextXAlignment.Left
 
+UICorner_22.CornerRadius = UDim.new(0.100000001, 0)
 UICorner_22.Parent = TextLabel_9
 
 Sec.Name = "Sec"
@@ -635,7 +636,7 @@ TextButton_2.BackgroundTransparency = 0.200
 TextButton_2.Position = UDim2.new(0.256637156, 0, 0.759664536, 0)
 TextButton_2.Size = UDim2.new(0.486430436, 0, 0.164056927, 0)
 TextButton_2.Font = Enum.Font.ArialBold
-TextButton_2.Text = "Submit"
+TextButton_2.Text = "Login"
 TextButton_2.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextButton_2.TextScaled = true
 TextButton_2.TextSize = 14.000
@@ -667,6 +668,7 @@ TextLabel_15.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_15.TextSize = 30.000
 TextLabel_15.TextWrapped = true
 
+UICorner_39.CornerRadius = UDim.new(0.100000001, 0)
 UICorner_39.Parent = TextLabel_15
 
 ImageLabel_2.Parent = Frame
@@ -681,7 +683,7 @@ UICorner_40.Parent = ImageLabel_2
 
 -- Scripts:
 
-local function KGMLFU_fake_script() -- Meteor.LocalScript 
+local function MNFXX_fake_script() -- Meteor.LocalScript 
 	local script = Instance.new('LocalScript', Meteor)
 
 	local On = false
@@ -718,8 +720,8 @@ local function KGMLFU_fake_script() -- Meteor.LocalScript
 	
 	
 end
-coroutine.wrap(KGMLFU_fake_script)()
-local function CFXGAPU_fake_script() -- Chest.LocalScript 
+coroutine.wrap(MNFXX_fake_script)()
+local function OHBFIJ_fake_script() -- Chest.LocalScript 
 	local script = Instance.new('LocalScript', Chest)
 
 	local On = false
@@ -756,8 +758,8 @@ local function CFXGAPU_fake_script() -- Chest.LocalScript
 		end
 	end)
 end
-coroutine.wrap(CFXGAPU_fake_script)()
-local function UHGI_fake_script() -- Dargon.LocalScript 
+coroutine.wrap(OHBFIJ_fake_script)()
+local function JWWIH_fake_script() -- Dargon.LocalScript 
 	local script = Instance.new('LocalScript', Dargon)
 
 	local On = false
@@ -793,8 +795,8 @@ local function UHGI_fake_script() -- Dargon.LocalScript
 		end
 	end
 end
-coroutine.wrap(UHGI_fake_script)()
-local function NTQJ_fake_script() -- XS.LocalScript 
+coroutine.wrap(JWWIH_fake_script)()
+local function DLBG_fake_script() -- XS.LocalScript 
 	local script = Instance.new('LocalScript', XS)
 
 	local On = false
@@ -828,8 +830,8 @@ local function NTQJ_fake_script() -- XS.LocalScript
 		end
 	end
 end
-coroutine.wrap(NTQJ_fake_script)()
-local function SBCEBAM_fake_script() -- My.LocalScript 
+coroutine.wrap(DLBG_fake_script)()
+local function OWMZJ_fake_script() -- My.LocalScript 
 	local script = Instance.new('LocalScript', My)
 
 	local On = false
@@ -866,8 +868,8 @@ local function SBCEBAM_fake_script() -- My.LocalScript
 		end
 	end
 end
-coroutine.wrap(SBCEBAM_fake_script)()
-local function BIDE_fake_script() -- Sand.LocalScript 
+coroutine.wrap(OWMZJ_fake_script)()
+local function FNCSL_fake_script() -- Sand.LocalScript 
 	local script = Instance.new('LocalScript', Sand)
 
 	local On = false
@@ -880,6 +882,7 @@ local function BIDE_fake_script() -- Sand.LocalScript
 		if On == false then
 			script.Parent.Parent.SaWh:TweenPosition(UDim2.new(0.865, 0,0.397, 0),"Out",Enum.EasingStyle.Quad,.2,true)
 			Position = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.workspace.Map["AUT MAP"].Forest.Collisions.Pathway.CFrame
 			On = true
 		elseif On == true then
 			script.Parent.Parent.SaWh:TweenPosition(UDim2.new(0.789, 0,0.397, 0),"Out",Enum.EasingStyle.Quad,.2,true)
@@ -908,8 +911,8 @@ local function BIDE_fake_script() -- Sand.LocalScript
 		end
 	end)
 end
-coroutine.wrap(BIDE_fake_script)()
-local function DDBZU_fake_script() -- AutoFarm.LocalScript 
+coroutine.wrap(FNCSL_fake_script)()
+local function CKTYTNQ_fake_script() -- AutoFarm.LocalScript 
 	local script = Instance.new('LocalScript', AutoFarm)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -917,8 +920,8 @@ local function DDBZU_fake_script() -- AutoFarm.LocalScript
 		script.Parent.Parent.Parent.SecOpItem.Visible = false
 	end)
 end
-coroutine.wrap(DDBZU_fake_script)()
-local function OVVFP_fake_script() -- ItemNoti.LocalScript 
+coroutine.wrap(CKTYTNQ_fake_script)()
+local function BJQLZOQ_fake_script() -- ItemNoti.LocalScript 
 	local script = Instance.new('LocalScript', ItemNoti)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -926,8 +929,8 @@ local function OVVFP_fake_script() -- ItemNoti.LocalScript
 		script.Parent.Parent.Parent.SecOpItem.Visible = true
 	end)
 end
-coroutine.wrap(OVVFP_fake_script)()
-local function PDKJKF_fake_script() -- BG.LocalScript 
+coroutine.wrap(BJQLZOQ_fake_script)()
+local function MZJZ_fake_script() -- BG.LocalScript 
 	local script = Instance.new('LocalScript', BG)
 
 	local Click = false
@@ -958,8 +961,8 @@ local function PDKJKF_fake_script() -- BG.LocalScript
 	
 	
 end
-coroutine.wrap(PDKJKF_fake_script)()
-local function YVCIQPZ_fake_script() -- BG.LocalScript 
+coroutine.wrap(MZJZ_fake_script)()
+local function SXUGL_fake_script() -- BG.LocalScript 
 	local script = Instance.new('LocalScript', BG)
 
 	game:GetService("UserInputService").InputBegan:Connect(function(i,c)
@@ -970,8 +973,8 @@ local function YVCIQPZ_fake_script() -- BG.LocalScript
 		end
 	end)
 end
-coroutine.wrap(YVCIQPZ_fake_script)()
-local function PIKDRO_fake_script() -- TextButton.LocalScript 
+coroutine.wrap(SXUGL_fake_script)()
+local function PQFKHJR_fake_script() -- TextButton.LocalScript 
 	local script = Instance.new('LocalScript', TextButton)
 
 	local On = false
@@ -990,8 +993,8 @@ local function PIKDRO_fake_script() -- TextButton.LocalScript
 	
 	
 end
-coroutine.wrap(PIKDRO_fake_script)()
-local function ZMCCTL_fake_script() -- ScrollingFrame.LocalScript 
+coroutine.wrap(PQFKHJR_fake_script)()
+local function OSXW_fake_script() -- ScrollingFrame.LocalScript 
 	local script = Instance.new('LocalScript', ScrollingFrame)
 
 	for i,v in pairs(script.Parent:GetChildren()) do
@@ -1002,16 +1005,16 @@ local function ZMCCTL_fake_script() -- ScrollingFrame.LocalScript
 		end
 	end
 end
-coroutine.wrap(ZMCCTL_fake_script)()
-local function MILXN_fake_script() -- TextButton_2.LocalScript 
+coroutine.wrap(OSXW_fake_script)()
+local function QDUTUNU_fake_script() -- TextButton_2.LocalScript 
 	local script = Instance.new('LocalScript', TextButton_2)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		loadstring(game:HttpGet(("https://raw.githubusercontent.com/w1ndytannyhub/AUT/main/Check"), true))()
 	end)
 end
-coroutine.wrap(MILXN_fake_script)()
-local function TCHKEWO_fake_script() -- Frame.LocalScript 
+coroutine.wrap(QDUTUNU_fake_script)()
+local function DCUEAUB_fake_script() -- Frame.LocalScript 
 	local script = Instance.new('LocalScript', Frame)
 
 	local Click = false
@@ -1042,4 +1045,4 @@ local function TCHKEWO_fake_script() -- Frame.LocalScript
 	
 	
 end
-coroutine.wrap(TCHKEWO_fake_script)()
+coroutine.wrap(DCUEAUB_fake_script)()
