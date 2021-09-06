@@ -2,708 +2,1158 @@
 -- Version: 3.2
 
 -- Instances:
-_G.Login = false
-local function fireproximityprompt(Obj, Amount, Skip)
-	if Obj.ClassName == "ProximityPrompt" then 
-		Amount = Amount or 1
-		local PromptTime = Obj.HoldDuration
-		if Skip then 
-			Obj.HoldDuration = 0
-		end
-		for i = 1, Amount do 
-			Obj:InputHoldBegin()
-			if not Skip then 
-				wait(Obj.HoldDuration)
-			end
-			Obj:InputHoldEnd()
-		end
-		Obj.HoldDuration = PromptTime
-	else 
-		error("userdata<ProximityPrompt> expected")
-	end
-end
+
 local TannyHub = Instance.new("ScreenGui")
-local BG = Instance.new("Frame")
+local Frame = Instance.new("Frame")
 local UICorner = Instance.new("UICorner")
-local SecOp = Instance.new("Frame")
+local Frame_2 = Instance.new("Frame")
+local UICorner_2 = Instance.new("UICorner")
 local TextLabel = Instance.new("TextLabel")
 local TextLabel_2 = Instance.new("TextLabel")
-local UICorner_2 = Instance.new("UICorner")
-local TextLabel_3 = Instance.new("TextLabel")
-local UICorner_3 = Instance.new("UICorner")
-local TextLabel_4 = Instance.new("TextLabel")
-local UICorner_4 = Instance.new("UICorner")
-local SaWh = Instance.new("TextLabel")
-local UICorner_5 = Instance.new("UICorner")
-local MeWh = Instance.new("TextLabel")
-local UICorner_6 = Instance.new("UICorner")
-local ChWh = Instance.new("TextLabel")
-local UICorner_7 = Instance.new("UICorner")
-local Meteor = Instance.new("TextButton")
-local UICorner_8 = Instance.new("UICorner")
-local Chest = Instance.new("TextButton")
-local UICorner_9 = Instance.new("UICorner")
-local UICorner_10 = Instance.new("UICorner")
-local TextLabel_5 = Instance.new("TextLabel")
-local UICorner_11 = Instance.new("UICorner")
-local DrWh = Instance.new("TextLabel")
-local UICorner_12 = Instance.new("UICorner")
-local Dargon = Instance.new("TextButton")
-local UICorner_13 = Instance.new("UICorner")
-local TextLabel_6 = Instance.new("TextLabel")
-local UICorner_14 = Instance.new("UICorner")
-local XSWh = Instance.new("TextLabel")
-local UICorner_15 = Instance.new("UICorner")
-local XS = Instance.new("TextButton")
-local UICorner_16 = Instance.new("UICorner")
-local TextLabel_7 = Instance.new("TextLabel")
-local UICorner_17 = Instance.new("UICorner")
-local MySh = Instance.new("TextLabel")
-local UICorner_18 = Instance.new("UICorner")
-local My = Instance.new("TextButton")
-local UICorner_19 = Instance.new("UICorner")
-local Sand = Instance.new("TextButton")
-local UICorner_20 = Instance.new("UICorner")
-local Titel = Instance.new("Frame")
-local UICorner_21 = Instance.new("UICorner")
-local TextLabel_8 = Instance.new("TextLabel")
-local TextLabel_9 = Instance.new("TextLabel")
-local UICorner_22 = Instance.new("UICorner")
-local Sec = Instance.new("Frame")
-local UICorner_23 = Instance.new("UICorner")
 local AutoFarm = Instance.new("TextButton")
-local UICorner_24 = Instance.new("UICorner")
-local ItemNoti = Instance.new("TextButton")
-local UICorner_25 = Instance.new("UICorner")
-local SecOpItem = Instance.new("Frame")
-local UICorner_26 = Instance.new("UICorner")
-local TextLabel_10 = Instance.new("TextLabel")
-local TextLabel_11 = Instance.new("TextLabel")
-local UICorner_27 = Instance.new("UICorner")
-local TextButton = Instance.new("TextButton")
-local UICorner_28 = Instance.new("UICorner")
-local MeWh_2 = Instance.new("TextLabel")
-local UICorner_29 = Instance.new("UICorner")
-local ScrollingFrame = Instance.new("ScrollingFrame")
-local UICorner_30 = Instance.new("UICorner")
+local TextLabel_3 = Instance.new("TextLabel")
+local Misc = Instance.new("TextButton")
+local TextLabel_4 = Instance.new("TextLabel")
+local Game = Instance.new("TextButton")
+local TextLabel_5 = Instance.new("TextLabel")
+local Setting = Instance.new("TextButton")
+local TextLabel_6 = Instance.new("TextLabel")
+local Player = Instance.new("TextButton")
+local TextLabel_7 = Instance.new("TextLabel")
+local Scoling = Instance.new("Frame")
+local UICorner_3 = Instance.new("UICorner")
+local AutoFarm_2 = Instance.new("ScrollingFrame")
+local UICorner_4 = Instance.new("UICorner")
 local UIListLayout = Instance.new("UIListLayout")
-local TextLabel_12 = Instance.new("TextLabel")
-local UICorner_31 = Instance.new("UICorner")
+local AutoChest = Instance.new("TextLabel")
+local UICorner_5 = Instance.new("UICorner")
+local TextButton = Instance.new("TextButton")
+local UICorner_6 = Instance.new("UICorner")
+local TextLabel_8 = Instance.new("TextLabel")
+local UICorner_7 = Instance.new("UICorner")
 local UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
-local None = Instance.new("TextButton")
-local UIAspectRatioConstraint_2 = Instance.new("UIAspectRatioConstraint")
-local UICorner_32 = Instance.new("UICorner")
-local DragonBall = Instance.new("TextButton")
-local UIAspectRatioConstraint_3 = Instance.new("UIAspectRatioConstraint")
-local UICorner_33 = Instance.new("UICorner")
-local Exo = Instance.new("TextButton")
-local UIAspectRatioConstraint_4 = Instance.new("UIAspectRatioConstraint")
-local UICorner_34 = Instance.new("UICorner")
-local ImageLabel = Instance.new("ImageLabel")
-local UICorner_35 = Instance.new("UICorner")
-local Frame = Instance.new("Frame")
-local TextLabel_13 = Instance.new("TextLabel")
-local TextBox = Instance.new("TextBox")
-local UICorner_36 = Instance.new("UICorner")
+local SandDebris = Instance.new("TextLabel")
+local UICorner_8 = Instance.new("UICorner")
 local TextButton_2 = Instance.new("TextButton")
-local UICorner_37 = Instance.new("UICorner")
-local UICorner_38 = Instance.new("UICorner")
+local UICorner_9 = Instance.new("UICorner")
+local TextLabel_9 = Instance.new("TextLabel")
+local UICorner_10 = Instance.new("UICorner")
+local UIAspectRatioConstraint_2 = Instance.new("UIAspectRatioConstraint")
+local Meteor = Instance.new("TextLabel")
+local UICorner_11 = Instance.new("UICorner")
+local TextButton_3 = Instance.new("TextButton")
+local UICorner_12 = Instance.new("UICorner")
+local TextLabel_10 = Instance.new("TextLabel")
+local UICorner_13 = Instance.new("UICorner")
+local UIAspectRatioConstraint_3 = Instance.new("UIAspectRatioConstraint")
+local Dragonball = Instance.new("TextLabel")
+local UICorner_14 = Instance.new("UICorner")
+local TextButton_4 = Instance.new("TextButton")
+local UICorner_15 = Instance.new("UICorner")
+local TextLabel_11 = Instance.new("TextLabel")
+local UICorner_16 = Instance.new("UICorner")
+local UIAspectRatioConstraint_4 = Instance.new("UIAspectRatioConstraint")
+local XSoul = Instance.new("TextLabel")
+local UICorner_17 = Instance.new("UICorner")
+local TextButton_5 = Instance.new("TextButton")
+local UICorner_18 = Instance.new("UICorner")
+local TextLabel_12 = Instance.new("TextLabel")
+local UICorner_19 = Instance.new("UICorner")
+local UIAspectRatioConstraint_5 = Instance.new("UIAspectRatioConstraint")
+local Mysterious = Instance.new("TextLabel")
+local UICorner_20 = Instance.new("UICorner")
+local TextButton_6 = Instance.new("TextButton")
+local UICorner_21 = Instance.new("UICorner")
+local TextLabel_13 = Instance.new("TextLabel")
+local UICorner_22 = Instance.new("UICorner")
+local UIAspectRatioConstraint_6 = Instance.new("UIAspectRatioConstraint")
+local DamageFarm = Instance.new("TextLabel")
+local UICorner_23 = Instance.new("UICorner")
+local TextButton_7 = Instance.new("TextButton")
+local UICorner_24 = Instance.new("UICorner")
 local TextLabel_14 = Instance.new("TextLabel")
+local UICorner_25 = Instance.new("UICorner")
+local UIAspectRatioConstraint_7 = Instance.new("UIAspectRatioConstraint")
+local Misc_2 = Instance.new("ScrollingFrame")
+local UICorner_26 = Instance.new("UICorner")
+local UIListLayout_2 = Instance.new("UIListLayout")
 local TextLabel_15 = Instance.new("TextLabel")
+local UICorner_27 = Instance.new("UICorner")
+local TextBox = Instance.new("TextBox")
+local UICorner_28 = Instance.new("UICorner")
+local TextLabel_16 = Instance.new("TextLabel")
+local UICorner_29 = Instance.new("UICorner")
+local TextBox_2 = Instance.new("TextBox")
+local UICorner_30 = Instance.new("UICorner")
+local AutoChest_2 = Instance.new("TextLabel")
+local UICorner_31 = Instance.new("UICorner")
+local TextButton_8 = Instance.new("TextButton")
+local UICorner_32 = Instance.new("UICorner")
+local TextLabel_17 = Instance.new("TextLabel")
+local UICorner_33 = Instance.new("UICorner")
+local UIAspectRatioConstraint_8 = Instance.new("UIAspectRatioConstraint")
+local Player_2 = Instance.new("ScrollingFrame")
+local UICorner_34 = Instance.new("UICorner")
+local UIListLayout_3 = Instance.new("UIListLayout")
+local Kill = Instance.new("TextLabel")
+local UICorner_35 = Instance.new("UICorner")
+local TextButton_9 = Instance.new("TextButton")
+local UICorner_36 = Instance.new("UICorner")
+local Frame_3 = Instance.new("Frame")
+local UICorner_37 = Instance.new("UICorner")
+local ScrollingFrame = Instance.new("ScrollingFrame")
+local UIListLayout_4 = Instance.new("UIListLayout")
+local CloneY = Instance.new("TextButton")
+local AutoChest_3 = Instance.new("TextLabel")
+local UICorner_38 = Instance.new("UICorner")
+local TextButton_10 = Instance.new("TextButton")
 local UICorner_39 = Instance.new("UICorner")
-local ImageLabel_2 = Instance.new("ImageLabel")
+local TextLabel_18 = Instance.new("TextLabel")
 local UICorner_40 = Instance.new("UICorner")
+local UIAspectRatioConstraint_9 = Instance.new("UIAspectRatioConstraint")
+local Setting_2 = Instance.new("ScrollingFrame")
+local UICorner_41 = Instance.new("UICorner")
+local UIListLayout_5 = Instance.new("UIListLayout")
+local TextLabel_19 = Instance.new("TextLabel")
+local UICorner_42 = Instance.new("UICorner")
+local TextLabel_20 = Instance.new("TextLabel")
+local UICorner_43 = Instance.new("UICorner")
+local TextLabel_21 = Instance.new("TextLabel")
+local UICorner_44 = Instance.new("UICorner")
+local TextLabel_22 = Instance.new("TextLabel")
+local UICorner_45 = Instance.new("UICorner")
+local TextLabel_23 = Instance.new("TextLabel")
+local UICorner_46 = Instance.new("UICorner")
+local TextLabel_24 = Instance.new("TextLabel")
+local UICorner_47 = Instance.new("UICorner")
+local TextLabel_25 = Instance.new("TextLabel")
+local UICorner_48 = Instance.new("UICorner")
 
 --Properties:
 
 TannyHub.Name = "TannyHub"
-TannyHub.Parent = game.CoreGui
+TannyHub.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 TannyHub.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 TannyHub.ResetOnSpawn = false
 
-BG.Name = "BG"
-BG.Parent = TannyHub
-BG.BackgroundColor3 = Color3.fromRGB(24, 24, 24)
-BG.BorderSizePixel = 0
-BG.Position = UDim2.new(0.00612277072, 0, 0.0153244287, 0)
-BG.Size = UDim2.new(0.381402642, 0, 0.651408434, 0)
-BG.Visible = false
+Frame.Parent = TannyHub
+Frame.BackgroundColor3 = Color3.fromRGB(39, 39, 39)
+Frame.Position = UDim2.new(0.202500641, 0, 0.213287666, 0)
+Frame.Size = UDim2.new(0.537846446, 0, 0.53813678, 0)
 
-UICorner.Parent = BG
+UICorner.Parent = Frame
 
-SecOp.Name = "SecOp"
-SecOp.Parent = BG
-SecOp.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
-SecOp.BorderSizePixel = 0
-SecOp.Position = UDim2.new(0.225206703, 0, 0.143243283, 0)
-SecOp.Size = UDim2.new(0.743801594, 0, 0.816216111, 0)
+Frame_2.Parent = Frame
+Frame_2.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
+Frame_2.BorderSizePixel = 0
+Frame_2.Position = UDim2.new(-0.000435408292, 0, 0, 0)
+Frame_2.Size = UDim2.new(0.278369993, 0, 0.999999821, 0)
 
-TextLabel.Parent = SecOp
+UICorner_2.CornerRadius = UDim.new(0, 5)
+UICorner_2.Parent = Frame_2
+
+TextLabel.Parent = Frame_2
 TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel.BackgroundTransparency = 1.000
-TextLabel.Position = UDim2.new(0.0250000004, 0, 0, 0)
-TextLabel.Size = UDim2.new(0.191666663, 0, 0.0794702098, 0)
+TextLabel.Position = UDim2.new(0.038758941, 0, 0.037281353, 0)
+TextLabel.Size = UDim2.new(0.9486655, 0, 0.120074563, 0)
 TextLabel.Font = Enum.Font.ArialBold
-TextLabel.Text = "Item Farm"
+TextLabel.Text = "A Universal Time"
 TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel.TextScaled = true
-TextLabel.TextSize = 14.000
+TextLabel.TextSize = 22.000
 TextLabel.TextWrapped = true
+TextLabel.TextXAlignment = Enum.TextXAlignment.Left
 
-TextLabel_2.Parent = SecOp
-TextLabel_2.BackgroundColor3 = Color3.fromRGB(21, 21, 21)
-TextLabel_2.Position = UDim2.new(0.0250000004, 0, 0.380253315, 0)
-TextLabel_2.Size = UDim2.new(0.949999988, 0, 0.110463589, 0)
+TextLabel_2.Parent = Frame_2
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.BackgroundTransparency = 1.000
+TextLabel_2.Position = UDim2.new(0.038758941, 0, 0.134786397, 0)
+TextLabel_2.Size = UDim2.new(0.948665857, 0, 0.0397763439, 0)
 TextLabel_2.Font = Enum.Font.ArialBold
-TextLabel_2.Text = "Sand Farm"
-TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_2.TextSize = 20.000
+TextLabel_2.Text = "Tanny Hub"
+TextLabel_2.TextColor3 = Color3.fromRGB(195, 195, 195)
+TextLabel_2.TextSize = 13.000
 TextLabel_2.TextWrapped = true
 TextLabel_2.TextXAlignment = Enum.TextXAlignment.Left
 
-UICorner_2.Parent = TextLabel_2
-
-TextLabel_3.Parent = SecOp
-TextLabel_3.BackgroundColor3 = Color3.fromRGB(21, 21, 21)
-TextLabel_3.Position = UDim2.new(0.0250000004, 0, 0.244553089, 0)
-TextLabel_3.Size = UDim2.new(0.949999988, 0, 0.110463589, 0)
-TextLabel_3.Font = Enum.Font.ArialBold
-TextLabel_3.Text = "Chest Farm"
-TextLabel_3.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_3.TextSize = 20.000
-TextLabel_3.TextWrapped = true
-TextLabel_3.TextXAlignment = Enum.TextXAlignment.Left
-
-UICorner_3.Parent = TextLabel_3
-
-TextLabel_4.Parent = SecOp
-TextLabel_4.BackgroundColor3 = Color3.fromRGB(21, 21, 21)
-TextLabel_4.Position = UDim2.new(0.0250000004, 0, 0.11258278, 0)
-TextLabel_4.Size = UDim2.new(0.949999988, 0, 0.110463589, 0)
-TextLabel_4.Font = Enum.Font.ArialBold
-TextLabel_4.Text = "Meteor Farm"
-TextLabel_4.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_4.TextSize = 20.000
-TextLabel_4.TextWrapped = true
-TextLabel_4.TextXAlignment = Enum.TextXAlignment.Left
-
-UICorner_4.Parent = TextLabel_4
-
-SaWh.Name = "SaWh"
-SaWh.Parent = SecOp
-SaWh.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-SaWh.Position = UDim2.new(0.788888812, 0, 0.397485167, 0)
-SaWh.Size = UDim2.new(0.088888891, 0, 0.0735099763, 0)
-SaWh.ZIndex = 2
-SaWh.Font = Enum.Font.ArialBold
-SaWh.Text = ""
-SaWh.TextColor3 = Color3.fromRGB(0, 0, 0)
-SaWh.TextSize = 14.000
-
-UICorner_5.Parent = SaWh
-
-MeWh.Name = "MeWh"
-MeWh.Parent = SecOp
-MeWh.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-MeWh.Position = UDim2.new(0.788888812, 0, 0.12913917, 0)
-MeWh.Size = UDim2.new(0.088888891, 0, 0.0735099763, 0)
-MeWh.ZIndex = 2
-MeWh.Font = Enum.Font.ArialBold
-MeWh.Text = ""
-MeWh.TextColor3 = Color3.fromRGB(0, 0, 0)
-MeWh.TextSize = 14.000
-
-UICorner_6.Parent = MeWh
-
-ChWh.Name = "ChWh"
-ChWh.Parent = SecOp
-ChWh.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-ChWh.Position = UDim2.new(0.788888812, 0, 0.260259211, 0)
-ChWh.Size = UDim2.new(0.088888891, 0, 0.0735099763, 0)
-ChWh.ZIndex = 2
-ChWh.Font = Enum.Font.ArialBold
-ChWh.Text = ""
-ChWh.TextColor3 = Color3.fromRGB(0, 0, 0)
-ChWh.TextSize = 14.000
-
-UICorner_7.Parent = ChWh
-
-Meteor.Name = "Meteor"
-Meteor.Parent = SecOp
-Meteor.BackgroundColor3 = Color3.fromRGB(49, 49, 49)
-Meteor.Position = UDim2.new(0.788888872, 0, 0.129139155, 0)
-Meteor.Size = UDim2.new(0.166666672, 0, 0.0735099316, 0)
-Meteor.Font = Enum.Font.ArialBold
-Meteor.Text = ""
-Meteor.TextColor3 = Color3.fromRGB(0, 0, 0)
-Meteor.TextSize = 14.000
-
-UICorner_8.Parent = Meteor
-
-Chest.Name = "Chest"
-Chest.Parent = SecOp
-Chest.BackgroundColor3 = Color3.fromRGB(49, 49, 49)
-Chest.Position = UDim2.new(0.788888872, 0, 0.262996852, 0)
-Chest.Size = UDim2.new(0.166666672, 0, 0.0735099316, 0)
-Chest.Font = Enum.Font.ArialBold
-Chest.Text = ""
-Chest.TextColor3 = Color3.fromRGB(0, 0, 0)
-Chest.TextSize = 14.000
-
-UICorner_9.Parent = Chest
-
-UICorner_10.Parent = SecOp
-
-TextLabel_5.Parent = SecOp
-TextLabel_5.BackgroundColor3 = Color3.fromRGB(21, 21, 21)
-TextLabel_5.Position = UDim2.new(0.0250000004, 0, 0.547252536, 0)
-TextLabel_5.Size = UDim2.new(0.949999988, 0, 0.110463589, 0)
-TextLabel_5.Font = Enum.Font.ArialBold
-TextLabel_5.Text = "Dragon Ball Farm"
-TextLabel_5.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_5.TextSize = 20.000
-TextLabel_5.TextWrapped = true
-TextLabel_5.TextXAlignment = Enum.TextXAlignment.Left
-
-UICorner_11.Parent = TextLabel_5
-
-DrWh.Name = "DrWh"
-DrWh.Parent = SecOp
-DrWh.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-DrWh.Position = UDim2.new(0.788888812, 0, 0.564484417, 0)
-DrWh.Size = UDim2.new(0.088888891, 0, 0.0735099763, 0)
-DrWh.ZIndex = 2
-DrWh.Font = Enum.Font.ArialBold
-DrWh.Text = ""
-DrWh.TextColor3 = Color3.fromRGB(0, 0, 0)
-DrWh.TextSize = 14.000
-
-UICorner_12.Parent = DrWh
-
-Dargon.Name = "Dargon"
-Dargon.Parent = SecOp
-Dargon.BackgroundColor3 = Color3.fromRGB(49, 49, 49)
-Dargon.Position = UDim2.new(0.788888872, 0, 0.565000892, 0)
-Dargon.Size = UDim2.new(0.166666672, 0, 0.0735099316, 0)
-Dargon.Font = Enum.Font.ArialBold
-Dargon.Text = ""
-Dargon.TextColor3 = Color3.fromRGB(0, 0, 0)
-Dargon.TextSize = 14.000
-
-UICorner_13.Parent = Dargon
-
-TextLabel_6.Parent = SecOp
-TextLabel_6.BackgroundColor3 = Color3.fromRGB(21, 21, 21)
-TextLabel_6.Position = UDim2.new(0.0221822541, 0, 0.678661764, 0)
-TextLabel_6.Size = UDim2.new(0.949999988, 0, 0.110463589, 0)
-TextLabel_6.Font = Enum.Font.ArialBold
-TextLabel_6.Text = "X Soul Farm"
-TextLabel_6.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_6.TextSize = 20.000
-TextLabel_6.TextWrapped = true
-TextLabel_6.TextXAlignment = Enum.TextXAlignment.Left
-
-UICorner_14.Parent = TextLabel_6
-
-XSWh.Name = "XSWh"
-XSWh.Parent = SecOp
-XSWh.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-XSWh.Position = UDim2.new(0.788888812, 0, 0.698631406, 0)
-XSWh.Size = UDim2.new(0.088888891, 0, 0.0735099763, 0)
-XSWh.ZIndex = 2
-XSWh.Font = Enum.Font.ArialBold
-XSWh.Text = ""
-XSWh.TextColor3 = Color3.fromRGB(0, 0, 0)
-XSWh.TextSize = 14.000
-
-UICorner_15.Parent = XSWh
-
-XS.Name = "XS"
-XS.Parent = SecOp
-XS.BackgroundColor3 = Color3.fromRGB(49, 49, 49)
-XS.Position = UDim2.new(0.786071122, 0, 0.69641012, 0)
-XS.Size = UDim2.new(0.166666672, 0, 0.0735099316, 0)
-XS.Font = Enum.Font.ArialBold
-XS.Text = ""
-XS.TextColor3 = Color3.fromRGB(0, 0, 0)
-XS.TextSize = 14.000
-
-UICorner_16.Parent = XS
-
-TextLabel_7.Parent = SecOp
-TextLabel_7.BackgroundColor3 = Color3.fromRGB(21, 21, 21)
-TextLabel_7.Position = UDim2.new(0.0221822541, 0, 0.810070992, 0)
-TextLabel_7.Size = UDim2.new(0.949999988, 0, 0.110463589, 0)
-TextLabel_7.Font = Enum.Font.ArialBold
-TextLabel_7.Text = "Mysterious Hat Farm"
-TextLabel_7.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_7.TextSize = 20.000
-TextLabel_7.TextWrapped = true
-TextLabel_7.TextXAlignment = Enum.TextXAlignment.Left
-
-UICorner_17.Parent = TextLabel_7
-
-MySh.Name = "MySh"
-MySh.Parent = SecOp
-MySh.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-MySh.Position = UDim2.new(0.788888812, 0, 0.827302933, 0)
-MySh.Size = UDim2.new(0.088888891, 0, 0.0735099763, 0)
-MySh.ZIndex = 2
-MySh.Font = Enum.Font.ArialBold
-MySh.Text = ""
-MySh.TextColor3 = Color3.fromRGB(0, 0, 0)
-MySh.TextSize = 14.000
-
-UICorner_18.Parent = MySh
-
-My.Name = "My"
-My.Parent = SecOp
-My.BackgroundColor3 = Color3.fromRGB(49, 49, 49)
-My.Position = UDim2.new(0.786071122, 0, 0.827819347, 0)
-My.Size = UDim2.new(0.166666672, 0, 0.0735099316, 0)
-My.Font = Enum.Font.ArialBold
-My.Text = ""
-My.TextColor3 = Color3.fromRGB(0, 0, 0)
-My.TextSize = 14.000
-
-UICorner_19.Parent = My
-
-Sand.Name = "Sand"
-Sand.Parent = SecOp
-Sand.BackgroundColor3 = Color3.fromRGB(49, 49, 49)
-Sand.Position = UDim2.new(0.788888872, 0, 0.398001671, 0)
-Sand.Size = UDim2.new(0.166666672, 0, 0.0735099316, 0)
-Sand.Font = Enum.Font.ArialBold
-Sand.Text = ""
-Sand.TextColor3 = Color3.fromRGB(0, 0, 0)
-Sand.TextSize = 14.000
-
-UICorner_20.Parent = Sand
-
-Titel.Name = "Titel"
-Titel.Parent = BG
-Titel.BackgroundColor3 = Color3.fromRGB(10, 10, 10)
-Titel.BorderSizePixel = 0
-Titel.Position = UDim2.new(-3.15264259e-08, 0, 0, 0)
-Titel.Size = UDim2.new(1, 0, 0.1027027, 0)
-
-UICorner_21.Parent = Titel
-
-TextLabel_8.Parent = Titel
-TextLabel_8.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_8.BackgroundTransparency = 1.000
-TextLabel_8.Position = UDim2.new(0.0185950436, 0, 0, 0)
-TextLabel_8.Size = UDim2.new(0.98140496, 0, 1, 0)
-TextLabel_8.Font = Enum.Font.ArialBold
-TextLabel_8.Text = "Swa Hub | A Universal Time"
-TextLabel_8.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_8.TextSize = 20.000
-TextLabel_8.TextWrapped = true
-TextLabel_8.TextXAlignment = Enum.TextXAlignment.Left
-
-TextLabel_9.Parent = Titel
-TextLabel_9.BackgroundColor3 = Color3.fromRGB(255, 179, 0)
-TextLabel_9.Position = UDim2.new(0.104524665, 0, 0.152302235, 0)
-TextLabel_9.Size = UDim2.new(0.0938223526, 0, 0.673638284, 0)
-TextLabel_9.ZIndex = 0
-TextLabel_9.Font = Enum.Font.ArialBold
-TextLabel_9.Text = ""
-TextLabel_9.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_9.TextSize = 20.000
-TextLabel_9.TextWrapped = true
-TextLabel_9.TextXAlignment = Enum.TextXAlignment.Left
-
-UICorner_22.CornerRadius = UDim.new(0.100000001, 0)
-UICorner_22.Parent = TextLabel_9
-
-Sec.Name = "Sec"
-Sec.Parent = BG
-Sec.BackgroundColor3 = Color3.fromRGB(10, 10, 10)
-Sec.BorderSizePixel = 0
-Sec.Position = UDim2.new(1.5763213e-08, 0, 0.1027027, 0)
-Sec.Size = UDim2.new(0.198346972, 0, 0.897297323, 0)
-
-UICorner_23.Parent = Sec
-
 AutoFarm.Name = "AutoFarm"
-AutoFarm.Parent = Sec
-AutoFarm.BackgroundColor3 = Color3.fromRGB(13, 13, 13)
+AutoFarm.Parent = Frame_2
+AutoFarm.BackgroundColor3 = Color3.fromRGB(78, 203, 255)
 AutoFarm.BorderSizePixel = 0
-AutoFarm.Position = UDim2.new(0, 0, 0.021084344, 0)
-AutoFarm.Size = UDim2.new(1, 0, 0.0963855386, 0)
-AutoFarm.Font = Enum.Font.ArialBold
-AutoFarm.Text = "Item Farm"
-AutoFarm.TextColor3 = Color3.fromRGB(255, 255, 255)
-AutoFarm.TextSize = 18.000
+AutoFarm.Position = UDim2.new(0, 0, 0.206481263, 0)
+AutoFarm.Size = UDim2.new(0.999999523, 0, 0.100000001, 0)
+AutoFarm.Font = Enum.Font.SourceSans
+AutoFarm.Text = ""
+AutoFarm.TextColor3 = Color3.fromRGB(227, 227, 227)
+AutoFarm.TextScaled = true
+AutoFarm.TextSize = 14.000
 AutoFarm.TextWrapped = true
 
-UICorner_24.Parent = AutoFarm
+TextLabel_3.Parent = AutoFarm
+TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.BackgroundTransparency = 1.000
+TextLabel_3.BorderSizePixel = 0
+TextLabel_3.Size = UDim2.new(1, 0, 1, 0)
+TextLabel_3.Font = Enum.Font.Highway
+TextLabel_3.Text = "Auto Farm"
+TextLabel_3.TextColor3 = Color3.fromRGB(235, 235, 235)
+TextLabel_3.TextSize = 20.000
+TextLabel_3.TextWrapped = true
 
-ItemNoti.Name = "ItemNoti"
-ItemNoti.Parent = Sec
-ItemNoti.BackgroundColor3 = Color3.fromRGB(13, 13, 13)
-ItemNoti.BorderSizePixel = 0
-ItemNoti.Position = UDim2.new(0, 0, 0.132937387, 0)
-ItemNoti.Size = UDim2.new(1, 0, 0.0963855386, 0)
-ItemNoti.Font = Enum.Font.ArialBold
-ItemNoti.Text = "Item Notifier"
-ItemNoti.TextColor3 = Color3.fromRGB(255, 255, 255)
-ItemNoti.TextSize = 17.000
-ItemNoti.TextWrapped = true
+Misc.Name = "Misc"
+Misc.Parent = Frame_2
+Misc.BackgroundColor3 = Color3.fromRGB(78, 203, 255)
+Misc.BackgroundTransparency = 1.000
+Misc.BorderSizePixel = 0
+Misc.Position = UDim2.new(9.31322575e-10, 0, 0.401986748, 0)
+Misc.Size = UDim2.new(0.999999821, 0, 0.0979058743, 0)
+Misc.Font = Enum.Font.Highway
+Misc.Text = ""
+Misc.TextColor3 = Color3.fromRGB(227, 227, 227)
+Misc.TextSize = 25.000
+Misc.TextWrapped = true
 
-UICorner_25.Parent = ItemNoti
+TextLabel_4.Parent = Misc
+TextLabel_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_4.BackgroundTransparency = 1.000
+TextLabel_4.BorderSizePixel = 0
+TextLabel_4.Size = UDim2.new(1.00000012, 0, 1, 0)
+TextLabel_4.Font = Enum.Font.Highway
+TextLabel_4.Text = "Misc"
+TextLabel_4.TextColor3 = Color3.fromRGB(235, 235, 235)
+TextLabel_4.TextSize = 20.000
+TextLabel_4.TextWrapped = true
 
-SecOpItem.Name = "SecOpItem"
-SecOpItem.Parent = BG
-SecOpItem.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
-SecOpItem.BorderSizePixel = 0
-SecOpItem.Position = UDim2.new(0.225206703, 0, 0.143243283, 0)
-SecOpItem.Size = UDim2.new(0.743801594, 0, 0.816216111, 0)
-SecOpItem.Visible = false
+Game.Name = "Game"
+Game.Parent = Frame_2
+Game.BackgroundColor3 = Color3.fromRGB(78, 203, 255)
+Game.BackgroundTransparency = 1.000
+Game.BorderSizePixel = 0
+Game.Position = UDim2.new(0.00156420085, 0, 0.402293116, 0)
+Game.Size = UDim2.new(0.998435378, 0, 0.100000001, 0)
+Game.Visible = false
+Game.Font = Enum.Font.SourceSans
+Game.Text = ""
+Game.TextColor3 = Color3.fromRGB(227, 227, 227)
+Game.TextScaled = true
+Game.TextSize = 14.000
+Game.TextWrapped = true
 
-UICorner_26.Parent = SecOpItem
+TextLabel_5.Parent = Game
+TextLabel_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_5.BackgroundTransparency = 1.000
+TextLabel_5.BorderSizePixel = 0
+TextLabel_5.Size = UDim2.new(1.00000012, 0, 1, 0)
+TextLabel_5.Visible = false
+TextLabel_5.Font = Enum.Font.Highway
+TextLabel_5.Text = "Game"
+TextLabel_5.TextColor3 = Color3.fromRGB(235, 235, 235)
+TextLabel_5.TextSize = 20.000
+TextLabel_5.TextWrapped = true
 
-TextLabel_10.Parent = SecOpItem
-TextLabel_10.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_10.BackgroundTransparency = 1.000
-TextLabel_10.Position = UDim2.new(0.0249999929, 0, 0, 0)
-TextLabel_10.Size = UDim2.new(0.247486144, 0, 0.0794702098, 0)
-TextLabel_10.Font = Enum.Font.ArialBold
-TextLabel_10.Text = "Item Notifier"
-TextLabel_10.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_10.TextScaled = true
-TextLabel_10.TextSize = 14.000
-TextLabel_10.TextWrapped = true
+Setting.Name = "Setting"
+Setting.Parent = Frame_2
+Setting.BackgroundColor3 = Color3.fromRGB(78, 203, 255)
+Setting.BackgroundTransparency = 1.000
+Setting.BorderSizePixel = 0
+Setting.Position = UDim2.new(0.00156415359, 0, 0.807514608, 0)
+Setting.Size = UDim2.new(0.985860169, 0, 0.100000001, 0)
+Setting.Font = Enum.Font.SourceSans
+Setting.Text = ""
+Setting.TextColor3 = Color3.fromRGB(227, 227, 227)
+Setting.TextScaled = true
+Setting.TextSize = 14.000
+Setting.TextWrapped = true
 
-TextLabel_11.Parent = SecOpItem
-TextLabel_11.BackgroundColor3 = Color3.fromRGB(21, 21, 21)
-TextLabel_11.Position = UDim2.new(0.0250000004, 0, 0.11258278, 0)
-TextLabel_11.Size = UDim2.new(0.949999988, 0, 0.110463589, 0)
-TextLabel_11.Font = Enum.Font.ArialBold
-TextLabel_11.Text = "Item Notifier"
-TextLabel_11.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_11.TextSize = 20.000
-TextLabel_11.TextWrapped = true
-TextLabel_11.TextXAlignment = Enum.TextXAlignment.Left
+TextLabel_6.Parent = Setting
+TextLabel_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_6.BackgroundTransparency = 1.000
+TextLabel_6.BorderSizePixel = 0
+TextLabel_6.Size = UDim2.new(0.98408705, 0, 1, 0)
+TextLabel_6.Visible = false
+TextLabel_6.Font = Enum.Font.Highway
+TextLabel_6.Text = "Setting"
+TextLabel_6.TextColor3 = Color3.fromRGB(235, 235, 235)
+TextLabel_6.TextSize = 20.000
+TextLabel_6.TextWrapped = true
 
-UICorner_27.Parent = TextLabel_11
+Player.Name = "Player"
+Player.Parent = Frame_2
+Player.BackgroundColor3 = Color3.fromRGB(78, 203, 255)
+Player.BackgroundTransparency = 1.000
+Player.BorderSizePixel = 0
+Player.Position = UDim2.new(0, 0, 0.306481272, 0)
+Player.Size = UDim2.new(0.999999821, 0, 0.0979058743, 0)
+Player.Font = Enum.Font.Highway
+Player.Text = ""
+Player.TextColor3 = Color3.fromRGB(227, 227, 227)
+Player.TextSize = 25.000
+Player.TextWrapped = true
 
-TextButton.Parent = SecOpItem
-TextButton.BackgroundColor3 = Color3.fromRGB(49, 49, 49)
-TextButton.Position = UDim2.new(0.788888872, 0, 0.129139155, 0)
-TextButton.Size = UDim2.new(0.166666672, 0, 0.0735099316, 0)
-TextButton.Font = Enum.Font.ArialBold
+TextLabel_7.Parent = Player
+TextLabel_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_7.BackgroundTransparency = 1.000
+TextLabel_7.BorderSizePixel = 0
+TextLabel_7.Size = UDim2.new(1.00000012, 0, 1, 0)
+TextLabel_7.Font = Enum.Font.Highway
+TextLabel_7.Text = "Player"
+TextLabel_7.TextColor3 = Color3.fromRGB(235, 235, 235)
+TextLabel_7.TextSize = 20.000
+TextLabel_7.TextWrapped = true
+
+Scoling.Name = "Scoling"
+Scoling.Parent = Frame
+Scoling.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Scoling.BackgroundTransparency = 1.000
+Scoling.Position = UDim2.new(0.311682582, 0, 0.0598313883, 0)
+Scoling.Size = UDim2.new(0.676578999, 0, 0.907533169, 0)
+
+UICorner_3.Parent = Scoling
+
+AutoFarm_2.Name = "AutoFarm"
+AutoFarm_2.Parent = Scoling
+AutoFarm_2.Active = true
+AutoFarm_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+AutoFarm_2.BackgroundTransparency = 1.000
+AutoFarm_2.BorderSizePixel = 0
+AutoFarm_2.Size = UDim2.new(1, 0, 1, 0)
+AutoFarm_2.ScrollBarThickness = 5
+
+UICorner_4.Parent = AutoFarm_2
+
+UIListLayout.Parent = AutoFarm_2
+UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+UIListLayout.Padding = UDim.new(0.0199999996, 0)
+
+AutoChest.Name = "AutoChest"
+AutoChest.Parent = AutoFarm_2
+AutoChest.BackgroundColor3 = Color3.fromRGB(57, 57, 57)
+AutoChest.ClipsDescendants = true
+AutoChest.Size = UDim2.new(0.973999977, 0, 0.064000003, 0)
+AutoChest.Font = Enum.Font.Highway
+AutoChest.Text = "Auto Chests "
+AutoChest.TextColor3 = Color3.fromRGB(221, 221, 221)
+AutoChest.TextSize = 20.000
+AutoChest.TextWrapped = true
+AutoChest.TextXAlignment = Enum.TextXAlignment.Left
+
+UICorner_5.CornerRadius = UDim.new(0, 4)
+UICorner_5.Parent = AutoChest
+
+TextButton.Parent = AutoChest
+TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.Position = UDim2.new(0.886187255, 0, 0.32776469, 0)
+TextButton.Size = UDim2.new(0.0755073875, 0, 0.357529044, 0)
+TextButton.Font = Enum.Font.SourceSans
 TextButton.Text = ""
 TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
 TextButton.TextSize = 14.000
 
-UICorner_28.Parent = TextButton
+UICorner_6.Parent = TextButton
 
-MeWh_2.Name = "MeWh"
-MeWh_2.Parent = SecOpItem
-MeWh_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-MeWh_2.Position = UDim2.new(0.788888812, 0, 0.12913917, 0)
-MeWh_2.Size = UDim2.new(0.088888891, 0, 0.0735099763, 0)
-MeWh_2.Font = Enum.Font.ArialBold
-MeWh_2.Text = ""
-MeWh_2.TextColor3 = Color3.fromRGB(0, 0, 0)
-MeWh_2.TextSize = 14.000
+TextLabel_8.Parent = AutoChest
+TextLabel_8.BackgroundColor3 = Color3.fromRGB(220, 220, 220)
+TextLabel_8.Position = UDim2.new(0.885999978, 0, 0.270999998, 0)
+TextLabel_8.Size = UDim2.new(0.0621477924, 0, 0.444822878, 0)
+TextLabel_8.ZIndex = 2
+TextLabel_8.Font = Enum.Font.SourceSans
+TextLabel_8.Text = ""
+TextLabel_8.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_8.TextSize = 14.000
 
-UICorner_29.Parent = MeWh_2
+UICorner_7.CornerRadius = UDim.new(100, 0)
+UICorner_7.Parent = TextLabel_8
 
-ScrollingFrame.Parent = SecOpItem
-ScrollingFrame.Active = true
-ScrollingFrame.BackgroundColor3 = Color3.fromRGB(39, 39, 39)
-ScrollingFrame.BorderSizePixel = 0
-ScrollingFrame.Position = UDim2.new(0, 0, 0.254312515, 0)
-ScrollingFrame.Size = UDim2.new(1, 0, 0.310337543, 0)
-ScrollingFrame.ScrollBarThickness = 5
+UIAspectRatioConstraint.Parent = TextLabel_8
+UIAspectRatioConstraint.DominantAxis = Enum.DominantAxis.Height
 
-UICorner_30.CornerRadius = UDim.new(1, 0)
-UICorner_30.Parent = ScrollingFrame
+SandDebris.Name = "SandDebris"
+SandDebris.Parent = AutoFarm_2
+SandDebris.BackgroundColor3 = Color3.fromRGB(57, 57, 57)
+SandDebris.Size = UDim2.new(0.973999977, 0, 0.064000003, 0)
+SandDebris.Font = Enum.Font.Highway
+SandDebris.Text = "Auto Sand Debris"
+SandDebris.TextColor3 = Color3.fromRGB(221, 221, 221)
+SandDebris.TextSize = 20.000
+SandDebris.TextWrapped = true
+SandDebris.TextXAlignment = Enum.TextXAlignment.Left
 
-UIListLayout.Parent = ScrollingFrame
-UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+UICorner_8.CornerRadius = UDim.new(0, 4)
+UICorner_8.Parent = SandDebris
 
-TextLabel_12.Parent = ScrollingFrame
-TextLabel_12.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
-TextLabel_12.Size = UDim2.new(0.975000024, 0, 0.150000006, 0)
-TextLabel_12.Font = Enum.Font.ArialBold
-TextLabel_12.Text = "None"
-TextLabel_12.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_12.TextSize = 19.000
+TextButton_2.Parent = SandDebris
+TextButton_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_2.Position = UDim2.new(0.886187255, 0, 0.32776469, 0)
+TextButton_2.Size = UDim2.new(0.0755073875, 0, 0.357529044, 0)
+TextButton_2.Font = Enum.Font.SourceSans
+TextButton_2.Text = ""
+TextButton_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_2.TextSize = 14.000
 
-UICorner_31.Parent = TextLabel_12
+UICorner_9.Parent = TextButton_2
 
-UIAspectRatioConstraint.Parent = TextLabel_12
-UIAspectRatioConstraint.AspectRatio = 9.000
-UIAspectRatioConstraint.AspectType = Enum.AspectType.ScaleWithParentSize
+TextLabel_9.Parent = SandDebris
+TextLabel_9.BackgroundColor3 = Color3.fromRGB(220, 220, 220)
+TextLabel_9.Position = UDim2.new(0.885999978, 0, 0.270999998, 0)
+TextLabel_9.Size = UDim2.new(0.0621477924, 0, 0.444822878, 0)
+TextLabel_9.ZIndex = 2
+TextLabel_9.Font = Enum.Font.SourceSans
+TextLabel_9.Text = ""
+TextLabel_9.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_9.TextSize = 14.000
 
-None.Name = "None"
-None.Parent = ScrollingFrame
-None.BackgroundColor3 = Color3.fromRGB(36, 36, 36)
-None.Position = UDim2.new(0, 0, 5.74010954e-08, 0)
-None.Size = UDim2.new(0.974999964, 0, 0.149762049, 0)
-None.Font = Enum.Font.ArialBold
-None.Text = "None"
-None.TextColor3 = Color3.fromRGB(255, 255, 255)
-None.TextSize = 20.000
-None.TextWrapped = true
+UICorner_10.CornerRadius = UDim.new(100, 0)
+UICorner_10.Parent = TextLabel_9
 
-UIAspectRatioConstraint_2.Parent = None
-UIAspectRatioConstraint_2.AspectRatio = 9.000
-UIAspectRatioConstraint_2.AspectType = Enum.AspectType.ScaleWithParentSize
+UIAspectRatioConstraint_2.Parent = TextLabel_9
+UIAspectRatioConstraint_2.DominantAxis = Enum.DominantAxis.Height
 
-UICorner_32.Parent = None
+Meteor.Name = "Meteor"
+Meteor.Parent = AutoFarm_2
+Meteor.BackgroundColor3 = Color3.fromRGB(57, 57, 57)
+Meteor.Size = UDim2.new(0.973999977, 0, 0.064000003, 0)
+Meteor.Font = Enum.Font.Highway
+Meteor.Text = "Auto Meteor"
+Meteor.TextColor3 = Color3.fromRGB(221, 221, 221)
+Meteor.TextSize = 20.000
+Meteor.TextWrapped = true
+Meteor.TextXAlignment = Enum.TextXAlignment.Left
 
-DragonBall.Name = "DragonBall"
-DragonBall.Parent = ScrollingFrame
-DragonBall.BackgroundColor3 = Color3.fromRGB(36, 36, 36)
-DragonBall.Position = UDim2.new(0, 0, 5.74010954e-08, 0)
-DragonBall.Size = UDim2.new(0.974999964, 0, 0.149762049, 0)
-DragonBall.Font = Enum.Font.ArialBold
-DragonBall.Text = "DragonBall"
-DragonBall.TextColor3 = Color3.fromRGB(255, 255, 255)
-DragonBall.TextSize = 20.000
-DragonBall.TextWrapped = true
+UICorner_11.CornerRadius = UDim.new(0, 4)
+UICorner_11.Parent = Meteor
 
-UIAspectRatioConstraint_3.Parent = DragonBall
-UIAspectRatioConstraint_3.AspectRatio = 9.000
-UIAspectRatioConstraint_3.AspectType = Enum.AspectType.ScaleWithParentSize
+TextButton_3.Parent = Meteor
+TextButton_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_3.Position = UDim2.new(0.886187255, 0, 0.32776469, 0)
+TextButton_3.Size = UDim2.new(0.0755073875, 0, 0.357529044, 0)
+TextButton_3.Font = Enum.Font.SourceSans
+TextButton_3.Text = ""
+TextButton_3.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_3.TextSize = 14.000
 
-UICorner_33.Parent = DragonBall
+UICorner_12.Parent = TextButton_3
 
-Exo.Name = "Exo"
-Exo.Parent = ScrollingFrame
-Exo.BackgroundColor3 = Color3.fromRGB(36, 36, 36)
-Exo.Position = UDim2.new(0, 0, 5.74010954e-08, 0)
-Exo.Size = UDim2.new(0.974999964, 0, 0.149762049, 0)
-Exo.Font = Enum.Font.ArialBold
-Exo.Text = "X Soul"
-Exo.TextColor3 = Color3.fromRGB(255, 255, 255)
-Exo.TextSize = 20.000
-Exo.TextWrapped = true
+TextLabel_10.Parent = Meteor
+TextLabel_10.BackgroundColor3 = Color3.fromRGB(220, 220, 220)
+TextLabel_10.Position = UDim2.new(0.885999978, 0, 0.270999998, 0)
+TextLabel_10.Size = UDim2.new(0.0621477924, 0, 0.444822878, 0)
+TextLabel_10.ZIndex = 2
+TextLabel_10.Font = Enum.Font.SourceSans
+TextLabel_10.Text = ""
+TextLabel_10.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_10.TextSize = 14.000
 
-UIAspectRatioConstraint_4.Parent = Exo
-UIAspectRatioConstraint_4.AspectRatio = 9.000
-UIAspectRatioConstraint_4.AspectType = Enum.AspectType.ScaleWithParentSize
+UICorner_13.CornerRadius = UDim.new(100, 0)
+UICorner_13.Parent = TextLabel_10
 
-UICorner_34.Parent = Exo
+UIAspectRatioConstraint_3.Parent = TextLabel_10
+UIAspectRatioConstraint_3.DominantAxis = Enum.DominantAxis.Height
 
-ImageLabel.Parent = BG
-ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-ImageLabel.BackgroundTransparency = 1.000
-ImageLabel.Size = UDim2.new(1, 0, 1, 0)
-ImageLabel.Image = "rbxassetid://7388258756"
-ImageLabel.ImageTransparency = 0.950
+Dragonball.Name = "Dragonball"
+Dragonball.Parent = AutoFarm_2
+Dragonball.BackgroundColor3 = Color3.fromRGB(57, 57, 57)
+Dragonball.Size = UDim2.new(0.973999977, 0, 0.064000003, 0)
+Dragonball.Font = Enum.Font.Highway
+Dragonball.Text = "Auto Dragon Ball"
+Dragonball.TextColor3 = Color3.fromRGB(221, 221, 221)
+Dragonball.TextSize = 20.000
+Dragonball.TextWrapped = true
+Dragonball.TextXAlignment = Enum.TextXAlignment.Left
 
-UICorner_35.Parent = ImageLabel
+UICorner_14.CornerRadius = UDim.new(0, 4)
+UICorner_14.Parent = Dragonball
 
-Frame.Parent = TannyHub
-Frame.BackgroundColor3 = Color3.fromRGB(24, 24, 24)
-Frame.Position = UDim2.new(0.371810347, 0, 0.334312499, 0)
-Frame.Size = UDim2.new(0.256118804, 0, 0.466382295, 0)
+TextButton_4.Parent = Dragonball
+TextButton_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_4.Position = UDim2.new(0.886187255, 0, 0.32776469, 0)
+TextButton_4.Size = UDim2.new(0.0755073875, 0, 0.357529044, 0)
+TextButton_4.Font = Enum.Font.SourceSans
+TextButton_4.Text = ""
+TextButton_4.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_4.TextSize = 14.000
 
-TextLabel_13.Parent = Frame
-TextLabel_13.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_13.BackgroundTransparency = 1.000
-TextLabel_13.Position = UDim2.new(0, 0, 0.053057909, 0)
-TextLabel_13.Size = UDim2.new(1.00000024, 0, 0.174733087, 0)
-TextLabel_13.Font = Enum.Font.ArialBold
-TextLabel_13.Text = "Swa Hub"
-TextLabel_13.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_13.TextSize = 30.000
-TextLabel_13.TextWrapped = true
+UICorner_15.Parent = TextButton_4
 
-TextBox.Parent = Frame
-TextBox.BackgroundColor3 = Color3.fromRGB(34, 34, 34)
-TextBox.BackgroundTransparency = 0.200
-TextBox.Position = UDim2.new(0.179940999, 0, 0.426838189, 0)
-TextBox.Size = UDim2.new(0.639822662, 0, 0.142704606, 0)
-TextBox.ClearTextOnFocus = false
-TextBox.Font = Enum.Font.ArialBold
-TextBox.Text = ""
-TextBox.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_11.Parent = Dragonball
+TextLabel_11.BackgroundColor3 = Color3.fromRGB(220, 220, 220)
+TextLabel_11.Position = UDim2.new(0.885999978, 0, 0.270999998, 0)
+TextLabel_11.Size = UDim2.new(0.0621477924, 0, 0.444822878, 0)
+TextLabel_11.ZIndex = 2
+TextLabel_11.Font = Enum.Font.SourceSans
+TextLabel_11.Text = ""
+TextLabel_11.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_11.TextSize = 14.000
+
+UICorner_16.CornerRadius = UDim.new(100, 0)
+UICorner_16.Parent = TextLabel_11
+
+UIAspectRatioConstraint_4.Parent = TextLabel_11
+UIAspectRatioConstraint_4.DominantAxis = Enum.DominantAxis.Height
+
+XSoul.Name = "XSoul"
+XSoul.Parent = AutoFarm_2
+XSoul.BackgroundColor3 = Color3.fromRGB(57, 57, 57)
+XSoul.Size = UDim2.new(0.973999977, 0, 0.064000003, 0)
+XSoul.Font = Enum.Font.Highway
+XSoul.Text = "Auto X Soul"
+XSoul.TextColor3 = Color3.fromRGB(221, 221, 221)
+XSoul.TextSize = 20.000
+XSoul.TextWrapped = true
+XSoul.TextXAlignment = Enum.TextXAlignment.Left
+
+UICorner_17.CornerRadius = UDim.new(0, 4)
+UICorner_17.Parent = XSoul
+
+TextButton_5.Parent = XSoul
+TextButton_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_5.Position = UDim2.new(0.886187255, 0, 0.32776469, 0)
+TextButton_5.Size = UDim2.new(0.0755073875, 0, 0.357529044, 0)
+TextButton_5.Font = Enum.Font.SourceSans
+TextButton_5.Text = ""
+TextButton_5.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_5.TextSize = 14.000
+
+UICorner_18.Parent = TextButton_5
+
+TextLabel_12.Parent = XSoul
+TextLabel_12.BackgroundColor3 = Color3.fromRGB(220, 220, 220)
+TextLabel_12.Position = UDim2.new(0.885999978, 0, 0.270999998, 0)
+TextLabel_12.Size = UDim2.new(0.0621477924, 0, 0.444822878, 0)
+TextLabel_12.ZIndex = 2
+TextLabel_12.Font = Enum.Font.SourceSans
+TextLabel_12.Text = ""
+TextLabel_12.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_12.TextSize = 14.000
+
+UICorner_19.CornerRadius = UDim.new(100, 0)
+UICorner_19.Parent = TextLabel_12
+
+UIAspectRatioConstraint_5.Parent = TextLabel_12
+UIAspectRatioConstraint_5.DominantAxis = Enum.DominantAxis.Height
+
+Mysterious.Name = "Mysterious"
+Mysterious.Parent = AutoFarm_2
+Mysterious.BackgroundColor3 = Color3.fromRGB(57, 57, 57)
+Mysterious.Position = UDim2.new(-0.0391644761, 0, -0.0178829562, 0)
+Mysterious.Size = UDim2.new(0.973999977, 0, 0.064000003, 0)
+Mysterious.Font = Enum.Font.Highway
+Mysterious.Text = "Auto Mysterious Hat"
+Mysterious.TextColor3 = Color3.fromRGB(221, 221, 221)
+Mysterious.TextSize = 20.000
+Mysterious.TextWrapped = true
+Mysterious.TextXAlignment = Enum.TextXAlignment.Left
+
+UICorner_20.CornerRadius = UDim.new(0, 4)
+UICorner_20.Parent = Mysterious
+
+TextButton_6.Parent = Mysterious
+TextButton_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_6.Position = UDim2.new(0.886187255, 0, 0.32776469, 0)
+TextButton_6.Size = UDim2.new(0.0755073875, 0, 0.357529044, 0)
+TextButton_6.Font = Enum.Font.SourceSans
+TextButton_6.Text = ""
+TextButton_6.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_6.TextSize = 14.000
+
+UICorner_21.Parent = TextButton_6
+
+TextLabel_13.Parent = Mysterious
+TextLabel_13.BackgroundColor3 = Color3.fromRGB(220, 220, 220)
+TextLabel_13.Position = UDim2.new(0.885999978, 0, 0.270999998, 0)
+TextLabel_13.Size = UDim2.new(0.0621477924, 0, 0.444822878, 0)
+TextLabel_13.ZIndex = 2
+TextLabel_13.Font = Enum.Font.SourceSans
+TextLabel_13.Text = ""
+TextLabel_13.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_13.TextSize = 14.000
+
+UICorner_22.CornerRadius = UDim.new(100, 0)
+UICorner_22.Parent = TextLabel_13
+
+UIAspectRatioConstraint_6.Parent = TextLabel_13
+UIAspectRatioConstraint_6.DominantAxis = Enum.DominantAxis.Height
+
+DamageFarm.Name = "DamageFarm"
+DamageFarm.Parent = AutoFarm_2
+DamageFarm.BackgroundColor3 = Color3.fromRGB(57, 57, 57)
+DamageFarm.Position = UDim2.new(-0.0391644761, 0, -0.0178829562, 0)
+DamageFarm.Size = UDim2.new(0.973999977, 0, 0.064000003, 0)
+DamageFarm.Font = Enum.Font.Highway
+DamageFarm.Text = "Auto Damage"
+DamageFarm.TextColor3 = Color3.fromRGB(221, 221, 221)
+DamageFarm.TextSize = 20.000
+DamageFarm.TextWrapped = true
+DamageFarm.TextXAlignment = Enum.TextXAlignment.Left
+
+UICorner_23.CornerRadius = UDim.new(0, 4)
+UICorner_23.Parent = DamageFarm
+
+TextButton_7.Parent = DamageFarm
+TextButton_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_7.Position = UDim2.new(0.886187255, 0, 0.32776469, 0)
+TextButton_7.Size = UDim2.new(0.0755073875, 0, 0.357529044, 0)
+TextButton_7.Font = Enum.Font.SourceSans
+TextButton_7.Text = ""
+TextButton_7.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_7.TextSize = 14.000
+
+UICorner_24.Parent = TextButton_7
+
+TextLabel_14.Parent = DamageFarm
+TextLabel_14.BackgroundColor3 = Color3.fromRGB(220, 220, 220)
+TextLabel_14.Position = UDim2.new(0.885999978, 0, 0.270999998, 0)
+TextLabel_14.Size = UDim2.new(0.0621477924, 0, 0.444822878, 0)
+TextLabel_14.ZIndex = 2
+TextLabel_14.Font = Enum.Font.SourceSans
+TextLabel_14.Text = ""
+TextLabel_14.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_14.TextSize = 14.000
+
+UICorner_25.CornerRadius = UDim.new(100, 0)
+UICorner_25.Parent = TextLabel_14
+
+UIAspectRatioConstraint_7.Parent = TextLabel_14
+UIAspectRatioConstraint_7.DominantAxis = Enum.DominantAxis.Height
+
+Misc_2.Name = "Misc"
+Misc_2.Parent = Scoling
+Misc_2.Active = true
+Misc_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Misc_2.BackgroundTransparency = 1.000
+Misc_2.BorderSizePixel = 0
+Misc_2.Size = UDim2.new(1, 0, 1, 0)
+Misc_2.Visible = false
+Misc_2.ScrollBarThickness = 5
+
+UICorner_26.Parent = Misc_2
+
+UIListLayout_2.Parent = Misc_2
+UIListLayout_2.SortOrder = Enum.SortOrder.LayoutOrder
+UIListLayout_2.Padding = UDim.new(0.0199999996, 0)
+
+TextLabel_15.Parent = Misc_2
+TextLabel_15.BackgroundColor3 = Color3.fromRGB(57, 57, 57)
+TextLabel_15.NextSelectionLeft = Misc_2
+TextLabel_15.Position = UDim2.new(0, 0, 4.54787106e-08, 0)
+TextLabel_15.Size = UDim2.new(0.974000037, 0, 0.0777343884, 0)
+TextLabel_15.Font = Enum.Font.Highway
+TextLabel_15.Text = "WalkSpeed"
+TextLabel_15.TextColor3 = Color3.fromRGB(221, 221, 221)
+TextLabel_15.TextSize = 20.000
+TextLabel_15.TextWrapped = true
+TextLabel_15.TextXAlignment = Enum.TextXAlignment.Left
+
+UICorner_27.CornerRadius = UDim.new(0, 4)
+UICorner_27.Parent = TextLabel_15
+
+TextBox.Parent = TextLabel_15
+TextBox.BackgroundColor3 = Color3.fromRGB(53, 53, 53)
+TextBox.BorderSizePixel = 0
+TextBox.Position = UDim2.new(0.855578065, 0, 0.223401487, 0)
+TextBox.Size = UDim2.new(0.111169428, 0, 0.519991577, 0)
+TextBox.Font = Enum.Font.Highway
+TextBox.Text = "16"
+TextBox.TextColor3 = Color3.fromRGB(247, 247, 247)
 TextBox.TextScaled = true
 TextBox.TextSize = 14.000
 TextBox.TextWrapped = true
 
-UICorner_36.Parent = TextBox
+UICorner_28.Parent = TextBox
 
-TextButton_2.Parent = Frame
-TextButton_2.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
-TextButton_2.BackgroundTransparency = 0.200
-TextButton_2.Position = UDim2.new(0.256637156, 0, 0.759664536, 0)
-TextButton_2.Size = UDim2.new(0.486430436, 0, 0.164056927, 0)
-TextButton_2.Font = Enum.Font.ArialBold
-TextButton_2.Text = "Login"
-TextButton_2.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextButton_2.TextScaled = true
-TextButton_2.TextSize = 14.000
-TextButton_2.TextWrapped = true
+TextLabel_16.Parent = Misc_2
+TextLabel_16.BackgroundColor3 = Color3.fromRGB(57, 57, 57)
+TextLabel_16.NextSelectionLeft = Misc_2
+TextLabel_16.Position = UDim2.new(0, 0, 0.195468813, 0)
+TextLabel_16.Size = UDim2.new(0.974000037, 0, 0.073377803, 0)
+TextLabel_16.Font = Enum.Font.Highway
+TextLabel_16.Text = "JumpPower"
+TextLabel_16.TextColor3 = Color3.fromRGB(221, 221, 221)
+TextLabel_16.TextSize = 20.000
+TextLabel_16.TextWrapped = true
+TextLabel_16.TextXAlignment = Enum.TextXAlignment.Left
 
-UICorner_37.Parent = TextButton_2
+UICorner_29.CornerRadius = UDim.new(0, 4)
+UICorner_29.Parent = TextLabel_16
 
-UICorner_38.Parent = Frame
+TextBox_2.Parent = TextLabel_16
+TextBox_2.BackgroundColor3 = Color3.fromRGB(53, 53, 53)
+TextBox_2.BorderSizePixel = 0
+TextBox_2.Position = UDim2.new(0.855578065, 0, 0.223401487, 0)
+TextBox_2.Size = UDim2.new(0.111169428, 0, 0.519991577, 0)
+TextBox_2.Font = Enum.Font.Highway
+TextBox_2.Text = "16"
+TextBox_2.TextColor3 = Color3.fromRGB(247, 247, 247)
+TextBox_2.TextScaled = true
+TextBox_2.TextSize = 14.000
+TextBox_2.TextWrapped = true
 
-TextLabel_14.Parent = Frame
-TextLabel_14.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_14.BackgroundTransparency = 1.000
-TextLabel_14.Position = UDim2.new(0.29481405, 0, 0.243040413, 0)
-TextLabel_14.Size = UDim2.new(0.404130101, 0, 0.0964412093, 0)
-TextLabel_14.Font = Enum.Font.ArialBold
-TextLabel_14.Text = "Login"
-TextLabel_14.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_14.TextSize = 30.000
-TextLabel_14.TextWrapped = true
+UICorner_30.Parent = TextBox_2
 
-TextLabel_15.Parent = Frame
-TextLabel_15.BackgroundColor3 = Color3.fromRGB(255, 179, 0)
-TextLabel_15.Position = UDim2.new(0.514169753, 0, 0.0700579286, 0)
-TextLabel_15.Size = UDim2.new(0.184774429, 0, 0.129407749, 0)
-TextLabel_15.ZIndex = 0
-TextLabel_15.Font = Enum.Font.ArialBold
-TextLabel_15.Text = ""
-TextLabel_15.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_15.TextSize = 30.000
-TextLabel_15.TextWrapped = true
+AutoChest_2.Name = "AutoChest"
+AutoChest_2.Parent = Misc_2
+AutoChest_2.BackgroundColor3 = Color3.fromRGB(57, 57, 57)
+AutoChest_2.ClipsDescendants = true
+AutoChest_2.Size = UDim2.new(0.973999977, 0, 0.064000003, 0)
+AutoChest_2.Font = Enum.Font.Highway
+AutoChest_2.Text = "Fly"
+AutoChest_2.TextColor3 = Color3.fromRGB(221, 221, 221)
+AutoChest_2.TextSize = 20.000
+AutoChest_2.TextWrapped = true
+AutoChest_2.TextXAlignment = Enum.TextXAlignment.Left
 
-UICorner_39.CornerRadius = UDim.new(0.100000001, 0)
-UICorner_39.Parent = TextLabel_15
+UICorner_31.CornerRadius = UDim.new(0, 4)
+UICorner_31.Parent = AutoChest_2
 
-ImageLabel_2.Parent = Frame
-ImageLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-ImageLabel_2.BackgroundTransparency = 1.000
-ImageLabel_2.Size = UDim2.new(1, 0, 1, 0)
-ImageLabel_2.ZIndex = -1
-ImageLabel_2.Image = "rbxassetid://7388244591"
-ImageLabel_2.ImageTransparency = 0.900
+TextButton_8.Parent = AutoChest_2
+TextButton_8.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_8.Position = UDim2.new(0.886187255, 0, 0.32776469, 0)
+TextButton_8.Size = UDim2.new(0.0755073875, 0, 0.357529044, 0)
+TextButton_8.Font = Enum.Font.SourceSans
+TextButton_8.Text = ""
+TextButton_8.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_8.TextSize = 14.000
 
-UICorner_40.Parent = ImageLabel_2
+UICorner_32.Parent = TextButton_8
+
+TextLabel_17.Parent = AutoChest_2
+TextLabel_17.BackgroundColor3 = Color3.fromRGB(220, 220, 220)
+TextLabel_17.Position = UDim2.new(0.885999978, 0, 0.270999998, 0)
+TextLabel_17.Size = UDim2.new(0.0621477924, 0, 0.444822878, 0)
+TextLabel_17.ZIndex = 2
+TextLabel_17.Font = Enum.Font.SourceSans
+TextLabel_17.Text = ""
+TextLabel_17.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_17.TextSize = 14.000
+
+UICorner_33.CornerRadius = UDim.new(100, 0)
+UICorner_33.Parent = TextLabel_17
+
+UIAspectRatioConstraint_8.Parent = TextLabel_17
+UIAspectRatioConstraint_8.DominantAxis = Enum.DominantAxis.Height
+
+Player_2.Name = "Player"
+Player_2.Parent = Scoling
+Player_2.Active = true
+Player_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Player_2.BackgroundTransparency = 1.000
+Player_2.BorderSizePixel = 0
+Player_2.Size = UDim2.new(1, 0, 1, 0)
+Player_2.Visible = false
+Player_2.ScrollBarThickness = 5
+
+UICorner_34.Parent = Player_2
+
+UIListLayout_3.Parent = Player_2
+UIListLayout_3.SortOrder = Enum.SortOrder.LayoutOrder
+UIListLayout_3.Padding = UDim.new(0.0199999996, 0)
+
+Kill.Name = "Kill"
+Kill.Parent = Player_2
+Kill.BackgroundColor3 = Color3.fromRGB(57, 57, 57)
+Kill.ClipsDescendants = true
+Kill.Size = UDim2.new(0.973999977, 0, 0.064000003, 0)
+Kill.Font = Enum.Font.Highway
+Kill.Text = "Select Players"
+Kill.TextColor3 = Color3.fromRGB(221, 221, 221)
+Kill.TextSize = 20.000
+Kill.TextWrapped = true
+Kill.TextXAlignment = Enum.TextXAlignment.Left
+
+UICorner_35.CornerRadius = UDim.new(0, 4)
+UICorner_35.Parent = Kill
+
+TextButton_9.Parent = Kill
+TextButton_9.BackgroundColor3 = Color3.fromRGB(78, 203, 255)
+TextButton_9.BackgroundTransparency = 1.000
+TextButton_9.Position = UDim2.new(0.879453599, 0, 0.30427444, 0)
+TextButton_9.Size = UDim2.new(0.0755073875, 0, 0.357529044, 0)
+TextButton_9.Font = Enum.Font.Highway
+TextButton_9.Text = "+"
+TextButton_9.TextColor3 = Color3.fromRGB(78, 203, 255)
+TextButton_9.TextSize = 50.000
+
+UICorner_36.Parent = TextButton_9
+
+Frame_3.Parent = Player_2
+Frame_3.BackgroundColor3 = Color3.fromRGB(57, 57, 57)
+Frame_3.Position = UDim2.new(0, 0, 0.167999998, 0)
+Frame_3.Size = UDim2.new(0.973999977, 0, 0, 0)
+Frame_3.Visible = false
+
+UICorner_37.CornerRadius = UDim.new(0, 4)
+UICorner_37.Parent = Frame_3
+
+ScrollingFrame.Parent = Frame_3
+ScrollingFrame.Active = true
+ScrollingFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ScrollingFrame.BackgroundTransparency = 1.000
+ScrollingFrame.BorderSizePixel = 0
+ScrollingFrame.Position = UDim2.new(0.00897819363, 0, 0.0347397998, 0)
+ScrollingFrame.Size = UDim2.new(0.979799092, 0, 0.930520415, 0)
+ScrollingFrame.CanvasSize = UDim2.new(0, 0, 4, 0)
+ScrollingFrame.ScrollBarThickness = 5
+
+UIListLayout_4.Parent = ScrollingFrame
+UIListLayout_4.HorizontalAlignment = Enum.HorizontalAlignment.Center
+UIListLayout_4.SortOrder = Enum.SortOrder.LayoutOrder
+
+CloneY.Name = "CloneY"
+CloneY.Parent = ScrollingFrame
+CloneY.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+CloneY.BackgroundTransparency = 1.000
+CloneY.Position = UDim2.new(0.27719, 0, 0, 0)
+CloneY.Size = UDim2.new(0.44562003, 0, 0.0375332981, 0)
+CloneY.Visible = false
+CloneY.Font = Enum.Font.Highway
+CloneY.Text = ""
+CloneY.TextColor3 = Color3.fromRGB(255, 255, 255)
+CloneY.TextScaled = true
+CloneY.TextSize = 20.000
+CloneY.TextWrapped = true
+
+AutoChest_3.Name = "AutoChest"
+AutoChest_3.Parent = Player_2
+AutoChest_3.BackgroundColor3 = Color3.fromRGB(57, 57, 57)
+AutoChest_3.ClipsDescendants = true
+AutoChest_3.Size = UDim2.new(0.973999977, 0, 0.064000003, 0)
+AutoChest_3.Font = Enum.Font.Highway
+AutoChest_3.Text = "Kill"
+AutoChest_3.TextColor3 = Color3.fromRGB(221, 221, 221)
+AutoChest_3.TextSize = 20.000
+AutoChest_3.TextWrapped = true
+AutoChest_3.TextXAlignment = Enum.TextXAlignment.Left
+
+UICorner_38.CornerRadius = UDim.new(0, 4)
+UICorner_38.Parent = AutoChest_3
+
+TextButton_10.Parent = AutoChest_3
+TextButton_10.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_10.Position = UDim2.new(0.886187255, 0, 0.32776469, 0)
+TextButton_10.Size = UDim2.new(0.0755073875, 0, 0.357529044, 0)
+TextButton_10.Font = Enum.Font.SourceSans
+TextButton_10.Text = ""
+TextButton_10.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_10.TextSize = 14.000
+
+UICorner_39.Parent = TextButton_10
+
+TextLabel_18.Parent = AutoChest_3
+TextLabel_18.BackgroundColor3 = Color3.fromRGB(220, 220, 220)
+TextLabel_18.Position = UDim2.new(0.885999978, 0, 0.270999998, 0)
+TextLabel_18.Size = UDim2.new(0.0621477924, 0, 0.444822878, 0)
+TextLabel_18.ZIndex = 2
+TextLabel_18.Font = Enum.Font.SourceSans
+TextLabel_18.Text = ""
+TextLabel_18.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_18.TextSize = 14.000
+
+UICorner_40.CornerRadius = UDim.new(100, 0)
+UICorner_40.Parent = TextLabel_18
+
+UIAspectRatioConstraint_9.Parent = TextLabel_18
+UIAspectRatioConstraint_9.DominantAxis = Enum.DominantAxis.Height
+
+Setting_2.Name = "Setting"
+Setting_2.Parent = Scoling
+Setting_2.Active = true
+Setting_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Setting_2.BackgroundTransparency = 1.000
+Setting_2.BorderSizePixel = 0
+Setting_2.Size = UDim2.new(1, 0, 1, 0)
+Setting_2.Visible = false
+Setting_2.ScrollBarThickness = 5
+
+UICorner_41.Parent = Setting_2
+
+UIListLayout_5.Parent = Setting_2
+UIListLayout_5.SortOrder = Enum.SortOrder.LayoutOrder
+UIListLayout_5.Padding = UDim.new(0.0199999996, 0)
+
+TextLabel_19.Parent = Setting_2
+TextLabel_19.BackgroundColor3 = Color3.fromRGB(57, 57, 57)
+TextLabel_19.NextSelectionLeft = Setting_2
+TextLabel_19.Size = UDim2.new(0.973999977, 0, 0.064000003, 0)
+TextLabel_19.Font = Enum.Font.Highway
+TextLabel_19.Text = "Game"
+TextLabel_19.TextColor3 = Color3.fromRGB(221, 221, 221)
+TextLabel_19.TextSize = 20.000
+TextLabel_19.TextWrapped = true
+TextLabel_19.TextXAlignment = Enum.TextXAlignment.Left
+
+UICorner_42.CornerRadius = UDim.new(0, 4)
+UICorner_42.Parent = TextLabel_19
+
+TextLabel_20.Parent = Setting_2
+TextLabel_20.BackgroundColor3 = Color3.fromRGB(57, 57, 57)
+TextLabel_20.NextSelectionLeft = Setting_2
+TextLabel_20.Size = UDim2.new(0.973999977, 0, 0.064000003, 0)
+TextLabel_20.Font = Enum.Font.Highway
+TextLabel_20.Text = "Setting"
+TextLabel_20.TextColor3 = Color3.fromRGB(221, 221, 221)
+TextLabel_20.TextSize = 20.000
+TextLabel_20.TextWrapped = true
+TextLabel_20.TextXAlignment = Enum.TextXAlignment.Left
+
+UICorner_43.CornerRadius = UDim.new(0, 4)
+UICorner_43.Parent = TextLabel_20
+
+TextLabel_21.Parent = Setting_2
+TextLabel_21.BackgroundColor3 = Color3.fromRGB(57, 57, 57)
+TextLabel_21.NextSelectionLeft = Setting_2
+TextLabel_21.Size = UDim2.new(0.973999977, 0, 0.064000003, 0)
+TextLabel_21.Font = Enum.Font.Highway
+TextLabel_21.Text = "Auto Meteor"
+TextLabel_21.TextColor3 = Color3.fromRGB(221, 221, 221)
+TextLabel_21.TextSize = 20.000
+TextLabel_21.TextWrapped = true
+TextLabel_21.TextXAlignment = Enum.TextXAlignment.Left
+
+UICorner_44.CornerRadius = UDim.new(0, 4)
+UICorner_44.Parent = TextLabel_21
+
+TextLabel_22.Parent = Setting_2
+TextLabel_22.BackgroundColor3 = Color3.fromRGB(57, 57, 57)
+TextLabel_22.NextSelectionLeft = Setting_2
+TextLabel_22.Size = UDim2.new(0.973999977, 0, 0.064000003, 0)
+TextLabel_22.Font = Enum.Font.Highway
+TextLabel_22.Text = "Auto Dragon Ball"
+TextLabel_22.TextColor3 = Color3.fromRGB(221, 221, 221)
+TextLabel_22.TextSize = 20.000
+TextLabel_22.TextWrapped = true
+TextLabel_22.TextXAlignment = Enum.TextXAlignment.Left
+
+UICorner_45.CornerRadius = UDim.new(0, 4)
+UICorner_45.Parent = TextLabel_22
+
+TextLabel_23.Parent = Setting_2
+TextLabel_23.BackgroundColor3 = Color3.fromRGB(57, 57, 57)
+TextLabel_23.NextSelectionLeft = Setting_2
+TextLabel_23.Size = UDim2.new(0.973999977, 0, 0.064000003, 0)
+TextLabel_23.Font = Enum.Font.Highway
+TextLabel_23.Text = "Auto X Soul"
+TextLabel_23.TextColor3 = Color3.fromRGB(221, 221, 221)
+TextLabel_23.TextSize = 20.000
+TextLabel_23.TextWrapped = true
+TextLabel_23.TextXAlignment = Enum.TextXAlignment.Left
+
+UICorner_46.CornerRadius = UDim.new(0, 4)
+UICorner_46.Parent = TextLabel_23
+
+TextLabel_24.Parent = Setting_2
+TextLabel_24.BackgroundColor3 = Color3.fromRGB(57, 57, 57)
+TextLabel_24.NextSelectionLeft = Setting_2
+TextLabel_24.Size = UDim2.new(0.973999977, 0, 0.064000003, 0)
+TextLabel_24.Font = Enum.Font.Highway
+TextLabel_24.Text = "Auto Mysterious Hat"
+TextLabel_24.TextColor3 = Color3.fromRGB(221, 221, 221)
+TextLabel_24.TextSize = 20.000
+TextLabel_24.TextWrapped = true
+TextLabel_24.TextXAlignment = Enum.TextXAlignment.Left
+
+UICorner_47.CornerRadius = UDim.new(0, 4)
+UICorner_47.Parent = TextLabel_24
+
+TextLabel_25.Parent = Setting_2
+TextLabel_25.BackgroundColor3 = Color3.fromRGB(57, 57, 57)
+TextLabel_25.NextSelectionLeft = Setting_2
+TextLabel_25.Size = UDim2.new(0.973999977, 0, 0.064000003, 0)
+TextLabel_25.Font = Enum.Font.Highway
+TextLabel_25.Text = "Auto Meteor"
+TextLabel_25.TextColor3 = Color3.fromRGB(221, 221, 221)
+TextLabel_25.TextSize = 20.000
+TextLabel_25.TextWrapped = true
+TextLabel_25.TextXAlignment = Enum.TextXAlignment.Left
+
+UICorner_48.CornerRadius = UDim.new(0, 4)
+UICorner_48.Parent = TextLabel_25
 
 -- Scripts:
 
-local function MNFXX_fake_script() -- Meteor.LocalScript 
-	local script = Instance.new('LocalScript', Meteor)
+local function BZYBMH_fake_script() -- Frame_2.LocalScript 
+	local script = Instance.new('LocalScript', Frame_2)
 
-	local On = false
+	local Scool = script.Parent.Parent.Scoling
+	for i,v in pairs(script.Parent:GetChildren()) do
+		if v:IsA("TextButton") then
+			v.MouseButton1Click:Connect(function()
+				for _,x in pairs(Scool:GetChildren()) do
+					if x:IsA("ScrollingFrame") then
+						x.Visible = false
+					end
+					Scool:FindFirstChild(v.Name).Visible = true
+				end
+				for _,x in pairs(script.Parent:GetChildren()) do
+					if x:IsA("TextButton") then
+						x.BackgroundTransparency = 1
+					end	
+				end
+				v.BackgroundTransparency = 0
+			end)
+		end
+	end
+end
+coroutine.wrap(BZYBMH_fake_script)()
+local function HNGP_fake_script() -- TextButton.LocalScript 
+	local script = Instance.new('LocalScript', TextButton)
+
+	local But = script.Parent.Parent.TextLabel
+	local Db = false
+	local XF = But.Position.X.Scale + 0.035
+	local XY = But.Position.X.Scale
+	local Position = nil
+	
+	local function fireproximityprompt(Obj, Amount, Skip)
+		if Obj.ClassName == "ProximityPrompt" then 
+			Amount = Amount or 1
+			local PromptTime = Obj.HoldDuration
+			if Skip then 
+				Obj.HoldDuration = 0
+			end
+			for i = 1, Amount do 
+				Obj:InputHoldBegin()
+				if not Skip then 
+					wait(Obj.HoldDuration)
+				end
+				Obj:InputHoldEnd()
+			end
+			Obj.HoldDuration = PromptTime
+		else 
+			error("userdata<ProximityPrompt> expected")
+		end
+	end
 	
 	script.Parent.MouseButton1Click:Connect(function()
-		if _G.Login == false then
-			game.Players.LocalPlayer:Kick("L O G I N")	
+		if Db == false then
+			Position = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+			But:TweenPosition(UDim2.new(XF ,0,But.Position.Y.Scale,0),"Out",Enum.EasingStyle.Quart,.5,true)
+			Db = true
+		elseif Db == true  then
+			But:TweenPosition(UDim2.new(XY,0,But.Position.Y.Scale,0),"Out",Enum.EasingStyle.Quart,.5,true)
+			Db = false
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = Position
 		end
-		if On == false then
-			script.Parent.Parent.MeWh:TweenPosition(UDim2.new(0.867, 0,0.129, 0),"Out",Enum.EasingStyle.Quad,.2,true)
-			On = true
-		elseif On == true then
-			script.Parent.Parent.MeWh:TweenPosition(UDim2.new(0.789, 0,0.129, 0),"Out",Enum.EasingStyle.Quad,.2,true)
-			On = false
-		end	
 	end)
 	
 	spawn(function()
 		while wait() do
-			if On == true then
+			if Db == true then
+				pcall(function()
+					for _,v in pairs(game.Workspace.ItemSpawns.Chests:GetChildren()) do
+						if v:FindFirstChild("Chest") then
+							game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Chest.RootPart.CFrame
+							wait(.2)
+							fireproximityprompt(v.Chest.RootPart.ProximityAttachment.Interaction, 1, true)
+							wait(1)
+						end
+					end
+				end)
+			end
+		end
+	end)
+end
+coroutine.wrap(HNGP_fake_script)()
+local function CBEAW_fake_script() -- TextButton_2.LocalScript 
+	local script = Instance.new('LocalScript', TextButton_2)
+
+	local But = script.Parent.Parent.TextLabel
+	local Db = false
+	local XF = But.Position.X.Scale + 0.035
+	local XY = But.Position.X.Scale
+	local Position = nil
+	local function fireproximityprompt(Obj, Amount, Skip)
+		if Obj.ClassName == "ProximityPrompt" then 
+			Amount = Amount or 1
+			local PromptTime = Obj.HoldDuration
+			if Skip then 
+				Obj.HoldDuration = 0
+			end
+			for i = 1, Amount do 
+				Obj:InputHoldBegin()
+				if not Skip then 
+					wait(Obj.HoldDuration)
+				end
+				Obj:InputHoldEnd()
+			end
+			Obj.HoldDuration = PromptTime
+		else 
+			error("userdata<ProximityPrompt> expected")
+		end
+	end
+	script.Parent.MouseButton1Click:Connect(function()
+		if Db == false then
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.workspace.Map["AUT MAP"].Forest.Collisions.Pathway.CFrame
+			Position = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+			But:TweenPosition(UDim2.new(XF ,0,But.Position.Y.Scale,0),"Out",Enum.EasingStyle.Quart,.5,true)
+			Db = true
+		elseif Db == true  then
+			But:TweenPosition(UDim2.new(XY,0,But.Position.Y.Scale,0),"Out",Enum.EasingStyle.Quart,.5,true)
+			Db = false
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = Position
+		end
+	end)
+	
+	spawn(function()
+		while wait() do
+			if Db == true and _G.Login == true then
+				pcall(function()
+					for _,v in pairs(game.Workspace.ItemSpawns["Sand Debris"]:GetChildren()) do
+						if v:FindFirstChild("SandDebris") then
+							game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.SandDebris.CFrame
+							wait(.2)
+							fireproximityprompt(v.SandDebris.ProximityAttachment.Interaction, 1, true) 
+							wait(2)
+							game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = Position
+							wait(3)
+						end
+					end
+				end)
+			end
+		end
+	end)
+end
+coroutine.wrap(CBEAW_fake_script)()
+local function DOMKZT_fake_script() -- TextButton_3.LocalScript 
+	local script = Instance.new('LocalScript', TextButton_3)
+
+	local But = script.Parent.Parent.TextLabel
+	local Db = false
+	local XF = But.Position.X.Scale + 0.035
+	local XY = But.Position.X.Scale
+	local Position = nil
+	local function fireproximityprompt(Obj, Amount, Skip)
+		if Obj.ClassName == "ProximityPrompt" then 
+			Amount = Amount or 1
+			local PromptTime = Obj.HoldDuration
+			if Skip then 
+				Obj.HoldDuration = 0
+			end
+			for i = 1, Amount do 
+				Obj:InputHoldBegin()
+				if not Skip then 
+					wait(Obj.HoldDuration)
+				end
+				Obj:InputHoldEnd()
+			end
+			Obj.HoldDuration = PromptTime
+		else 
+			error("userdata<ProximityPrompt> expected")
+		end
+	end
+	script.Parent.MouseButton1Click:Connect(function()
+		if Db == false then
+			Position = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+			But:TweenPosition(UDim2.new(XF ,0,But.Position.Y.Scale,0),"Out",Enum.EasingStyle.Quart,.5,true)
+			Db = true
+		elseif Db == true  then
+			But:TweenPosition(UDim2.new(XY,0,But.Position.Y.Scale,0),"Out",Enum.EasingStyle.Quart,.5,true)
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = Position
+			Db = false
+		end
+	end)
+	
+	spawn(function()
+		while wait() do
+			if Db == true then
 				pcall(function()
 					for _,v in pairs(game.Workspace.ItemSpawns.Meteors:GetChildren()) do
 						if v:FindFirstChild("Meteor") then
@@ -717,144 +1167,159 @@ local function MNFXX_fake_script() -- Meteor.LocalScript
 			end	
 		end
 	end)
-	
-	
 end
-coroutine.wrap(MNFXX_fake_script)()
-local function OHBFIJ_fake_script() -- Chest.LocalScript 
-	local script = Instance.new('LocalScript', Chest)
+coroutine.wrap(DOMKZT_fake_script)()
+local function KNNSL_fake_script() -- TextButton_4.LocalScript 
+	local script = Instance.new('LocalScript', TextButton_4)
 
-	local On = false
+	local But = script.Parent.Parent.TextLabel
+	local Db = false
+	local XF = But.Position.X.Scale + 0.035
+	local XY = But.Position.X.Scale
 	local Position = nil
-	script.Parent.MouseButton1Click:Connect(function()
-		if _G.Login == false then
-			game.Players.LocalPlayer:Kick("L O G I N")	
-		end
-		if On == false then
-			script.Parent.Parent.ChWh:TweenPosition(UDim2.new(0.865, 0,0.263, 0),"Out",Enum.EasingStyle.Quad,.2,true)
-			Position = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
-			On = true
-		elseif On == true then
-			script.Parent.Parent.ChWh:TweenPosition(UDim2.new(0.789, 0,0.263, 0),"Out",Enum.EasingStyle.Quad,.2,true)
-			On = false
-			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = Position
-		end	
-	end)
-	
-	spawn(function()
-		while wait() do
-			if On == true then
-				pcall(function()
-					for _,v in pairs(game.Workspace.ItemSpawns.Chests:GetChildren()) do
-						if v:FindFirstChild("Chest") then
-							game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Chest.RootPart.CFrame
-							wait(.2)
-							fireproximityprompt(v.Chest.RootPart.ProximityAttachment.Interaction, 1, true)
-							wait(3)
-						end
-					end
-				end)
+	local function fireproximityprompt(Obj, Amount, Skip)
+		if Obj.ClassName == "ProximityPrompt" then 
+			Amount = Amount or 1
+			local PromptTime = Obj.HoldDuration
+			if Skip then 
+				Obj.HoldDuration = 0
 			end
+			for i = 1, Amount do 
+				Obj:InputHoldBegin()
+				if not Skip then 
+					wait(Obj.HoldDuration)
+				end
+				Obj:InputHoldEnd()
+			end
+			Obj.HoldDuration = PromptTime
+		else 
+			error("userdata<ProximityPrompt> expected")
 		end
-	end)
-end
-coroutine.wrap(OHBFIJ_fake_script)()
-local function JWWIH_fake_script() -- Dargon.LocalScript 
-	local script = Instance.new('LocalScript', Dargon)
-
-	local On = false
-	local Position = nil
+	end
 	
 	script.Parent.MouseButton1Click:Connect(function()
-		if _G.Login == false then
-			game.Players.LocalPlayer:Kick("L O G I N")	
-		end
-		if On == false then
-			script.Parent.Parent.DrWh:TweenPosition(UDim2.new(0.865, 0,0.564, 0),"Out",Enum.EasingStyle.Quad,.2,true)
+		if Db == false then
 			Position = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
-			On = true
-		elseif On == true then
-			script.Parent.Parent.DrWh:TweenPosition(UDim2.new(0.789, 0,0.564, 0),"Out",Enum.EasingStyle.Quad,.2,true)
-			On = false
+			But:TweenPosition(UDim2.new(XF ,0,But.Position.Y.Scale,0),"Out",Enum.EasingStyle.Quart,.5,true)
+			Db = true
+		elseif Db == true  then
+			But:TweenPosition(UDim2.new(XY,0,But.Position.Y.Scale,0),"Out",Enum.EasingStyle.Quart,.5,true)
 			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = Position
-		end	
+	
+			Db = false
+		end
 	end)
 	
 	while wait() do
-		if On == true then
+		if Db == true then
 			pcall(function()
-			for _,v in pairs(game.Workspace.ItemSpawns["StandardItems"]:GetChildren()) do
-				if v:FindFirstChild("Dragon Ball") then
-					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v["Dragon Ball"].CFrame
-					wait(.2)
-					fireproximityprompt(v["Dragon Ball"].ProximityAttachment.Interaction, 1, true) 
-					wait(3)
+				for _,v in pairs(game.Workspace.ItemSpawns["StandardItems"]:GetChildren()) do
+					if v:FindFirstChild("Dragon Ball") then
+						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v["Dragon Ball"].CFrame
+						wait(.2)
+						fireproximityprompt(v["Dragon Ball"].ProximityAttachment.Interaction, 1, true) 
+						wait(3)
 					end
 				end
 			end)	
 		end
 	end
 end
-coroutine.wrap(JWWIH_fake_script)()
-local function DLBG_fake_script() -- XS.LocalScript 
-	local script = Instance.new('LocalScript', XS)
+coroutine.wrap(KNNSL_fake_script)()
+local function VUTTT_fake_script() -- TextButton_5.LocalScript 
+	local script = Instance.new('LocalScript', TextButton_5)
 
-	local On = false
+	local But = script.Parent.Parent.TextLabel
+	local Db = false
+	local XF = But.Position.X.Scale + 0.035
+	local XY = But.Position.X.Scale
 	local Position = nil
-	
-	script.Parent.MouseButton1Click:Connect(function()
-		if _G.Login == false then
-			game.Players.LocalPlayer:Kick("L O G I N")	
+	local function fireproximityprompt(Obj, Amount, Skip)
+		if Obj.ClassName == "ProximityPrompt" then 
+			Amount = Amount or 1
+			local PromptTime = Obj.HoldDuration
+			if Skip then 
+				Obj.HoldDuration = 0
+			end
+			for i = 1, Amount do 
+				Obj:InputHoldBegin()
+				if not Skip then 
+					wait(Obj.HoldDuration)
+				end
+				Obj:InputHoldEnd()
+			end
+			Obj.HoldDuration = PromptTime
+		else 
+			error("userdata<ProximityPrompt> expected")
 		end
-		if On == false then
-			script.Parent.Parent.XSWh:TweenPosition(UDim2.new(0.862, 0,0.699, 0),"Out",Enum.EasingStyle.Quad,.2,true)
+	end
+	script.Parent.MouseButton1Click:Connect(function()
+		if Db == false then
 			Position = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
-			On = true
-		elseif On == true then
-			script.Parent.Parent.XSWh:TweenPosition(UDim2.new(0.789, 0,0.699, 0),"Out",Enum.EasingStyle.Quad,.2,true)
-			On = false
+			But:TweenPosition(UDim2.new(XF ,0,But.Position.Y.Scale,0),"Out",Enum.EasingStyle.Quart,.5,true)
+			Db = true
+		elseif Db == true  then
+			But:TweenPosition(UDim2.new(XY,0,But.Position.Y.Scale,0),"Out",Enum.EasingStyle.Quart,.5,true)
 			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = Position
-		end	
+			Db = false
+		end
 	end)
 	
 	while wait() do
-		if On == true then
+		if Db == true then
 			for _,v in pairs(game.Workspace.ItemSpawns["StandardItems"]:GetChildren()) do
-				if v:FindFirstChild("XSoul") then
-					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v["XSoul"].CFrame
+				if v:FindFirstChild("xSoul") then
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v["xSoul"].CFrame
 					wait(.2)
-					fireproximityprompt(v["XSoul"].ProximityAttachment.Interaction, 1, true) 
+					fireproximityprompt(v["xSoul"].ProximityAttachment.Interaction, 1, true) 
 					wait(3)
 				end
 			end
 		end
 	end
 end
-coroutine.wrap(DLBG_fake_script)()
-local function OWMZJ_fake_script() -- My.LocalScript 
-	local script = Instance.new('LocalScript', My)
+coroutine.wrap(VUTTT_fake_script)()
+local function CPDFQS_fake_script() -- TextButton_6.LocalScript 
+	local script = Instance.new('LocalScript', TextButton_6)
 
-	local On = false
+	local But = script.Parent.Parent.TextLabel
+	local Db = false
+	local XF = But.Position.X.Scale + 0.035
+	local XY = But.Position.X.Scale
 	local Position = nil
-	
-	script.Parent.MouseButton1Click:Connect(function()
-		if _G.Login == false then
-			game.Players.LocalPlayer:Kick("L O G I N")	
+	local function fireproximityprompt(Obj, Amount, Skip)
+		if Obj.ClassName == "ProximityPrompt" then 
+			Amount = Amount or 1
+			local PromptTime = Obj.HoldDuration
+			if Skip then 
+				Obj.HoldDuration = 0
+			end
+			for i = 1, Amount do 
+				Obj:InputHoldBegin()
+				if not Skip then 
+					wait(Obj.HoldDuration)
+				end
+				Obj:InputHoldEnd()
+			end
+			Obj.HoldDuration = PromptTime
+		else 
+			error("userdata<ProximityPrompt> expected")
 		end
-		if On == false then
-			script.Parent.Parent.MySh:TweenPosition(UDim2.new(0.862, 0,0.827, 0),"Out",Enum.EasingStyle.Quad,.2,true)
+	end
+	script.Parent.MouseButton1Click:Connect(function()
+		if Db == false then
 			Position = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
-			On = true
-		elseif On == true then
-			script.Parent.Parent.MySh:TweenPosition(UDim2.new(0.786, 0,0.827, 0),"Out",Enum.EasingStyle.Quad,.2,true)
-			On = false
+			But:TweenPosition(UDim2.new(XF ,0,But.Position.Y.Scale,0),"Out",Enum.EasingStyle.Quart,.5,true)
+			Db = true
+		elseif Db == true  then
+			But:TweenPosition(UDim2.new(XY,0,But.Position.Y.Scale,0),"Out",Enum.EasingStyle.Quart,.5,true)
 			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = Position
-		end	
+			Db = false
+		end
 	end)
 	
-	
 	while wait() do
-		if On == true then
+		if Db == true then
 			pcall(function()
 				for _,v in pairs(game.Workspace.ItemSpawns["StandardItems"]:GetChildren()) do
 					if v:FindFirstChild("Mysterious Hat") then
@@ -868,153 +1333,335 @@ local function OWMZJ_fake_script() -- My.LocalScript
 		end
 	end
 end
-coroutine.wrap(OWMZJ_fake_script)()
-local function FNCSL_fake_script() -- Sand.LocalScript 
-	local script = Instance.new('LocalScript', Sand)
+coroutine.wrap(CPDFQS_fake_script)()
+local function ROOHSIA_fake_script() -- TextButton_7.LocalScript 
+	local script = Instance.new('LocalScript', TextButton_7)
 
-	local On = false
+	local But = script.Parent.Parent.TextLabel
+	local Db = false
+	local XF = But.Position.X.Scale + 0.035
+	local XY = But.Position.X.Scale
 	local Position = nil
 	
-	script.Parent.MouseButton1Click:Connect(function()
-		if _G.Login == false then
-			game.Players.LocalPlayer:Kick("L O G I N")	
-		end
-		if On == false then
-			script.Parent.Parent.SaWh:TweenPosition(UDim2.new(0.865, 0,0.397, 0),"Out",Enum.EasingStyle.Quad,.2,true)
-			Position = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
-			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.workspace.Map["AUT MAP"].Forest.Collisions.Pathway.CFrame
-			On = true
-		elseif On == true then
-			script.Parent.Parent.SaWh:TweenPosition(UDim2.new(0.789, 0,0.397, 0),"Out",Enum.EasingStyle.Quad,.2,true)
-			On = false
-			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = Position
+	local function Path()
+		if game.Workspace:FindFirstChild("TannyFarmPath") == nil then
+			local A = Instance.new("Part",workspace)
+			A.Name = "TannyFarmPath"
+			A.Anchored = true
+			A.Size = Vector3.new(50, 1, 50)
+			A.CFrame = A.CFrame*CFrame.new(0,500,0)
 		end	
-	end)
-	
-	
-	spawn(function()
-		while wait() do
-			if On == true and _G.Login == true then
-				pcall(function()
-				for _,v in pairs(game.Workspace.ItemSpawns["Sand Debris"]:GetChildren()) do
-					if v:FindFirstChild("SandDebris") then
-						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.SandDebris.CFrame
-						wait(.2)
-						fireproximityprompt(v.SandDebris.ProximityAttachment.Interaction, 1, true) 
-						wait(2)
-						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = Position
-						wait(3)
+		local A = game.Workspace.TannyFarmPath
+		local Can = {
+			["Scorpion"] = true,
+		}
+		spawn(function()
+			game:GetService("RunService").RenderStepped:Connect(function()
+				if Db == true then
+					if game.Workspace.Living:FindFirstChild("Scorpion") and game.Workspace.Living:FindFirstChild("Scorpion").Humanoid.Health > 0 then
+						local vHum = game.Workspace.Living:FindFirstChild("Scorpion").HumanoidRootPart
+						local pHum = game.Players.LocalPlayer.Character.HumanoidRootPart
+						vHum.Anchored = true
+						if Db == true then
+							game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(vHum.CFrame.X,vHum.CFrame.Y+4,vHum.CFrame.Z)
 						end
-					end
-				end)
-			end
-		end
-	end)
-end
-coroutine.wrap(FNCSL_fake_script)()
-local function CKTYTNQ_fake_script() -- AutoFarm.LocalScript 
-	local script = Instance.new('LocalScript', AutoFarm)
-
-	script.Parent.MouseButton1Click:Connect(function()
-		script.Parent.Parent.Parent.SecOp.Visible = true
-		script.Parent.Parent.Parent.SecOpItem.Visible = false
-	end)
-end
-coroutine.wrap(CKTYTNQ_fake_script)()
-local function BJQLZOQ_fake_script() -- ItemNoti.LocalScript 
-	local script = Instance.new('LocalScript', ItemNoti)
-
-	script.Parent.MouseButton1Click:Connect(function()
-		script.Parent.Parent.Parent.SecOp.Visible = false
-		script.Parent.Parent.Parent.SecOpItem.Visible = true
-	end)
-end
-coroutine.wrap(BJQLZOQ_fake_script)()
-local function MZJZ_fake_script() -- BG.LocalScript 
-	local script = Instance.new('LocalScript', BG)
-
-	local Click = false
-	local Pos = nil
-	local FP = nil
-	local Frame = script.Parent
-	local Mouse = game.Players.LocalPlayer:GetMouse()
-	Frame.InputBegan:Connect(function(i)
-		if i.UserInputType == Enum.UserInputType.MouseButton1 then
-			Click = true
-			Pos = Vector2.new(i.Position.X,i.Position.Y)
-			FP = Vector2.new(Frame.Position.X.Scale,Frame.Position.Y.Scale)
-		end
-	end)
+					elseif game.Workspace.Living:FindFirstChild("Dummy") and game.Workspace.Living:FindFirstChild("Dummy").Humanoid.Health > 0 then
+						local vHum = game.Workspace.Living:FindFirstChild("Dummy").HumanoidRootPart
+						local pHum = game.Players.LocalPlayer.Character.HumanoidRootPart
+						vHum.Anchored = true
+						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(vHum.CFrame.X,vHum.CFrame.Y+4,vHum.CFrame.Z)
 	
-	Frame.InputEnded:Connect(function(i)
-		if i.UserInputType == Enum.UserInputType.MouseButton1 then
-			Click = false
-		end
-	end)
-	
-	game.Players.LocalPlayer:GetMouse().Move:Connect(function()
-		if Click == true then
-			local Nw = FP + ((Vector2.new(Mouse.X,Mouse.Y) - Pos ) / game.Workspace.Camera.ViewportSize)
-			Frame.Position = UDim2.new(Nw.X,0,Nw.Y,0)
-		end
-	end)
-	
-	
-end
-coroutine.wrap(MZJZ_fake_script)()
-local function SXUGL_fake_script() -- BG.LocalScript 
-	local script = Instance.new('LocalScript', BG)
-
-	game:GetService("UserInputService").InputBegan:Connect(function(i,c)
-		if not c then
-			if i.KeyCode == Enum.KeyCode.RightControl and _G.Login == true then
-				script.Parent.Visible = not script.Parent.Visible
-			end
-		end
-	end)
-end
-coroutine.wrap(SXUGL_fake_script)()
-local function PQFKHJR_fake_script() -- TextButton.LocalScript 
-	local script = Instance.new('LocalScript', TextButton)
-
-	local On = false
-	script.Parent.MouseButton1Click:Connect(function()
-		if _G.Login == false then
-			game.Players.LocalPlayer:Kick("L O G I N")	
-		end
-		if On == false then
-			script.Parent.Parent.MeWh:TweenPosition(UDim2.new(0.867, 0,0.129, 0),"Out",Enum.EasingStyle.Quad,.2,true)
-			On = true
-		elseif On == true then
-			script.Parent.Parent.MeWh:TweenPosition(UDim2.new(0.789, 0,0.129, 0),"Out",Enum.EasingStyle.Quad,.2,true)
-			On = false
-		end	
-	end)
-	
-	
-end
-coroutine.wrap(PQFKHJR_fake_script)()
-local function OSXW_fake_script() -- ScrollingFrame.LocalScript 
-	local script = Instance.new('LocalScript', ScrollingFrame)
-
-	for i,v in pairs(script.Parent:GetChildren()) do
-		if v:IsA("TextButton") then
-			v.MouseButton1Click:Connect(function()
-				script.Parent.TextLabel.Text = v.Name
+					end			
+				end
 			end)
+		end)
+	end
+	
+	
+	
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		if Db == false then
+			Position = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+			But:TweenPosition(UDim2.new(XF ,0,But.Position.Y.Scale,0),"Out",Enum.EasingStyle.Quart,.5,true)
+			Path()
+			Db = true
+		elseif Db == true  then
+			But:TweenPosition(UDim2.new(XY,0,But.Position.Y.Scale,0),"Out",Enum.EasingStyle.Quart,.5,true)
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = Position
+			Db = false
+		end
+	end)
+	
+	while wait() do
+		if Db == true then
+			game.ReplicatedStorage.Remotes.Input:FireServer("KEY","LMB")
+			game.ReplicatedStorage.Remotes.InputFunc:InvokeServer("LMB")
 		end
 	end
 end
-coroutine.wrap(OSXW_fake_script)()
-local function QDUTUNU_fake_script() -- TextButton_2.LocalScript 
-	local script = Instance.new('LocalScript', TextButton_2)
+coroutine.wrap(ROOHSIA_fake_script)()
+local function CVWPWVQ_fake_script() -- TextBox.LocalScript 
+	local script = Instance.new('LocalScript', TextBox)
 
-	script.Parent.MouseButton1Click:Connect(function()
-		loadstring(game:HttpGet(("https://raw.githubusercontent.com/w1ndytannyhub/AUT/main/Check"), true))()
+	wait(2)
+	script.Parent.Text = game.Players.LocalPlayer.Character.Humanoid.WalkSpeed
+	
+	game:GetService("RunService").RenderStepped:Connect(function()
+		pcall(function()
+			if typeof(tonumber(script.Parent.Text)) == "number" then
+				game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = tonumber(script.Parent.Text)
+			end	
+		end)	
 	end)
 end
-coroutine.wrap(QDUTUNU_fake_script)()
-local function DCUEAUB_fake_script() -- Frame.LocalScript 
+coroutine.wrap(CVWPWVQ_fake_script)()
+local function KHTAVYV_fake_script() -- TextBox_2.LocalScript 
+	local script = Instance.new('LocalScript', TextBox_2)
+
+	wait(2)
+	script.Parent.Text = game.Players.LocalPlayer.Character.Humanoid.JumpPower
+	
+	game:GetService("RunService").RenderStepped:Connect(function()
+		pcall(function()
+	
+			if typeof(tonumber(script.Parent.Text)) == "number" then
+				game.Players.LocalPlayer.Character.Humanoid.JumpPower = tonumber(script.Parent.Text)
+			end	
+		end)	
+	end)
+end
+coroutine.wrap(KHTAVYV_fake_script)()
+local function PZGUC_fake_script() -- TextButton_8.LocalScript 
+	local script = Instance.new('LocalScript', TextButton_8)
+
+	local But = script.Parent.Parent.TextLabel
+	local Db = false
+	local XF = But.Position.X.Scale + 0.035
+	local XY = But.Position.X.Scale
+	local Position = nil
+	local uis = game:GetService("UserInputService")
+	local wPressed = false
+	local sPressed = false
+	local aPressed = false
+	local dPressed = false
+	local char = game.Players.LocalPlayer.Character
+	local cam = game.Workspace.Camera
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		if Db == false then
+			But:TweenPosition(UDim2.new(XF ,0,But.Position.Y.Scale,0),"Out",Enum.EasingStyle.Quart,.5,true)
+			char.Animate.Disabled = true
+			local bv = Instance.new("BodyVelocity", char.PrimaryPart)
+			bv.MaxForce = Vector3.new(math.huge,math.huge,math.huge)
+			bv.Velocity = Vector3.new(0,0,0)
+			bv.Name = "FlightForce"
+			Db = true
+		elseif Db == true  then
+			if char.PrimaryPart:FindFirstChild("FlightForce") then
+				char.Animate.Disabled = false
+				char.PrimaryPart:FindFirstChild("FlightForce"):Destroy()
+			end	
+			But:TweenPosition(UDim2.new(XY,0,But.Position.Y.Scale,0),"Out",Enum.EasingStyle.Quart,.5,true)
+			Db = false
+		end
+	end)
+	
+	uis.InputBegan:Connect(function(key, chat)
+		if chat then return end
+		if key.KeyCode == Enum.KeyCode.W then
+			wPressed = true
+		end
+		if key.KeyCode == Enum.KeyCode.S then
+			sPressed = true
+		end
+		if key.KeyCode == Enum.KeyCode.A then
+			aPressed = true
+		end
+		if key.KeyCode == Enum.KeyCode.D then
+			dPressed = true
+		end
+	end)
+	
+	uis.InputEnded:Connect(function(key)	
+		if key.KeyCode == Enum.KeyCode.W then
+			wPressed = false
+		elseif key.KeyCode == Enum.KeyCode.S then
+			sPressed = false
+		elseif key.KeyCode == Enum.KeyCode.A then
+			aPressed = false
+		elseif key.KeyCode == Enum.KeyCode.D then
+			dPressed = false
+		end
+	
+	end)
+	spawn(function()
+		while wait() do
+			if Db == true then
+				char.PrimaryPart:FindFirstChild("FlightForce").Velocity = Vector3.new(0,0,0)
+				if wPressed then
+					char.PrimaryPart:FindFirstChild("FlightForce").Velocity = cam.CFrame.LookVector * 100
+				end
+				if sPressed then
+					char.PrimaryPart:FindFirstChild("FlightForce").Velocity = cam.CFrame.LookVector * -100
+				end
+				if aPressed then
+					char.PrimaryPart:FindFirstChild("FlightForce").Velocity = cam.CFrame.RightVector * -100
+				end
+				if dPressed then
+					char.PrimaryPart:FindFirstChild("FlightForce").Velocity = cam.CFrame.RightVector * 100
+				end
+			end
+		end
+	end)
+end
+coroutine.wrap(PZGUC_fake_script)()
+local function FSGPVNU_fake_script() -- TextButton_9.LocalScript 
+	local script = Instance.new('LocalScript', TextButton_9)
+
+	local Db = false
+	local Object = script.Parent.Parent.Parent.Frame
+	
+	function A(x)
+		if x then
+			Object.Visible = false
+			Db = false
+		end
+	end
+	
+	function B(x)
+		if x then
+			Db = true
+		end
+	end
+	
+	
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		if Db == false then
+			Object.Visible = true
+			Db = "x"
+			Object:TweenSize(UDim2.new(0.974, 0,0.173, 0),"Out",Enum.EasingStyle.Quart,0.5,true,B)
+		elseif Db == true then
+			Db = "x"
+			Object:TweenSize(UDim2.new(0.974, 0,0, 0),"Out",Enum.EasingStyle.Quart,0.5,true,A)
+		end
+	end)
+end
+coroutine.wrap(FSGPVNU_fake_script)()
+local function AIJI_fake_script() -- ScrollingFrame.LocalScript 
+	local script = Instance.new('LocalScript', ScrollingFrame)
+
+	function x()
+	for i,v in pairs(script.Parent:GetChildren()) do
+		if v:IsA("TextButton") then
+			v.MouseButton1Click:Connect(function()
+				for _,X in pairs(script.Parent:GetChildren()) do
+					if X:IsA("TextButton") then
+						X.TextColor3 = Color3.fromRGB(255, 255, 255)
+					end	
+				end
+				v.TextColor3 = Color3.fromRGB(78, 203, 255)
+				script.Parent.Parent.Parent.PlayerSec.Value = v.Text
+			end)
+		end
+		end
+	end
+	
+	script.Parent.ChildAdded:Connect(x)
+end
+coroutine.wrap(AIJI_fake_script)()
+local function CWPS_fake_script() -- ScrollingFrame.LocalScript 
+	local script = Instance.new('LocalScript', ScrollingFrame)
+
+	function Update(Who)
+		for i,v in pairs(script.Parent:GetChildren()) do
+			if v:IsA("TextButton") and v.Name ~= "CloneY" then
+				v:Destroy()
+			end
+		end
+	
+		for i,v in pairs(game.Players:GetPlayers()) do
+			if v.Name ~= game.Players.LocalPlayer.Name then
+			local A = script.Parent.CloneY:Clone()
+			A.Name = "TextButton"
+			A.Visible = true
+			A.Text = v.Name
+			A.Parent = script.Parent 
+			end	
+		end	
+	end
+	
+	Update()
+	
+	game.Players.ChildAdded:Connect(Update)
+	game.Players.ChildRemoved:Connect(Update)
+	
+end
+coroutine.wrap(CWPS_fake_script)()
+local function BRMT_fake_script() -- TextButton_10.LocalScript 
+	local script = Instance.new('LocalScript', TextButton_10)
+
+	local But = script.Parent.Parent.TextLabel
+	local Db = false
+	local XF = But.Position.X.Scale + 0.035
+	local XY = But.Position.X.Scale
+	local Position = nil
+	
+	local function Path()
+		if game.Workspace:FindFirstChild("TannyFarmPath") == nil then
+			local A = Instance.new("Part",workspace)
+			A.Name = "TannyFarmPath"
+			A.Anchored = true
+			A.Size = Vector3.new(50, 1, 50)
+			A.CFrame = A.CFrame*CFrame.new(0,500,0)
+		end	
+		local A = game.Workspace.TannyFarmPath
+		
+		
+		spawn(function()
+			game:GetService("RunService").RenderStepped:Connect(function()
+				if Db == true then
+					local Nam = script.Parent.Parent.Parent.PlayerSec.Value
+					if Nam ~= nil and game.Workspace.Living:FindFirstChild(Nam) and game.Workspace.Living:FindFirstChild(Nam).Humanoid.Health > 0 then
+						local vHum = game.Workspace.Living:FindFirstChild(Nam).HumanoidRootPart
+						local pHum = game.Players.LocalPlayer.Character.HumanoidRootPart
+						if Db == true then
+							game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(vHum.CFrame.X,vHum.CFrame.Y,vHum.CFrame.Z + 2)
+						end
+					end			
+				end
+			end)
+		end)
+	end
+	
+	
+	
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		if Db == false then
+			Position = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+			But:TweenPosition(UDim2.new(XF ,0,But.Position.Y.Scale,0),"Out",Enum.EasingStyle.Quart,.5,true)
+			Path()
+			Db = true
+		elseif Db == true  then
+			But:TweenPosition(UDim2.new(XY,0,But.Position.Y.Scale,0),"Out",Enum.EasingStyle.Quart,.5,true)
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = Position
+			Db = false
+		end
+	end)
+	
+	while wait() do
+		if Db == true then
+			pcall(function()
+			game.ReplicatedStorage.Remotes.Input:FireServer("KEY","LMB")
+			game.ReplicatedStorage.Remotes.InputFunc:InvokeServer("LMB")
+			end)	
+		end
+	end
+end
+coroutine.wrap(BRMT_fake_script)()
+local function GYSSINS_fake_script() -- Frame.LocalScript 
 	local script = Instance.new('LocalScript', Frame)
 
 	local Click = false
@@ -1045,4 +1692,16 @@ local function DCUEAUB_fake_script() -- Frame.LocalScript
 	
 	
 end
-coroutine.wrap(DCUEAUB_fake_script)()
+coroutine.wrap(GYSSINS_fake_script)()
+local function YBMBGLG_fake_script() -- Frame.LocalScript 
+	local script = Instance.new('LocalScript', Frame)
+
+	game:GetService("UserInputService").InputBegan:Connect(function(i,c)
+		if not c then
+			if i.KeyCode == Enum.KeyCode.RightControl then
+				script.Parent.Visible =not script.Parent.Visible
+			end
+		end
+	end)
+end
+coroutine.wrap(YBMBGLG_fake_script)()
