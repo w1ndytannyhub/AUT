@@ -132,7 +132,7 @@ local UICorner_48 = Instance.new("UICorner")
 --Properties:
 
 TannyHub.Name = "TannyHub"
-TannyHub.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+TannyHub.Parent = game.CoreGui
 TannyHub.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 TannyHub.ResetOnSpawn = false
 
